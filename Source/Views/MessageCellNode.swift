@@ -62,6 +62,7 @@ class MessageCellNode: ASCellNode {
         }
 
         selectionStyle = .None
+        shouldRasterizeDescendants = true
     }
     
     override func calculateSizeThatFits(constrainedSize: CGSize) -> CGSize {
