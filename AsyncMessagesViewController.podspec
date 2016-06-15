@@ -11,8 +11,8 @@ A smooth, responsive and flexible messages UI library for iOS. Built on top of t
   s.author           = { "Huy Nguyen" => "no_email_for_huy@please_fill_this_in", "Edward Valentini" => "edward@interlook.com" }
   s.source           = { :git => "git@github.com:edwardvalentini/AsyncMessagesViewController.git", :tag => s.version.to_s }
 
-  s.platform     = :ios, '7.0'
-  s.ios.deployment_target = '7.0'
+  s.platform     = :ios, '9.0'
+  s.ios.deployment_target = '9.0'
 
   s.pod_target_xcconfig = {
                  'CLANG_ALLOW_NON_MODULAR_INCLUDES_IN_FRAMEWORK_MODULES' => 'YES',
