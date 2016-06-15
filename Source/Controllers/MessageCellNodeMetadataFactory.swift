@@ -39,7 +39,7 @@ class MessageCellNodeMetadataFactory {
         let showTailFlags = showSenderAvatarFlags
         let showDateFlags = showDateFlagsForMessages(messages)
         
-        for var i = 0; i < messages.count; ++i {
+        for i in 0.stride(to: messages.count, by: 1) {
             let metadata = MessageCellNodeMetadata(
                 isOutgoing: (messages[i].senderID() == currentUserID),
                 showsSenderName: showSenderNameFlags[i],
@@ -67,7 +67,7 @@ class MessageCellNodeMetadataFactory {
         
         result[0] = true
         
-        for var i = messages.count - 1; i > 0; --i {
+        for i in (messages.count - 1).stride(to: 0, by: -1) {
             let message = messages[i]
             if !message.senderDisplayName().isEmpty {
                 let isOutgoing = (message.senderID() == currentUserID)
@@ -92,7 +92,7 @@ class MessageCellNodeMetadataFactory {
         
         result[messages.count - 1] = true
         
-        for var i = 0; i < messages.count - 1; ++i {
+        for i in 0.stride(to: messages.count - 1, by: 1) {
             let hasSameSenderAsNextMessage = messages[i].senderID() == messages[i + 1].senderID()
             result[i] = !hasSameSenderAsNextMessage
         }
@@ -115,7 +115,7 @@ class MessageCellNodeMetadataFactory {
         result[0] = true
         var lastShownDate = messages[0].date()
         
-        for var i = 1; i < messages.count; ++i {
+        for i in 1.stride(to: messages.count, by: 1) {
             let date = messages[i].date()
             if abs(date.timeIntervalSinceDate(lastShownDate)) >= dateInterval {
                 result[i] = true
