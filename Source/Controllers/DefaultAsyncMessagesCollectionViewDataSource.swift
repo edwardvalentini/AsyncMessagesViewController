@@ -7,6 +7,7 @@
 //
 
 import Foundation
+import AsyncDisplayKit
 
 //TODO: Make AsyncMessagesCollectionViewDataSource's methods thread-safe.
 class DefaultAsyncMessagesCollectionViewDataSource: NSObject, AsyncMessagesCollectionViewDataSource {

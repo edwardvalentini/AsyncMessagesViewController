@@ -7,6 +7,7 @@
 //
 
 import Foundation
+import AsyncDisplayKit
 
 private struct MessageProperties: Hashable {
     let isOutgoing: Bool

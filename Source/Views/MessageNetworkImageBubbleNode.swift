@@ -7,6 +7,8 @@
 //
 
 import Foundation
+import AsyncDisplayKit
+
 
 class MessageNetworkImageBubbleNodeFactory: MessageBubbleNodeFactory {
     

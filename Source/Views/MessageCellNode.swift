@@ -7,6 +7,7 @@
 //
 
 import Foundation
+import AsyncDisplayKit
 
 let kAMMessageCellNodeAvatarImageSize: CGFloat = 34
 

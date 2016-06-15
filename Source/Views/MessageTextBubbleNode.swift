@@ -7,6 +7,8 @@
 //
 
 import Foundation
+import AsyncDisplayKit
+
 
 private let kAMMessageTextBubbleNodeIncomingTextAttributes = [NSForegroundColorAttributeName: UIColor.blackColor(),
     NSFontAttributeName: UIFont.systemFontOfSize(14)]

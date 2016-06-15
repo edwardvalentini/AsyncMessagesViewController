@@ -7,6 +7,7 @@
 //
 
 import Foundation
+import AsyncDisplayKit
 
 struct MessageCellNodeMetadata: Hashable {
     let isOutgoing: Bool
