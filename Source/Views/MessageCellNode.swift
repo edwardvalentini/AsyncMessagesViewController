@@ -65,25 +65,27 @@ class MessageCellNode: ASCellNode {
         selectionStyle = .None
     }
     
-    override func layoutSpecThatFits(constrainedSize: ASSizeRange) -> ASLayoutSpec! {
+    override func layoutSpecThatFits(constrainedSize: ASSizeRange) -> ASLayoutSpec {
+        
+        
+        let contentTopFinal : ASLayoutSpec? = contentTopTextNode == nil ? nil : ASInsetLayoutSpec(insets: UIEdgeInsetsMake(0, 22 + avatarImageSize, 0, 0), child: contentTopTextNode!)
+        
         return ASInsetLayoutSpec(
             insets: UIEdgeInsetsMake(1, 4, 1, 4),
             child: ASStackLayoutSpec(
                 direction: .Vertical,
                 spacing: 0,
                 justifyContent: .Start, // Never used
-                alignItems: isOutgoing ? .End : .Start,
+                alignItems: isOutgoing == true ? .End : .Start,
                 children: Array.filterNils([
                     topTextNode,
-                    contentTopTextNode == nil
-                        ? nil
-                        : ASInsetLayoutSpec(insets: UIEdgeInsetsMake(0, 22 + avatarImageSize, 0, 0), child: contentTopTextNode),
+                    contentTopFinal,
                     ASStackLayoutSpec(
                         direction: .Horizontal,
                         spacing: 2,
                         justifyContent: .Start, // Never used
                         alignItems: .End,
-                        children: Array.filterNils(isOutgoing ? [bubbleNode, avatarImageNode] : [avatarImageNode, bubbleNode])),
+                        children: Array.filterNils(isOutgoing == true ? [bubbleNode, self.avatarImageNode! ] : [self.avatarImageNode!, bubbleNode])),
                     bottomTextNode])))
     }
     

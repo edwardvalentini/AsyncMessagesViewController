@@ -23,7 +23,10 @@ class AsyncMessagesViewController: SLKTextViewController {
         let layout = UICollectionViewFlowLayout()
         layout.scrollDirection = UICollectionViewScrollDirection.Vertical
         //TODO: consider enabling asyncDataFetching
-        let asyncCollectionView = ASCollectionView(frame: CGRectZero, collectionViewLayout: layout, asyncDataFetching: false)
+       // let asyncCollectionView = ASCollectionView(frame: CGRectZero, collectionViewLayout: layout, asyncDataFetching: false)
+        
+        let asyncCollectionView = ASCollectionView(frame: CGRectZero, collectionViewLayout: layout)
+        
         asyncCollectionView.backgroundColor = UIColor.whiteColor()
         asyncCollectionView.scrollsToTop = true
         asyncCollectionView.asyncDataSource = dataSource
@@ -33,8 +36,10 @@ class AsyncMessagesViewController: SLKTextViewController {
         inverted = false
     }
 
-    required init?(coder aDecoder: NSCoder) {
-        fatalError("init(coder:) has not been implemented")
+    required init(coder aDecoder: NSCoder) {
+      //  super.init()
+      //  super.init(coder: aDecoder)
+      fatalError("init(coder:) has not been implemented")
     }
 
     override func viewWillLayoutSubviews() {
@@ -46,6 +51,8 @@ class AsyncMessagesViewController: SLKTextViewController {
     }
     
     func scrollCollectionViewToBottom() {
+        
+      //  let numberOfItems = dataSource.collectionView(collectionView, updateCurrentUserID: 0)
         let numberOfItems = dataSource.collectionView(collectionView, numberOfItemsInSection: 0)
         if numberOfItems > 0 {
             let lastItemIndexPath = NSIndexPath(forItem: numberOfItems - 1, inSection: 0)

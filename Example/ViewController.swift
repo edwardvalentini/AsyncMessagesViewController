@@ -7,8 +7,10 @@
 //
 
 import UIKit
+import AsyncDisplayKit
+import LoremIpsum
 
-class ViewController: AsyncMessagesViewController, ASCollectionViewDelegate {
+class ViewController: AsyncMessagesViewController, ASCollectionDelegate {
 
     private let users: [User]
     private var currentUser: User? {
@@ -34,13 +36,13 @@ class ViewController: AsyncMessagesViewController, ASCollectionViewDelegate {
         collectionView.asyncDelegate = nil
     }
     
-    required init?(coder aDecoder: NSCoder) {
+    required init(coder aDecoder: NSCoder) {
         fatalError("init(coder:) has not been implemented")
     }
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        navigationItem.rightBarButtonItem = UIBarButtonItem(title: "Change user", style: .Plain, target: self, action: "changeCurrentUser")
+        navigationItem.rightBarButtonItem = UIBarButtonItem(title: "Change user", style: .Plain, target: self, action: #selector(ViewController.changeCurrentUser))
     }
 
     override func viewDidAppear(animated: Bool) {

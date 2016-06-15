@@ -9,7 +9,7 @@
 import Foundation
 import AsyncDisplayKit
 
-protocol AsyncMessagesCollectionViewDataSource: ASCollectionViewDataSource {
+protocol AsyncMessagesCollectionViewDataSource: ASCollectionDataSource {
     
     func currentUserID() -> String?
     

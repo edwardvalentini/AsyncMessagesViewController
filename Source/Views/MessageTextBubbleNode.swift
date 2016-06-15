@@ -63,7 +63,7 @@ class MessageTextBubbleNode: ASDisplayNode {
         addSubnode(textNode)
     }
     
-    override func layoutSpecThatFits(constrainedSize: ASSizeRange) -> ASLayoutSpec! {
+    override func layoutSpecThatFits(constrainedSize: ASSizeRange) -> ASLayoutSpec {
         let textNodeVerticalOffset = CGFloat(6)
         return ASBackgroundLayoutSpec(
             child: ASInsetLayoutSpec(

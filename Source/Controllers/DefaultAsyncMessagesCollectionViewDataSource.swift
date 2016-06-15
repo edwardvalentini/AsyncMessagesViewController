@@ -39,12 +39,12 @@ class DefaultAsyncMessagesCollectionViewDataSource: NSObject, AsyncMessagesColle
     }
 
     //MARK: ASCollectionViewDataSource methods
-    func collectionView(collectionView: UICollectionView!, numberOfItemsInSection section: Int) -> Int {
+    func collectionView(collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int {
         assert(nodeMetadatas.count == messages.count, "Node metadata is required for each message.")
         return messages.count
     }
 
-    func collectionView(collectionView: ASCollectionView!, nodeForItemAtIndexPath indexPath: NSIndexPath!) -> ASCellNode! {
+    func collectionView(collectionView: ASCollectionView, nodeForItemAtIndexPath indexPath: NSIndexPath) -> ASCellNode {
         let message = self.collectionView(collectionView, messageForItemAtIndexPath: indexPath)
         let metadata = nodeMetadatas[indexPath.item]
         let isOutgoing = metadata.isOutgoing
@@ -72,7 +72,7 @@ class DefaultAsyncMessagesCollectionViewDataSource: NSObject, AsyncMessagesColle
         return cellNode
     }
   
-    func collectionView(collectionView: ASCollectionView!, constrainedSizeForNodeAtIndexPath indexPath: NSIndexPath!) -> ASSizeRange {
+    func collectionView(collectionView: ASCollectionView, constrainedSizeForNodeAtIndexPath indexPath: NSIndexPath) -> ASSizeRange {
         let width = collectionView.bounds.width;
         // Assume horizontal scroll directions
         return ASSizeRangeMake(CGSizeMake(width, 0), CGSizeMake(width, CGFloat.max))
