@@ -1,4 +1,4 @@
-PODREPO = "chatloudcocoapods"
+PODREPO = "trunk"
 
 desc "Runs the specs [EMPTY]"
 task :spec do
