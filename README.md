@@ -13,17 +13,5 @@ To run the example project, clone the repo, and run `pod install` from the Examp
 
 ## Installation
 
-AsyncMessagesViewController is available through [CocoaPods](http://cocoapods.org). To install
-it, simply add the following line to your Podfile:
+this is a fork of [AsyncMessagesViewController](https://github.com/nguyenhuy/AsyncMessagesViewController)
 
-```ruby
-pod "AsyncMessagesViewController"
-```
-
-## Author
-
-Edward Valentini, edward@interlook.com
-
-## License
-
-AsyncMessagesViewController is available under the MIT license. See the LICENSE file for more info.
