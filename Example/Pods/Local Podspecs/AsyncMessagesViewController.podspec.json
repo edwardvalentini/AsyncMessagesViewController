@@ -1,0 +1,42 @@
+{
+  "name": "AsyncMessagesViewController",
+  "version": "0.0.9",
+  "summary": "A smooth, responsive and flexible messages UI library for iOS.",
+  "description": "A smooth, responsive and flexible messages UI library for iOS. Built on top of the awesome AsyncDisplayKit framework, it takes full advantage of asynchronous sizing, (non-auto) layout and text rendering to deliver a 5x fps (subject to increase) scrolling experience.",
+  "homepage": "https://github.com/nguyenhuy/AsyncMessagesViewController",
+  "screenshots": [
+    "https://raw.githubusercontent.com/nguyenhuy/AsyncMessagesViewController/master/Screenshots/screenshot1.png",
+    "https://raw.githubusercontent.com/nguyenhuy/AsyncMessagesViewController/master/Screenshots/screenshot2.png"
+  ],
+  "license": "MIT",
+  "authors": {
+    "Huy Nguyen": "no_email_for_huy@please_fill_this_in",
+    "Edward Valentini": "edward@interlook.com"
+  },
+  "source": {
+    "git": "https://github.com/edwardvalentini/AsyncMessagesViewController.git",
+    "tag": "0.0.9"
+  },
+  "platforms": {
+    "ios": "9.0"
+  },
+  "pod_target_xcconfig": {
+    "CLANG_ALLOW_NON_MODULAR_INCLUDES_IN_FRAMEWORK_MODULES": "YES",
+    "DEFINES_MODULE ": "YES"
+  },
+  "requires_arc": true,
+  "source_files": [
+    "AsyncMessagesViewController/**/*.{h,m,swift}"
+  ],
+  "resources": [
+    "AsyncMessagesViewController/Assets/AsyncMessagesViewController.bundle"
+  ],
+  "dependencies": {
+    "AsyncDisplayKit": [
+      "~> 1.9.80"
+    ],
+    "SlackTextViewController": [
+      "~> 1.9.3"
+    ]
+  }
+}

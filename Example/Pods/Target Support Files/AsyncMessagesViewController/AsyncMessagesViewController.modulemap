@@ -1,0 +1,6 @@
+framework module AsyncMessagesViewController {
+  umbrella header "AsyncMessagesViewController-umbrella.h"
+
+  export *
+  module * { export * }
+}

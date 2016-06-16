@@ -1,42 +1,31 @@
-#
-# Be sure to run `pod lib lint AsyncMessagesViewController.podspec' to ensure this is a
-# valid spec before submitting.
-#
-# Any lines starting with a # are optional, but their use is encouraged
-# To learn more about a Podspec see http://guides.cocoapods.org/syntax/podspec.html
-#
-
 Pod::Spec.new do |s|
-  s.name             = 'AsyncMessagesViewController'
-  s.version          = '0.1.0'
-  s.summary          = 'A short description of AsyncMessagesViewController.'
-
-# This description is used to generate tags and improve search results.
-#   * Think: What does it do? Why did you write it? What is the focus?
-#   * Try to keep it short, snappy and to the point.
-#   * Write the description between the DESC delimiters below.
-#   * Finally, don't worry about the indent, CocoaPods strips it!
-
+  s.name             = "AsyncMessagesViewController"
+  s.version          = "0.0.0"
+  s.summary          = "A smooth, responsive and flexible messages UI library for iOS."
   s.description      = <<-DESC
-TODO: Add long description of the pod here.
+A smooth, responsive and flexible messages UI library for iOS. Built on top of the awesome AsyncDisplayKit framework, it takes full advantage of asynchronous sizing, (non-auto) layout and text rendering to deliver a 5x fps (subject to increase) scrolling experience.
                        DESC
+  s.homepage         = "https://github.com/nguyenhuy/AsyncMessagesViewController"
+  s.screenshots      = "https://raw.githubusercontent.com/nguyenhuy/AsyncMessagesViewController/master/Screenshots/screenshot1.png", "https://raw.githubusercontent.com/nguyenhuy/AsyncMessagesViewController/master/Screenshots/screenshot2.png"
+  s.license          = 'MIT'
+  s.author           = { "Huy Nguyen" => "no_email_for_huy@please_fill_this_in", "Edward Valentini" => "edward@interlook.com" }
+  s.source           = { :git => "https://github.com/edwardvalentini/AsyncMessagesViewController.git", :tag => s.version.to_s }
 
-  s.homepage         = 'https://github.com/<GITHUB_USERNAME>/AsyncMessagesViewController'
-  # s.screenshots     = 'www.example.com/screenshots_1', 'www.example.com/screenshots_2'
-  s.license          = { :type => 'MIT', :file => 'LICENSE' }
-  s.author           = { 'Edward Valentini' => 'edward@interlook.com' }
-  s.source           = { :git => 'https://github.com/<GITHUB_USERNAME>/AsyncMessagesViewController.git', :tag => s.version.to_s }
-  # s.social_media_url = 'https://twitter.com/<TWITTER_USERNAME>'
+  s.platform     = :ios, '9.0'
+  s.ios.deployment_target = '9.0'
 
-  s.ios.deployment_target = '8.0'
+  s.pod_target_xcconfig = {
+                 'CLANG_ALLOW_NON_MODULAR_INCLUDES_IN_FRAMEWORK_MODULES' => 'YES',
+                 'DEFINES_MODULE ' => 'YES',
+               }
 
-  s.source_files = 'AsyncMessagesViewController/Classes/**/*'
-  
-  # s.resource_bundles = {
-  #   'AsyncMessagesViewController' => ['AsyncMessagesViewController/Assets/*.png']
-  # }
+  s.requires_arc = true
 
-  # s.public_header_files = 'Pod/Classes/**/*.h'
-  # s.frameworks = 'UIKit', 'MapKit'
-  # s.dependency 'AFNetworking', '~> 2.3'
+  s.source_files = ['AsyncMessagesViewController/**/*.{h,m,swift}']
+
+  s.resources = ['AsyncMessagesViewController/Assets/AsyncMessagesViewController.bundle']
+
+  s.dependency 'AsyncDisplayKit', '~> 1.9.80'
+  s.dependency 'SlackTextViewController', '~> 1.9.3'
+
 end

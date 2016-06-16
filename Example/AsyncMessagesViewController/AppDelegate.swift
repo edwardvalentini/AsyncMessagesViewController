@@ -2,8 +2,8 @@
 //  AppDelegate.swift
 //  AsyncMessagesViewController
 //
-//  Created by Edward Valentini on 06/16/2016.
-//  Copyright (c) 2016 Edward Valentini. All rights reserved.
+//  Created by Huy Nguyen on 17/02/15.
+//  Copyright (c) 2015 Huy Nguyen. All rights reserved.
 //
 
 import UIKit
@@ -15,7 +15,11 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
 
 
     func application(application: UIApplication, didFinishLaunchingWithOptions launchOptions: [NSObject: AnyObject]?) -> Bool {
-        // Override point for customization after application launch.
+        
+        window = UIWindow(frame: UIScreen.mainScreen().bounds)
+        window!.rootViewController = UINavigationController(rootViewController: ViewController())
+        window!.makeKeyAndVisible()
+        
         return true
     }
 
