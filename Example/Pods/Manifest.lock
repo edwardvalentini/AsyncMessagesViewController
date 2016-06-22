@@ -7,7 +7,7 @@ PODS:
   - AsyncDisplayKit/PINRemoteImage (1.9.80):
     - AsyncDisplayKit/Core
     - PINRemoteImage/iOS (>= 3.0.0-beta.2)
-  - AsyncMessagesViewController (0.0.9):
+  - AsyncMessagesViewController (0.0.1):
     - AsyncDisplayKit (~> 1.9.80)
     - SlackTextViewController (~> 1.9.3)
   - LoremIpsum (1.0.0)
@@ -28,7 +28,7 @@ EXTERNAL SOURCES:
 
 SPEC CHECKSUMS:
   AsyncDisplayKit: ab57b10cd058797015c77be10407f3dc13027c85
-  AsyncMessagesViewController: 66ad02a3f59814fb9b3b6ea500bf9df9b56ee204
+  AsyncMessagesViewController: e6f5bb0e24c1264f81974638c129ba89ab815325
   LoremIpsum: 9029c55d36501b2ee0b05cc9ecda11d3a0479160
   PINCache: 078426d356ab95ef875e9e62e5c35a2ea3333c28
   PINRemoteImage: 197554c5ba57a6ae90f5db441651180039fc9062
