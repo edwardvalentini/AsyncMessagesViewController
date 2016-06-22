@@ -31,7 +31,7 @@ public class MessageBubbleImageProvider {
     private let incomingColor: UIColor
     private var imageCache = [MessageProperties: UIImage]()
     
-    init(incomingColor: UIColor = kDefaultIncomingColor, outgoingColor: UIColor = kDefaultOutgoingColor) {
+    public init(incomingColor: UIColor = kDefaultIncomingColor, outgoingColor: UIColor = kDefaultOutgoingColor) {
         self.incomingColor = incomingColor
         self.outgoingColor = outgoingColor
     }

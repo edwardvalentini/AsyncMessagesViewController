@@ -48,7 +48,7 @@ public class MessageTextBubbleNode: ASDisplayNode {
     private let bubbleImageNode: ASImageNode
     private let textNode: ASTextNode
     
-    init(text: NSAttributedString, isOutgoing: Bool, bubbleImage: UIImage) {
+    public init(text: NSAttributedString, isOutgoing: Bool, bubbleImage: UIImage) {
         self.isOutgoing = isOutgoing
 
         bubbleImageNode = ASImageNode()

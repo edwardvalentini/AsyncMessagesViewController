@@ -15,7 +15,7 @@ public class MessageTimestampFormatter {
     private let dateTextAttributes: [String: AnyObject]
     private let timeTextAttributes: [String: AnyObject]
     
-    init() {
+    public init() {
         dateFormatter = NSDateFormatter()
         dateFormatter.locale = NSLocale.currentLocale()
         dateFormatter.doesRelativeDateFormatting = true
@@ -33,7 +33,7 @@ public class MessageTimestampFormatter {
         ]
     }
 
-    func attributedTimestamp(date: NSDate) -> NSAttributedString {
+    public func attributedTimestamp(date: NSDate) -> NSAttributedString {
         let relativeDate = relativeDateString(date)
         let time = timeString(date)
         let timestamp = NSMutableAttributedString(string: relativeDate, attributes: dateTextAttributes)

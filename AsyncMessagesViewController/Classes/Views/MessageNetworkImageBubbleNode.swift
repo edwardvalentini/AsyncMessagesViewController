@@ -23,7 +23,7 @@ public class MessageNetworkImageBubbleNode: ASNetworkImageNode {
     private let minSize: CGSize
     private let bubbleImage: UIImage
     
-    init(URL: NSURL?, bubbleImage: UIImage, minSize: CGSize = CGSizeMake(210, 150)) {
+    public init(URL: NSURL?, bubbleImage: UIImage, minSize: CGSize = CGSizeMake(210, 150)) {
         self.minSize = minSize
         self.bubbleImage = bubbleImage
         super.init(cache: nil, downloader: ASBasicImageDownloader.sharedImageDownloader())
