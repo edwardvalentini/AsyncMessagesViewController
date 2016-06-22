@@ -31,7 +31,7 @@ import Foundation
 
 public class AsyncMessagesConfiguration {
 
-    static var messageTranscriptScrollsToTop : Bool = true
+    public static var messageTranscriptScrollsToTop : Bool = true
     
     
 }
