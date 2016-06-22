@@ -102,6 +102,10 @@ public class DefaultAsyncMessagesCollectionViewDataSource: NSObject, AsyncMessag
         return messages[indexPath.item]
     }
     
+    public func collectionView(collectionView: ASCollectionView, replaceMessages newMessages: [MessageData], completion: ((Bool) -> ())?) {
+        // fill in later. work in progress.
+    }
+    
     public func collectionView(collectionView: ASCollectionView, insertMessages newMessages: [MessageData], completion: ((Bool) -> ())?) {
         
         if newMessages.isEmpty {

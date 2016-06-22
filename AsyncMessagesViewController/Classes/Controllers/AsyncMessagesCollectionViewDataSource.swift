@@ -19,6 +19,8 @@ public protocol AsyncMessagesCollectionViewDataSource: ASCollectionDataSource {
     
     func collectionView(collectionView: ASCollectionView, insertMessages newMessages: [MessageData], completion: ((Bool) -> ())?)
     
+    func collectionView(collectionView: ASCollectionView, replaceMessages newMessages: [MessageData], completion: ((Bool) -> ())?)
+    
     func collectionView(collectionView: ASCollectionView, deleteMessagesAtIndexPaths indexPaths: [NSIndexPath], completion: ((Bool) -> ())?)
     
 }
