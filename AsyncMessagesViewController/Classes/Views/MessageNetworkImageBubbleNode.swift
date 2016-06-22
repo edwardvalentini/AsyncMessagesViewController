@@ -17,6 +17,10 @@ public class MessageNetworkImageBubbleNodeFactory: MessageBubbleNodeFactory {
         return MessageNetworkImageBubbleNode(URL: URL, bubbleImage: bubbleImage)
     }
     
+    public init() {
+        
+    }
+    
 }
 
 public class MessageNetworkImageBubbleNode: ASNetworkImageNode {

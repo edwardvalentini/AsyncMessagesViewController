@@ -31,7 +31,7 @@ public class MessageCellNodeMetadataFactory {
         
     }
     
-    func buildMetadatas(messages: [MessageData], currentUserID: String?) -> [MessageCellNodeMetadata] {
+    public func buildMetadatas(messages: [MessageData], currentUserID: String?) -> [MessageCellNodeMetadata] {
         var result = [MessageCellNodeMetadata]()
         if messages.isEmpty {
             return result

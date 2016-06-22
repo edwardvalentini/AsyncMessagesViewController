@@ -36,7 +36,7 @@ public class MessageBubbleImageProvider {
         self.outgoingColor = outgoingColor
     }
     
-    func bubbleImage(isOutgoing: Bool, hasTail: Bool) -> UIImage {
+    public func bubbleImage(isOutgoing: Bool, hasTail: Bool) -> UIImage {
         let properties = MessageProperties(isOutgoing: isOutgoing, hasTail: hasTail)
         return bubbleImage(properties)
     }
