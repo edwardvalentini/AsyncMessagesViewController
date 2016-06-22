@@ -85,6 +85,7 @@
 		29B52ECC2460D29624DB90ADC99DC0A1 /* ASRangeController.mm in Sources */ = {isa = PBXBuildFile; fileRef = 322E6F6DCFA7691D49D44FCE61E5BBDD /* ASRangeController.mm */; };
 		2AA2C6B04B16E43EFA22308F57809B9E /* ASLayoutSpec.mm in Sources */ = {isa = PBXBuildFile; fileRef = 19BC4D4EDD5919CFD74AC28E8D0D9655 /* ASLayoutSpec.mm */; };
 		2B4C1910E4B9C3FBA4D285A2DCE5FFD1 /* PINRemoteImageManagerResult.m in Sources */ = {isa = PBXBuildFile; fileRef = 040D2E5EADC7E3E800A275FB2473A04D /* PINRemoteImageManagerResult.m */; };
+		2B596A421D1B4FE70037DD5C /* AsyncMessagesConfiguration.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2B596A411D1B4FE70037DD5C /* AsyncMessagesConfiguration.swift */; };
 		2BE5DE30584717322B6688492A82B658 /* MessageBubbleNodeFactory.swift in Sources */ = {isa = PBXBuildFile; fileRef = ACB6F5DBFDC9DB735BAD42B216AD82DE /* MessageBubbleNodeFactory.swift */; };
 		2CADD53F4098185A671E19624B17EB22 /* ASBatchFetching.m in Sources */ = {isa = PBXBuildFile; fileRef = 026017440665B959ED40BB69FFBC968F /* ASBatchFetching.m */; };
 		2E0A1AF9E89BF486636B42BF7275C061 /* ASCollectionViewProtocols.h in Headers */ = {isa = PBXBuildFile; fileRef = 32FA72DF0FF4276F3BD3CB178EC2505D /* ASCollectionViewProtocols.h */; settings = {ATTRIBUTES = (Public, ); }; };
@@ -590,6 +591,7 @@
 		29CD515A383A39D83236CDD75A7D90E5 /* ASDataController+Subclasses.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = "ASDataController+Subclasses.h"; path = "AsyncDisplayKit/Details/ASDataController+Subclasses.h"; sourceTree = "<group>"; };
 		2A0F009D20FC981523BDA9C67DCEF5C3 /* ASDefaultPlayButton.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = ASDefaultPlayButton.h; path = AsyncDisplayKit/Private/ASDefaultPlayButton.h; sourceTree = "<group>"; };
 		2B182953346B42727ED179809447CE1A /* PINAnimatedImageManager.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = PINAnimatedImageManager.h; path = Pod/Classes/PINAnimatedImageManager.h; sourceTree = "<group>"; };
+		2B596A411D1B4FE70037DD5C /* AsyncMessagesConfiguration.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AsyncMessagesConfiguration.swift; sourceTree = "<group>"; };
 		2C5471D2D30C52A255F655D2B0FDA321 /* ASLayoutable.mm */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.cpp.objcpp; name = ASLayoutable.mm; path = AsyncDisplayKit/Layout/ASLayoutable.mm; sourceTree = "<group>"; };
 		2D5D4E5CFBE5790BCB1DED7B9DA20363 /* ASNetworkImageNode.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = ASNetworkImageNode.h; path = AsyncDisplayKit/ASNetworkImageNode.h; sourceTree = "<group>"; };
 		2D6C84ADC98A78894215417FB041E6DB /* ASFlowLayoutController.mm */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.cpp.objcpp; name = ASFlowLayoutController.mm; path = AsyncDisplayKit/Details/ASFlowLayoutController.mm; sourceTree = "<group>"; };
@@ -1634,6 +1636,7 @@
 			isa = PBXGroup;
 			children = (
 				D103A4FD0271C006378905AF2745FFED /* MessageData.swift */,
+				2B596A411D1B4FE70037DD5C /* AsyncMessagesConfiguration.swift */,
 			);
 			path = Models;
 			sourceTree = "<group>";
@@ -2328,6 +2331,7 @@
 			files = (
 				7656D1F69EBE806370B1597E0AEC6577 /* AsyncMessagesCollectionViewDataSource.swift in Sources */,
 				52CBA6B80751A7432C82F0933B4638ED /* AsyncMessagesViewController-dummy.m in Sources */,
+				2B596A421D1B4FE70037DD5C /* AsyncMessagesConfiguration.swift in Sources */,
 				799E7DCD107DBD13374A077A694B8DBA /* AsyncMessagesViewController.swift in Sources */,
 				AD89E284A0EAB0FE27C4DCFF55E1F13C /* DefaultAsyncMessagesCollectionViewDataSource.swift in Sources */,
 				03078F64E8126ABBB76C08E44B294311 /* MessageBubbleImageProvider.swift in Sources */,

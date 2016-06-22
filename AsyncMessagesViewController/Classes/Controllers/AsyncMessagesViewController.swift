@@ -29,7 +29,7 @@ public class AsyncMessagesViewController: SLKTextViewController {
         let asyncCollectionView = ASCollectionView(frame: CGRectZero, collectionViewLayout: layout)
         
         asyncCollectionView.backgroundColor = UIColor.whiteColor()
-        asyncCollectionView.scrollsToTop = true
+        asyncCollectionView.scrollsToTop = AsyncMessagesConfiguration.messageTranscriptScrollsToTop
         asyncCollectionView.asyncDataSource = dataSource
         
         super.init(scrollView: asyncCollectionView)
