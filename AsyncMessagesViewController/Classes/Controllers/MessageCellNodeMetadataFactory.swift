@@ -10,11 +10,11 @@ import Foundation
 import AsyncDisplayKit
 
 public struct MessageCellNodeMetadata: Hashable {
-    let isOutgoing: Bool
-    let showsSenderName: Bool
-    let showsSenderAvatar: Bool
-    let showsTailForBubbleImage: Bool
-    let showsDate: Bool
+    public let isOutgoing: Bool
+    public let showsSenderName: Bool
+    public let showsSenderAvatar: Bool
+    public let showsTailForBubbleImage: Bool
+    public let showsDate: Bool
     
     public var hashValue: Int {
         return (24 &* isOutgoing.hashValue) &+ (18 &* showsSenderName.hashValue) &+ (12 &* showsSenderAvatar.hashValue) &+ (6 &* showsTailForBubbleImage.hashValue) &+ showsDate.hashValue

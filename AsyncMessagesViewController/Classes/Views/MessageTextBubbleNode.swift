@@ -25,6 +25,10 @@ public class MessageTextBubbleNodeFactory: MessageBubbleNodeFactory {
         return MessageTextBubbleNode(text: text, isOutgoing: isOutgoing, bubbleImage: bubbleImage)
     }
     
+    public init() {
+        
+    }
+    
 }
 
 private class MessageTextNode: ASTextNode {
