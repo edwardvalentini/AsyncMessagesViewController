@@ -96,7 +96,10 @@ class ViewController: AsyncMessagesViewController, ASCollectionDelegate {
                 sender: sender)
             messages.append(message)
         }
-        dataSource!.collectionView(collectionView, insertMessages: messages, completion: nil)
+        //dataSource!.collectionView(collectionView, insertMessages: messages, completion: nil)
+        dataSource?.collectionView(collectionView, insertMessages: messages, completion: { [unowned self] (boolVal) in
+            self.scrollCollectionViewToBottom()
+        })
     }
     
     func changeCurrentUser() {

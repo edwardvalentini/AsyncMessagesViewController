@@ -34,7 +34,7 @@ public class AsyncMessagesViewController: SLKTextViewController {
         
         super.init(scrollView: asyncCollectionView)
         
-        inverted = false
+        inverted = AsyncMessagesConfiguration.invertScrollView
     }
 
     required public init(coder aDecoder: NSCoder) {

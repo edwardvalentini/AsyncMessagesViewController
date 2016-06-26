@@ -32,6 +32,6 @@ import Foundation
 public class AsyncMessagesConfiguration {
 
     public static var messageTranscriptScrollsToTop : Bool = true
-    
+    public static var invertScrollView : Bool = false
     
 }
