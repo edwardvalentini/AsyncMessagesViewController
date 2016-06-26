@@ -61,4 +61,12 @@ public class AsyncMessagesViewController: SLKTextViewController {
         }
     }
     
+    public func scrollCollectionViewToTop() {
+        let numberOfItems = dataSource?.collectionView(collectionView, numberOfItemsInSection: 0)
+        if numberOfItems! > 0 {
+            let firstItemIndexPath = NSIndexPath(forItem: 0, inSection: 0)
+            collectionView.scrollToItemAtIndexPath(firstItemIndexPath, atScrollPosition: .Top, animated: true)
+        }
+    }
+    
 }
