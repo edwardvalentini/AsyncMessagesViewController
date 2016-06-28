@@ -20,4 +20,23 @@ extension UIImage {
         UIGraphicsEndImageContext()
         return roundedImage
     }
+    
+    func imageMaskedWith(color: UIColor) -> UIImage {
+        let imageRect = CGRectMake(0, 0, size.width, size.height)
+        
+        UIGraphicsBeginImageContextWithOptions(imageRect.size, false, scale)
+        let context = UIGraphicsGetCurrentContext()
+        
+        CGContextScaleCTM(context, 1, -1)
+        CGContextTranslateCTM(context, 0, -(imageRect.size.height))
+        
+        CGContextClipToMask(context, imageRect, CGImage)
+        CGContextSetFillColorWithColor(context, color.CGColor)
+        CGContextFillRect(context, imageRect)
+        
+        let newImage = UIGraphicsGetImageFromCurrentImageContext()
+        UIGraphicsEndImageContext()
+        
+        return newImage
+    }
 }

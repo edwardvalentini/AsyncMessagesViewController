@@ -10,11 +10,10 @@
 		00038607AA9B6B505209CB2DB4D32A7D /* PINRemoteImageTask.h in Headers */ = {isa = PBXBuildFile; fileRef = A6D2B9EE8E870790B3E2AAB801A78BA1 /* PINRemoteImageTask.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		004C8762CDADD1C8705B1F2956FC5E50 /* ASCollectionViewLayoutController.h in Headers */ = {isa = PBXBuildFile; fileRef = 6636186030EBE4F9B67241D4E91427D6 /* ASCollectionViewLayoutController.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		00EA7923AD90FE194F1E270794A2632E /* ASStackLayoutSpec.mm in Sources */ = {isa = PBXBuildFile; fileRef = 1827B2A50DFDA09344C760C29E19DA83 /* ASStackLayoutSpec.mm */; };
-		010E8C7282DA10F6FC17C29DB6D99DD4 /* SLKInputAccessoryView.m in Sources */ = {isa = PBXBuildFile; fileRef = F91280417386F026DB2817A757F3A982 /* SLKInputAccessoryView.m */; };
+		01A5B92A4ECADEED54094F4C9AA9F528 /* SLKTextViewController.h in Headers */ = {isa = PBXBuildFile; fileRef = FBC7AD065CEE7AD524457B854450FFBD /* SLKTextViewController.h */; };
 		01F3B3A576616E837BC1D8169934CC87 /* ASTableView.mm in Sources */ = {isa = PBXBuildFile; fileRef = 87D6B4FBA51F7931168242E5BF1C681B /* ASTableView.mm */; };
 		025FC9F2475660E93F1C2F9229F66F14 /* ASScrollNode.h in Headers */ = {isa = PBXBuildFile; fileRef = 847278EF84E83D9EF6B1A8AB03542244 /* ASScrollNode.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		02EA6933C0BCAF6E2791147DB42750AC /* ASTextKitTruncating.h in Headers */ = {isa = PBXBuildFile; fileRef = EDE98C7F18873DED3AB2318ED62883B5 /* ASTextKitTruncating.h */; settings = {ATTRIBUTES = (Project, ); }; };
-		03078F64E8126ABBB76C08E44B294311 /* MessageBubbleImageProvider.swift in Sources */ = {isa = PBXBuildFile; fileRef = BFE7F645A6A9BCF6BC2224E44D469CFD /* MessageBubbleImageProvider.swift */; };
 		04148994C6A0AE4028B33C172F84662E /* ASScrollDirection.h in Headers */ = {isa = PBXBuildFile; fileRef = ACE909FC083947B7A73C788CCAE1FF87 /* ASScrollDirection.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		04B401F0CD31429C54930C83D8A305E9 /* _ASPendingState.mm in Sources */ = {isa = PBXBuildFile; fileRef = EF0A5045391DE320C239E61521159B50 /* _ASPendingState.mm */; };
 		04C3BD9965BC59DE636F1B9A77999C4D /* ASControlNode.mm in Sources */ = {isa = PBXBuildFile; fileRef = C3FBD30605ACF98A193E324A6BC1C14F /* ASControlNode.mm */; };
@@ -23,23 +22,20 @@
 		07115328EC395E5C53932C73A88908A9 /* ASRelativeSize.mm in Sources */ = {isa = PBXBuildFile; fileRef = F5FF9A87E2F0E27D875D185104163BA5 /* ASRelativeSize.mm */; };
 		071F75E20C165CC072A6A52AE6D58291 /* ASImageNode+tvOS.h in Headers */ = {isa = PBXBuildFile; fileRef = E6F709CA6C3F68118FEB783A81BDECD1 /* ASImageNode+tvOS.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		07AC7527365BA10D76983C9BE5E3DA28 /* Pods-AsyncMessagesViewController_Tests-umbrella.h in Headers */ = {isa = PBXBuildFile; fileRef = 82141F3F115C352AA7F57949EAA9A436 /* Pods-AsyncMessagesViewController_Tests-umbrella.h */; settings = {ATTRIBUTES = (Public, ); }; };
-		07CA11884E024E7E958F03E882190FE8 /* SLKTypingIndicatorView.h in Headers */ = {isa = PBXBuildFile; fileRef = DB3F81C52D7DB9BF71331D91F26908D0 /* SLKTypingIndicatorView.h */; };
 		07E171BED9E471CF0732BAC03F22E24D /* ASStaticLayoutSpec.mm in Sources */ = {isa = PBXBuildFile; fileRef = 0EA48617A9129FFDE96446A7A1E0F421 /* ASStaticLayoutSpec.mm */; };
 		07FD3D4F1BA4008984B34E8FE9454CF4 /* ASAbstractLayoutController.h in Headers */ = {isa = PBXBuildFile; fileRef = BA9A051FE67973B5A328D18B40A23AD8 /* ASAbstractLayoutController.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		084069AF8F1A83000D83158187055D94 /* ASCollectionViewFlowLayoutInspector.h in Headers */ = {isa = PBXBuildFile; fileRef = 69D8E11C682414E096F9D5E3227F2D0A /* ASCollectionViewFlowLayoutInspector.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		0876222D5FB85A6B1075407652ACF8F7 /* LoremIpsum.m in Sources */ = {isa = PBXBuildFile; fileRef = CDEDECB45646D99CCEE58DDF41C9BB25 /* LoremIpsum.m */; settings = {COMPILER_FLAGS = "-DOS_OBJECT_USE_OBJC=0"; }; };
 		0A791986C4018FDAC35139794854F5B7 /* ASTextKitAttributes.mm in Sources */ = {isa = PBXBuildFile; fileRef = 3ABBDF86933C67BB0EF61BFAD8FEF2EB /* ASTextKitAttributes.mm */; };
 		0BC2B09FE16776EDFEA1456F5BAA63C3 /* AsyncDisplayKit.h in Headers */ = {isa = PBXBuildFile; fileRef = 15E10D26C77C9CE413D98F1105277F5C /* AsyncDisplayKit.h */; settings = {ATTRIBUTES = (Public, ); }; };
-		0C75BC21C4579DFC1C2770AEF2244119 /* UIScrollView+SLKAdditions.h in Copy . Public Headers */ = {isa = PBXBuildFile; fileRef = D410EEF65831D63F3463CF60CF15592F /* UIScrollView+SLKAdditions.h */; };
 		0D9A70D67693A21DAC40400B19B10AA0 /* ASScrollDirection.m in Sources */ = {isa = PBXBuildFile; fileRef = D452AC1003A25D6DC01C1AA6F4FC7E40 /* ASScrollDirection.m */; };
 		0E809A38E568D3427D03783989FC046B /* ASTextKitRenderer+Positioning.mm in Sources */ = {isa = PBXBuildFile; fileRef = 4EB9FB589116083A88DCFBAEA5B33776 /* ASTextKitRenderer+Positioning.mm */; };
 		0E9DFEF913C17D4BDC2E6C7D1F2ABCE8 /* ASWeakSet.m in Sources */ = {isa = PBXBuildFile; fileRef = 10D9CF8679818D0A3063A97F4D4943FD /* ASWeakSet.m */; };
 		0EAE41BC40A0ACA8D6AAFAAF274B7260 /* Nullability.h in Headers */ = {isa = PBXBuildFile; fileRef = 7B362A37CD7CA9DD76CB3F9995F1321C /* Nullability.h */; settings = {ATTRIBUTES = (Public, ); }; };
-		0ED5C1E533CFE4A72D2B13895B05EE32 /* UIView+SLKAdditions.h in Copy . Public Headers */ = {isa = PBXBuildFile; fileRef = D37CD2E5A000CF41FD78D5355E932911 /* UIView+SLKAdditions.h */; };
 		0EFD94293981D4B9A7A972CFDF7BF526 /* _ASAsyncTransaction.h in Headers */ = {isa = PBXBuildFile; fileRef = 6B1908DAD3BDF0699A1E5ED7610B9ED9 /* _ASAsyncTransaction.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		0F3F7B5194942F01CE4BFDC00F8882BB /* UIResponder+SLKAdditions.m in Sources */ = {isa = PBXBuildFile; fileRef = 0788C43E40CBA8D1704B6C28DE70A3C9 /* UIResponder+SLKAdditions.m */; };
 		0F7D9EE32DCB1B5B8933B29A813432AF /* PINAlternateRepresentationProvider.h in Headers */ = {isa = PBXBuildFile; fileRef = 93E8CDCE0E87795C0D3A410797559F02 /* PINAlternateRepresentationProvider.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		106690AA7E84AF680A49580D596D26CE /* ASTextKitShadower.h in Headers */ = {isa = PBXBuildFile; fileRef = D3C4435D0AEFCE3364C40C9F741AD5CD /* ASTextKitShadower.h */; settings = {ATTRIBUTES = (Project, ); }; };
-		10BC113149BC98BAC9002A208C05839A /* SLKTextView.m in Sources */ = {isa = PBXBuildFile; fileRef = 3B460941326C781B1B52683A8BBB4FC0 /* SLKTextView.m */; };
 		134EC2FB8FE99B08B8DE8D7EAEA4A47E /* NSData+ImageDetectors.h in Headers */ = {isa = PBXBuildFile; fileRef = 8D4A897F142DA115073DAFE0A0964675 /* NSData+ImageDetectors.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		140995E23B899F895BED6FE874DD7F31 /* ASTextKitContext.mm in Sources */ = {isa = PBXBuildFile; fileRef = 6F42154A73A31AC013D44DC5389CC250 /* ASTextKitContext.mm */; };
 		141C1AC88571C14D26E19607DBC6F8D3 /* NSData+ImageDetectors.m in Sources */ = {isa = PBXBuildFile; fileRef = 41383AB0D3B23E10217B0D2A06A53458 /* NSData+ImageDetectors.m */; };
@@ -52,9 +48,12 @@
 		162ABEE313399A13AE40DD97FD82FD4E /* ASTextKitCoreTextAdditions.h in Headers */ = {isa = PBXBuildFile; fileRef = 198798F1BFD67FAB87961EB0959ED541 /* ASTextKitCoreTextAdditions.h */; settings = {ATTRIBUTES = (Project, ); }; };
 		1670A3E356D0D37A0131D0DB2F863E42 /* ASTraitCollection.h in Headers */ = {isa = PBXBuildFile; fileRef = F79116021EB9DBCB3335901508B085F6 /* ASTraitCollection.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		17DED324C448C8CD9E7506A00150C7CA /* _ASAsyncTransaction.mm in Sources */ = {isa = PBXBuildFile; fileRef = 8A1D06DF6608BD046BD5D224021E4A91 /* _ASAsyncTransaction.mm */; };
+		184E84A291256C4BA4A07846177FD2D3 /* NSBundle+AsyncMessagesViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1DB67E386F7E05A9AC3244444AE4D5E9 /* NSBundle+AsyncMessagesViewController.swift */; };
 		191819B17E3DD7DF8E6CDCC7E50FD87A /* ASTextKitRenderer+TextChecking.h in Headers */ = {isa = PBXBuildFile; fileRef = 2F40695E0C3D30E9EA147BC3973BE121 /* ASTextKitRenderer+TextChecking.h */; settings = {ATTRIBUTES = (Project, ); }; };
 		19CDF76039A55339D7CFC1F109721D13 /* ASLayoutablePrivate.h in Headers */ = {isa = PBXBuildFile; fileRef = DF2EDD0EAEC100E7A3E9ADD403332675 /* ASLayoutablePrivate.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		19D132E7E9C521360DC2D81ACC65BC86 /* SLKTypingIndicatorView.h in Headers */ = {isa = PBXBuildFile; fileRef = DB3F81C52D7DB9BF71331D91F26908D0 /* SLKTypingIndicatorView.h */; };
 		1A008946308737EC1FFEEC3673048C2C /* PINRemoteImage-umbrella.h in Headers */ = {isa = PBXBuildFile; fileRef = 6A319F3FC786CEA4CCA7931D61A82709 /* PINRemoteImage-umbrella.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		1AA3AECB92FE64843CE79578DDB29BC0 /* UIImage+AsyncMessagesViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 941D83483E76247688DFB65EB2222471 /* UIImage+AsyncMessagesViewController.swift */; };
 		1B7829598AE85595D8B89C7D7CA1FD42 /* ASTextKitEntityAttribute.h in Headers */ = {isa = PBXBuildFile; fileRef = 8D139B7876B7A205986A06047EC7F6A8 /* ASTextKitEntityAttribute.h */; settings = {ATTRIBUTES = (Project, ); }; };
 		1BE9B77D96DB7C1F96218E50C31D0138 /* _ASCoreAnimationExtras.h in Headers */ = {isa = PBXBuildFile; fileRef = 05549FBF41CB7FA065CBB1A4B493BAE3 /* _ASCoreAnimationExtras.h */; settings = {ATTRIBUTES = (Project, ); }; };
 		1C5CDAE80BEEC3E6C50F283063493A7B /* ASMultiplexImageNode.mm in Sources */ = {isa = PBXBuildFile; fileRef = BDE4386884F3A3F03B291F950BD3464E /* ASMultiplexImageNode.mm */; };
@@ -66,13 +65,12 @@
 		1F5E110F17201ABF290EAA00B6EC02D3 /* ASTabBarController.m in Sources */ = {isa = PBXBuildFile; fileRef = AE985932FFB9F0D32020116A0C4B9EA6 /* ASTabBarController.m */; };
 		208430CCE6625543E222A28CFF537F54 /* ASMainSerialQueue.h in Headers */ = {isa = PBXBuildFile; fileRef = F113AFD1B1DE804AB55812A0A61CCF53 /* ASMainSerialQueue.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		21148090C6C12FAFC4DFD63B5BED923A /* ASEqualityHashHelpers.h in Headers */ = {isa = PBXBuildFile; fileRef = 1BF2BEF0440E97AB629650F95DC301FA /* ASEqualityHashHelpers.h */; settings = {ATTRIBUTES = (Project, ); }; };
-		2167D07D5E488FA75EB1C0914F1FA112 /* AsyncMessagesViewController-umbrella.h in Headers */ = {isa = PBXBuildFile; fileRef = 411D941BD42D55C5B1A132A1D97AB230 /* AsyncMessagesViewController-umbrella.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		21D9A178D75AFE36D1EEF51FC1A10335 /* PINImageView+PINRemoteImage.m in Sources */ = {isa = PBXBuildFile; fileRef = DA3732753CE142B0CC6E9C5F45F02B18 /* PINImageView+PINRemoteImage.m */; };
 		22035A24B57A793BE14C9805A72129EB /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 07FA10155518D07C7413C5035CA5DFA3 /* UIKit.framework */; };
 		22C4E42D028DEB706AA7CEAC06C5DCA1 /* ASTextKitCoreTextAdditions.m in Sources */ = {isa = PBXBuildFile; fileRef = E977A1EDC0C201A5E6F7119B505F6606 /* ASTextKitCoreTextAdditions.m */; };
-		2384743DAEF311699953AD0C2FB4EBDB /* UIView+SLKAdditions.h in Headers */ = {isa = PBXBuildFile; fileRef = D37CD2E5A000CF41FD78D5355E932911 /* UIView+SLKAdditions.h */; };
-		239D40114A8939E23E8B976245EE8626 /* SLKTextInput+Implementation.m in Sources */ = {isa = PBXBuildFile; fileRef = 15706EEBDA336E77C25A7B6041848A56 /* SLKTextInput+Implementation.m */; };
+		22D987286A75E0D8305BA0C7E646CAC7 /* AsyncDisplayKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = EBD6670BC0FC769DEAF4128B78F3F313 /* AsyncDisplayKit.framework */; };
 		241F580F76BF57303D0CFB7E0E59B92B /* ASLayoutController.h in Headers */ = {isa = PBXBuildFile; fileRef = 36C448698AFF3C0E38FDEA8620FFA867 /* ASLayoutController.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		245494F2A38F584ECAAC1CD5A04D4C41 /* UIView+SLKAdditions.h in Copy . Public Headers */ = {isa = PBXBuildFile; fileRef = D37CD2E5A000CF41FD78D5355E932911 /* UIView+SLKAdditions.h */; };
 		2488AB060F2A122B74F883694A8F9E53 /* ASIndexPath.m in Sources */ = {isa = PBXBuildFile; fileRef = E931747FCF3A353EDB712E00968565A1 /* ASIndexPath.m */; };
 		24CBADED7FD279E8F5B80BFE995CFB1E /* PINRemoteImageProcessorTask.h in Headers */ = {isa = PBXBuildFile; fileRef = E45ACFE7342F9CD7C6492DB792E8E6AB /* PINRemoteImageProcessorTask.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		274BCFB0746A68736497B0FB7B909C72 /* _ASAsyncTransactionGroup.m in Sources */ = {isa = PBXBuildFile; fileRef = 7298B0C1989CEA57C9285A1CD627F25F /* _ASAsyncTransactionGroup.m */; };
@@ -85,8 +83,8 @@
 		29B52ECC2460D29624DB90ADC99DC0A1 /* ASRangeController.mm in Sources */ = {isa = PBXBuildFile; fileRef = 322E6F6DCFA7691D49D44FCE61E5BBDD /* ASRangeController.mm */; };
 		2AA2C6B04B16E43EFA22308F57809B9E /* ASLayoutSpec.mm in Sources */ = {isa = PBXBuildFile; fileRef = 19BC4D4EDD5919CFD74AC28E8D0D9655 /* ASLayoutSpec.mm */; };
 		2B4C1910E4B9C3FBA4D285A2DCE5FFD1 /* PINRemoteImageManagerResult.m in Sources */ = {isa = PBXBuildFile; fileRef = 040D2E5EADC7E3E800A275FB2473A04D /* PINRemoteImageManagerResult.m */; };
-		2B596A421D1B4FE70037DD5C /* AsyncMessagesConfiguration.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2B596A411D1B4FE70037DD5C /* AsyncMessagesConfiguration.swift */; };
-		2BE5DE30584717322B6688492A82B658 /* MessageBubbleNodeFactory.swift in Sources */ = {isa = PBXBuildFile; fileRef = ACB6F5DBFDC9DB735BAD42B216AD82DE /* MessageBubbleNodeFactory.swift */; };
+		2C5BC978A7B4BE24F139FD61BD30CE4E /* UIResponder+SLKAdditions.h in Headers */ = {isa = PBXBuildFile; fileRef = 21CA42FCC4C97B65F2DD72873FBDFB73 /* UIResponder+SLKAdditions.h */; };
+		2C8A3D74A0E3D74334035E4A69DE9A37 /* AsyncMessagesViewController-umbrella.h in Headers */ = {isa = PBXBuildFile; fileRef = 411D941BD42D55C5B1A132A1D97AB230 /* AsyncMessagesViewController-umbrella.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		2CADD53F4098185A671E19624B17EB22 /* ASBatchFetching.m in Sources */ = {isa = PBXBuildFile; fileRef = 026017440665B959ED40BB69FFBC968F /* ASBatchFetching.m */; };
 		2E0A1AF9E89BF486636B42BF7275C061 /* ASCollectionViewProtocols.h in Headers */ = {isa = PBXBuildFile; fileRef = 32FA72DF0FF4276F3BD3CB178EC2505D /* ASCollectionViewProtocols.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		2E5454E479804DEE7B906733A405719D /* ASViewController.mm in Sources */ = {isa = PBXBuildFile; fileRef = 060EC885527D2246EF6B383984F2F0F0 /* ASViewController.mm */; };
@@ -96,14 +94,13 @@
 		2FC3116738CE75651765CA6D5CA2F7E2 /* ASTextKitAttributes.h in Headers */ = {isa = PBXBuildFile; fileRef = 182C992CAF13DF8A1DA9E9F7DC04F768 /* ASTextKitAttributes.h */; settings = {ATTRIBUTES = (Project, ); }; };
 		2FCC4C4D682331FF059ED83C7ACB6360 /* ASViewController.h in Headers */ = {isa = PBXBuildFile; fileRef = 04C55558E96617CC68CD100A0F1A256F /* ASViewController.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		2FDD3A996A8EFF16FDDA7A600A5382F3 /* PINRemoteImageCategoryManager.h in Headers */ = {isa = PBXBuildFile; fileRef = 8BF0C6085CBA73E3CB6D0B85EF677734 /* PINRemoteImageCategoryManager.h */; settings = {ATTRIBUTES = (Public, ); }; };
-		303FB48B6BE85C70765AEC0560147D0C /* SLKTextInputbar.h in Headers */ = {isa = PBXBuildFile; fileRef = 8942B0A1B9CC14F1844A2E8653840AAE /* SLKTextInputbar.h */; };
 		3167BF70AF3630BF7F184C1B75BF89E8 /* ASTextNode.h in Headers */ = {isa = PBXBuildFile; fileRef = 7CD72C4FE595EE151FE47EC5B5A3BB9E /* ASTextNode.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		31A05297AC34D3470F792F7667835F92 /* PINImage+WebP.h in Headers */ = {isa = PBXBuildFile; fileRef = E85901FDB7CA0B081DB38AF22287E77A /* PINImage+WebP.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		31C591186E6EE6FA99B6E4F567C74A47 /* SLKTextInput.h in Headers */ = {isa = PBXBuildFile; fileRef = 8AF4FA582845A2F5C1BAC4C098E8175C /* SLKTextInput.h */; };
 		32923B1FDCCE48F496EF3CFE61274D78 /* _ASDisplayViewAccessiblity.h in Headers */ = {isa = PBXBuildFile; fileRef = F9BB5D4D946B48215CCDEABBDFEB1FC0 /* _ASDisplayViewAccessiblity.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		3306E9EC6AE0AC333E7406336A0285BC /* ASAssert.h in Headers */ = {isa = PBXBuildFile; fileRef = 043A6BFF43EE842AECA7BFB440F2A864 /* ASAssert.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		341F5DF94D45A4353AAC4D3D0506ACA5 /* ASBackgroundLayoutSpec.h in Headers */ = {isa = PBXBuildFile; fileRef = D7D5779D37E96E6D22F900C14873B1FC /* ASBackgroundLayoutSpec.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		359E872AA722377DBB5513BCE86DF8C2 /* ASCellNode.h in Headers */ = {isa = PBXBuildFile; fileRef = 7820801D0C17D92C25325E10B3F6F200 /* ASCellNode.h */; settings = {ATTRIBUTES = (Public, ); }; };
-		36325729781C01113C5FB1FA0DC3A2BB /* UIResponder+SLKAdditions.m in Sources */ = {isa = PBXBuildFile; fileRef = 0788C43E40CBA8D1704B6C28DE70A3C9 /* UIResponder+SLKAdditions.m */; };
 		3632937242300152F23A379BCDB660AB /* ASDisplayNode+AsyncDisplay.mm in Sources */ = {isa = PBXBuildFile; fileRef = FB1ACF5F91C489036AB600246F82C7F2 /* ASDisplayNode+AsyncDisplay.mm */; };
 		3654804C18E9FDADF7F0C38C79FDA361 /* ASCenterLayoutSpec.h in Headers */ = {isa = PBXBuildFile; fileRef = C87E2846D61C0FDF4703467A595FF641 /* ASCenterLayoutSpec.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		37A6DE6F0EBA2E179E665F391B1A72A2 /* ASRatioLayoutSpec.h in Headers */ = {isa = PBXBuildFile; fileRef = 3B9ADBCB002F9AB2B667E0E89219A69F /* ASRatioLayoutSpec.h */; settings = {ATTRIBUTES = (Public, ); }; };
@@ -116,48 +113,48 @@
 		3C9D4F31C48733A03839A73547855D09 /* _ASScopeTimer.h in Headers */ = {isa = PBXBuildFile; fileRef = BD263AFC5131F560E5FB0F7BFF04639B /* _ASScopeTimer.h */; settings = {ATTRIBUTES = (Project, ); }; };
 		3D05EB93C9E0ECF8AFA4531D6662D435 /* ASButtonNode.mm in Sources */ = {isa = PBXBuildFile; fileRef = 531077A034834666B75001A5C38A1AC5 /* ASButtonNode.mm */; };
 		3D29F4ABAEFDE355F84BB67AAD4696E8 /* PINCache.h in Headers */ = {isa = PBXBuildFile; fileRef = B14AB1D3B87359BBF86594D929B892C2 /* PINCache.h */; settings = {ATTRIBUTES = (Public, ); }; };
-		3D972262393743335CCBE8A99D60B379 /* SlackTextViewController-umbrella.h in Headers */ = {isa = PBXBuildFile; fileRef = 8A5DCD7B26684EE08D8FE06CF6F6A145 /* SlackTextViewController-umbrella.h */; settings = {ATTRIBUTES = (Public, ); }; };
-		3FD4B5025C26FEEEAE98BCC1A7F5437A /* SLKTextInputbar.h in Copy . Public Headers */ = {isa = PBXBuildFile; fileRef = 8942B0A1B9CC14F1844A2E8653840AAE /* SLKTextInputbar.h */; };
+		4033CFE658676863366DD6CB6D933D76 /* SlackTextViewController.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = DDDFD80EC04F049564FB61A390E5BD8E /* SlackTextViewController.framework */; };
 		41839141C30C3680A0DCA15790D21C74 /* ASPagerNode.m in Sources */ = {isa = PBXBuildFile; fileRef = FCE6CA6EE811955D3D684F1F47716BCE /* ASPagerNode.m */; };
 		420036E04AE49AC9115358709B544B01 /* ASTextKitRenderer.mm in Sources */ = {isa = PBXBuildFile; fileRef = AE6BB1816EEC665E20D074D15528B124 /* ASTextKitRenderer.mm */; };
 		42B5205046346E9D4022E0B5CE2F478D /* PINRemoteImageCategoryManager.m in Sources */ = {isa = PBXBuildFile; fileRef = EC272694F064B79DA3FA7CF44B431845 /* PINRemoteImageCategoryManager.m */; };
+		436E8E378690A54EBB80A5D1BDE01B0C /* UIView+SLKAdditions.h in Headers */ = {isa = PBXBuildFile; fileRef = D37CD2E5A000CF41FD78D5355E932911 /* UIView+SLKAdditions.h */; };
 		45368CC72E838354229F1E6E72C2F0EE /* ASImageNode+CGExtras.m in Sources */ = {isa = PBXBuildFile; fileRef = D5D76FAB00E538A160F2BE26C2B2DE09 /* ASImageNode+CGExtras.m */; };
 		469F9004471910A81B4FBA4BB2FBF340 /* AssetsLibrary.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 006CA9EB2528D673CA6A3D795CA6C24A /* AssetsLibrary.framework */; };
+		46D7553C268280F2ACEB94B1905E72E0 /* MessageTextBubbleNode.swift in Sources */ = {isa = PBXBuildFile; fileRef = B1E1B8E0874AF34129DEC872AC1AB0A7 /* MessageTextBubbleNode.swift */; };
 		472245F0258C12CEBC8F768B2AE18AFD /* ASDataController.mm in Sources */ = {isa = PBXBuildFile; fileRef = E9A1C66F0A2FDF7EF5A730E5EBC30E2E /* ASDataController.mm */; };
-		48787890AE2CB9A822CCD53DBE909820 /* MessageTimestampFormatter.swift in Sources */ = {isa = PBXBuildFile; fileRef = D453DD00A909AB0BC97A520EEF43B61C /* MessageTimestampFormatter.swift */; };
+		49510CC954ADCE622154870ACD338823 /* MessageBubbleImageProvider.swift in Sources */ = {isa = PBXBuildFile; fileRef = E9F068FC04DAC7B1F17C65D2DD39EAC1 /* MessageBubbleImageProvider.swift */; };
 		4A05EF74F65D5CD07414A842167C94C5 /* ASDataController+Subclasses.h in Headers */ = {isa = PBXBuildFile; fileRef = 29CD515A383A39D83236CDD75A7D90E5 /* ASDataController+Subclasses.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		4AE20545A6F41C3228B5FC0C331EE610 /* AsyncDisplayKit+Debug.h in Headers */ = {isa = PBXBuildFile; fileRef = B92C6DFE0DA9AF47AE5B43262D51F381 /* AsyncDisplayKit+Debug.h */; settings = {ATTRIBUTES = (Public, ); }; };
-		4D26CBD7CE50D725C2F75CA42CDF0592 /* SLKTextInput.h in Headers */ = {isa = PBXBuildFile; fileRef = 8AF4FA582845A2F5C1BAC4C098E8175C /* SLKTextInput.h */; };
+		4AEBABC9308F30AA0C95F389C7D2D763 /* SLKInputAccessoryView.h in Headers */ = {isa = PBXBuildFile; fileRef = 77E729C106ACCEABC6CD7CA5244C9169 /* SLKInputAccessoryView.h */; };
+		4B0C4186C2ED28E6AB9B7881BAFA32EA /* AsyncMessagesCollectionViewDataSource.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0090EE7C7182E9038F7F418EEF35C313 /* AsyncMessagesCollectionViewDataSource.swift */; };
 		4F277BB88D6AD1E6E36D3B2EC51B0AC8 /* ASPagerFlowLayout.m in Sources */ = {isa = PBXBuildFile; fileRef = 15FB3C77EC2AB688E3731DBFB253B430 /* ASPagerFlowLayout.m */; };
-		4F3D864D0E813D7703AA29CA57C5E3A1 /* SLKTextView+SLKAdditions.h in Copy . Public Headers */ = {isa = PBXBuildFile; fileRef = A02EB8F9C59B257406E4EAAFBA4F6A46 /* SLKTextView+SLKAdditions.h */; };
 		4F4FCB5428744ADA9F9328E72CAB8355 /* ASImageNode.h in Headers */ = {isa = PBXBuildFile; fileRef = 209894DE0999F6936530FB059A733D56 /* ASImageNode.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		509BD5CEEFF466986BA842BCB5715D35 /* PINRemoteImageDownloadTask.h in Headers */ = {isa = PBXBuildFile; fileRef = AF40A5F3754DAE5DBB867AB9C6076FB3 /* PINRemoteImageDownloadTask.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		51044D23B7658F3A7E5BF289C04AADCB /* ASIndexedNodeContext.h in Headers */ = {isa = PBXBuildFile; fileRef = 6EA84983EEA70D6DB8B40DC1ED8FA37D /* ASIndexedNodeContext.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		510A15303FCCF156F3D961A846AAACBD /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 0D184769027146AD98A3D0E37366EEE3 /* Foundation.framework */; };
 		51EC08590C8B599B236489CB30D7DB38 /* _ASAsyncTransactionContainer+Private.h in Headers */ = {isa = PBXBuildFile; fileRef = 0A2B703F7FA150EF45B38AEBFC51CDF0 /* _ASAsyncTransactionContainer+Private.h */; settings = {ATTRIBUTES = (Public, ); }; };
-		52CBA6B80751A7432C82F0933B4638ED /* AsyncMessagesViewController-dummy.m in Sources */ = {isa = PBXBuildFile; fileRef = DCB098F66037E1FF71B4DACD21CC53EA /* AsyncMessagesViewController-dummy.m */; };
-		553C1A203F8D495F541152372061ACAF /* SLKTypingIndicatorView.m in Sources */ = {isa = PBXBuildFile; fileRef = BF38D215C0B6D5F87130E7A73F7BB7F7 /* SLKTypingIndicatorView.m */; };
-		55F9204FC93473DE4F348FBEBBE68D31 /* AsyncDisplayKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = EBD6670BC0FC769DEAF4128B78F3F313 /* AsyncDisplayKit.framework */; };
 		5654EF64F39678AD7BEA1C8C0E482869 /* _ASDisplayView.mm in Sources */ = {isa = PBXBuildFile; fileRef = 86580575FAE06D1717F5FFA921BEA0FC /* _ASDisplayView.mm */; };
 		571B1AD7F8272694051F45CB7C15D743 /* ASImageNode.mm in Sources */ = {isa = PBXBuildFile; fileRef = DA9A3401ADFAE6B13691AB44B10E2B9A /* ASImageNode.mm */; };
-		5725F451A54E47936DDDE59E85A4A6CB /* SLKTextView+SLKAdditions.h in Headers */ = {isa = PBXBuildFile; fileRef = A02EB8F9C59B257406E4EAAFBA4F6A46 /* SLKTextView+SLKAdditions.h */; };
+		573D7FD551B30770E98C6F85E41D7121 /* SLKTextViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 1B40BDDC2EF99A58283B75DE14DB0FC0 /* SLKTextViewController.m */; };
+		57522668F35E6DB5EDC46410DC36F409 /* UIScrollView+SLKAdditions.h in Headers */ = {isa = PBXBuildFile; fileRef = D410EEF65831D63F3463CF60CF15592F /* UIScrollView+SLKAdditions.h */; };
 		579A5C25661953A7C0010C9C9198C2CE /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 0D184769027146AD98A3D0E37366EEE3 /* Foundation.framework */; };
 		57C55B94ED1FD8EB769BFCC83BC6C450 /* _ASHierarchyChangeSet.m in Sources */ = {isa = PBXBuildFile; fileRef = 37F027FA99EDCB626BDD23CA67D80921 /* _ASHierarchyChangeSet.m */; };
 		57FA3E9B563E32A783954B46426738C0 /* ASRunLoopQueue.mm in Sources */ = {isa = PBXBuildFile; fileRef = B408FFEF20DDD698F13AB7C4809F7F16 /* ASRunLoopQueue.mm */; };
 		58511C4BBB8E7146321FA585EB710F66 /* PINURLSessionManager.h in Headers */ = {isa = PBXBuildFile; fileRef = 14DE747F7135652F2E1E39F9A68D6B84 /* PINURLSessionManager.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		586F26C62C676A70D5E6F9EBDB1312C0 /* ASDefaultPlayButton.m in Sources */ = {isa = PBXBuildFile; fileRef = 452B6767B04ADFF4CE356CA19412852A /* ASDefaultPlayButton.m */; };
 		58822DF2C31FBCC35C11B6702588E64A /* ASPINRemoteImageDownloader.m in Sources */ = {isa = PBXBuildFile; fileRef = 5D9700D8BC8D9A6D366E7BAC1F313007 /* ASPINRemoteImageDownloader.m */; };
-		58CDAC5C066A94061671DF075E4F70E0 /* SLKInputAccessoryView.h in Headers */ = {isa = PBXBuildFile; fileRef = 77E729C106ACCEABC6CD7CA5244C9169 /* SLKInputAccessoryView.h */; };
 		59A6C9D900D9A831E8956CA0B8977F6A /* ASTableView.h in Headers */ = {isa = PBXBuildFile; fileRef = E4E72838EFE3E2A04D4FC593C1871086 /* ASTableView.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		5A32EF14DC0BC1F01540FEEB615AF962 /* _ASTransitionContext.m in Sources */ = {isa = PBXBuildFile; fileRef = 1F40345AA3081CFE8CF401107BC91827 /* _ASTransitionContext.m */; };
 		5A3A8DFF670ABF521DFB10251B599EBC /* PINRemoteImageManager.h in Headers */ = {isa = PBXBuildFile; fileRef = 327321652ADAC12E3A4DDF642053F2A5 /* PINRemoteImageManager.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		5B3A56FF3C630D87899F0103E7818601 /* _ASAsyncTransactionGroup.h in Headers */ = {isa = PBXBuildFile; fileRef = 4B8C51C0DDFB5FB2EB999EFEAF108CAE /* _ASAsyncTransactionGroup.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		5C09A99A062C6817FE8CB95637CB50CB /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 0D184769027146AD98A3D0E37366EEE3 /* Foundation.framework */; };
 		5CEAC4685D2E8E52D54EDE393201393E /* ASNetworkImageNode.mm in Sources */ = {isa = PBXBuildFile; fileRef = 8E53CF7C8B1D1150BDEF1FAB86D80B75 /* ASNetworkImageNode.mm */; };
+		5D30FD89FBE16A87CA7D2C9E5CE4A1D0 /* SLKTextViewController.h in Copy . Public Headers */ = {isa = PBXBuildFile; fileRef = FBC7AD065CEE7AD524457B854450FFBD /* SLKTextViewController.h */; };
 		5DEB5B52FA19587D3842AB06FCE97766 /* ASVideoPlayerNode.mm in Sources */ = {isa = PBXBuildFile; fileRef = 8A43195FA6000CF859568316DAE8AC45 /* ASVideoPlayerNode.mm */; };
 		5E324FEF3F7EB36E20C4631964943AFA /* ASEditableTextNode.h in Headers */ = {isa = PBXBuildFile; fileRef = AF8874F4A835F75C9C8A881B60E23458 /* ASEditableTextNode.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		5ED1ECE72AC34EE000B0469F759B2970 /* PINImageView+PINRemoteImage.h in Headers */ = {isa = PBXBuildFile; fileRef = 57C53B063D1AB039F702C77DE7597944 /* PINImageView+PINRemoteImage.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		5EFB4ED453F6607B5A4609E9F8F99C33 /* ASCollectionView.mm in Sources */ = {isa = PBXBuildFile; fileRef = ACB3EFBF6F4317327BE73796E3DF1A85 /* ASCollectionView.mm */; };
-		5F2F6FC934FE13A487099FFFCC83C40F /* MessageData.swift in Sources */ = {isa = PBXBuildFile; fileRef = D103A4FD0271C006378905AF2745FFED /* MessageData.swift */; };
+		5FEDB0A8578A282495249F2036FF9658 /* UIScrollView+SLKAdditions.h in Copy . Public Headers */ = {isa = PBXBuildFile; fileRef = D410EEF65831D63F3463CF60CF15592F /* UIScrollView+SLKAdditions.h */; };
 		602E3807CABACFE2FA4D0520FE20595C /* ASTextKitEntityAttribute.m in Sources */ = {isa = PBXBuildFile; fileRef = 387318E2FF433D64B6CD4AEB84BF5D09 /* ASTextKitEntityAttribute.m */; };
 		6088FFA2D7F13B7B10B60E683DD139D6 /* ASDisplayNode+DebugTiming.mm in Sources */ = {isa = PBXBuildFile; fileRef = 6519DB4FB73B5AF288A85F3FC425A882 /* ASDisplayNode+DebugTiming.mm */; };
 		60EAC2F6282894D2CCF61D781E533A33 /* ASCollectionDataController.h in Headers */ = {isa = PBXBuildFile; fileRef = CB78725D0C21C541B4C50719A2C05631 /* ASCollectionDataController.h */; settings = {ATTRIBUTES = (Public, ); }; };
@@ -169,18 +166,14 @@
 		64FEA44694BD000A55BBCFA2CA8BBD6B /* ASDisplayNodeExtras.h in Headers */ = {isa = PBXBuildFile; fileRef = 22B9994C6D07680CCBE35315EA692433 /* ASDisplayNodeExtras.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		64FEC68CD3AAD3EFCEAD270FDD34F027 /* ASAsciiArtBoxCreator.m in Sources */ = {isa = PBXBuildFile; fileRef = E562DC1E61A69747F753A121CF3A1938 /* ASAsciiArtBoxCreator.m */; };
 		66034E7BE3C80DFC363D9768BE34E828 /* ASCollectionViewLayoutController.mm in Sources */ = {isa = PBXBuildFile; fileRef = C93DE2931FDA226CF2C8FFEE6B8A9737 /* ASCollectionViewLayoutController.mm */; };
-		6645E87F9D2F4BB26448D6095DBB2542 /* SLKTextInput.h in Copy . Public Headers */ = {isa = PBXBuildFile; fileRef = 8AF4FA582845A2F5C1BAC4C098E8175C /* SLKTextInput.h */; };
 		66FBCE0809D11832B46B4C55BA0B01B1 /* ASStackLayoutSpecUtilities.h in Headers */ = {isa = PBXBuildFile; fileRef = 7AD18A0C86DB1F0AEC217F2D56FD92FF /* ASStackLayoutSpecUtilities.h */; settings = {ATTRIBUTES = (Project, ); }; };
 		67078426F5D33EDD0609CD8BDAEEE8AA /* ASDisplayNodeExtras.mm in Sources */ = {isa = PBXBuildFile; fileRef = F0211F22EBDD7FAA5AE600E736F3995C /* ASDisplayNodeExtras.mm */; };
-		671797BE62C3FA95CE1E3157FDB09DD2 /* SlackTextViewController.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = DDDFD80EC04F049564FB61A390E5BD8E /* SlackTextViewController.framework */; };
 		673D7B9C6FE381ED2B67296DCC3F8ED7 /* ASLayoutSpec.h in Headers */ = {isa = PBXBuildFile; fileRef = 37BCDF0C8069E2D56749FA3999482E73 /* ASLayoutSpec.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		696B76E1B021310F7B1CFBDEFE308C4C /* PINCache-dummy.m in Sources */ = {isa = PBXBuildFile; fileRef = FB1BA3C33B6CEFEA378F5A558B9EB387 /* PINCache-dummy.m */; };
 		69E88C3DDFCF1A7BA1548EA2CEECF571 /* ASDisplayNode+FrameworkPrivate.h in Headers */ = {isa = PBXBuildFile; fileRef = 0BF931EC14FDA016A4F916D3576798FA /* ASDisplayNode+FrameworkPrivate.h */; settings = {ATTRIBUTES = (Project, ); }; };
-		6A12F783DDF0E39C04CF19B35D95C192 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 0D184769027146AD98A3D0E37366EEE3 /* Foundation.framework */; };
 		6A2B61F3C14F14A9F4810D457E266481 /* AsyncDisplayKit-dummy.m in Sources */ = {isa = PBXBuildFile; fileRef = 5E6916414085B0E2139571D21A2E71B7 /* AsyncDisplayKit-dummy.m */; };
 		6A2F647D06F66A610A9809356F63424E /* PINRemoteLock.m in Sources */ = {isa = PBXBuildFile; fileRef = 9A8F83F51A403BC1C953FF02C4AD519D /* PINRemoteLock.m */; };
 		6A7817DFA82695B941758BAFF851D1E6 /* ASCollectionDataController.mm in Sources */ = {isa = PBXBuildFile; fileRef = 8C1CC601DBF6DB16B4455335F486861E /* ASCollectionDataController.mm */; };
-		6AC3479149A7E1AA1780F1C468901F44 /* MessageCellNodeMetadataFactory.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7EBD2E69E7B82D675D42484B76ABD6C4 /* MessageCellNodeMetadataFactory.swift */; };
 		6C3CEC5A476C014FE7D3EC734079451A /* UIView+ASConvenience.h in Headers */ = {isa = PBXBuildFile; fileRef = 90E19FBCAC832D0FFC7007CD746F5D28 /* UIView+ASConvenience.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		6CE57E04A74A444E7A5DC0F9453F705B /* ASCollectionNode.h in Headers */ = {isa = PBXBuildFile; fileRef = 044AC3CAE0C84488F0EDDEFFEC2E722F /* ASCollectionNode.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		6D0C0F1EEAB38E5AC4725793DF7A526A /* ASCollectionInternal.h in Headers */ = {isa = PBXBuildFile; fileRef = 8B37C9B0958DB8706D691785D6CEE38A /* ASCollectionInternal.h */; settings = {ATTRIBUTES = (Public, ); }; };
@@ -190,39 +183,43 @@
 		6F3DAB3AAB278AC07E09049564457B59 /* NSMutableAttributedString+TextKitAdditions.m in Sources */ = {isa = PBXBuildFile; fileRef = 1607020D656BDBEDB61C5629F9C64068 /* NSMutableAttributedString+TextKitAdditions.m */; };
 		6F599F599257137DC853B824A52C3579 /* ASAbstractLayoutController.mm in Sources */ = {isa = PBXBuildFile; fileRef = C50A94DF4C17B0DB961EF7EE6478CF5D /* ASAbstractLayoutController.mm */; };
 		6F6186B9DCC3AE549C13EC00A15468A0 /* ASStackBaselinePositionedLayout.mm in Sources */ = {isa = PBXBuildFile; fileRef = 72AFB5669DE02EB5D5A4CD0C06E74798 /* ASStackBaselinePositionedLayout.mm */; };
-		700E98EE07B85B76C3FFB645D6838638 /* UIResponder+SLKAdditions.h in Copy . Public Headers */ = {isa = PBXBuildFile; fileRef = 21CA42FCC4C97B65F2DD72873FBDFB73 /* UIResponder+SLKAdditions.h */; };
+		6F91F32334FA4530DD211082F72A388D /* SLKTextView+SLKAdditions.h in Headers */ = {isa = PBXBuildFile; fileRef = A02EB8F9C59B257406E4EAAFBA4F6A46 /* SLKTextView+SLKAdditions.h */; };
 		710B96B1C5A3BF83BA59F337E91C0A54 /* PINAnimatedImageManager.m in Sources */ = {isa = PBXBuildFile; fileRef = CB5BCE602FD3B858EEED3648C421EB08 /* PINAnimatedImageManager.m */; };
 		7278E1873FA2ADB9FB68A8C4DBBB7FDD /* PINRemoteImageCallbacks.h in Headers */ = {isa = PBXBuildFile; fileRef = 0A6B9E6C9B601CEFC37FBC4A3FA1EC36 /* PINRemoteImageCallbacks.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		728B44A5DBE678FE072441A8A896ADEE /* _ASDisplayLayer.mm in Sources */ = {isa = PBXBuildFile; fileRef = 23B7827B777BD299177F9FCADDB16CBA /* _ASDisplayLayer.mm */; };
+		72F219B4587965B4DE40E2A4D325A242 /* SLKInputAccessoryView.h in Copy . Public Headers */ = {isa = PBXBuildFile; fileRef = 77E729C106ACCEABC6CD7CA5244C9169 /* SLKInputAccessoryView.h */; };
 		7308FFE98301FF8152E3335AB54E7B9B /* ASMultidimensionalArrayUtils.h in Headers */ = {isa = PBXBuildFile; fileRef = EE7AB4553FDB6C93B4C35247D902BD7E /* ASMultidimensionalArrayUtils.h */; settings = {ATTRIBUTES = (Project, ); }; };
+		742F9B9A24D713F41EE8E35CD5009E47 /* SLKTextInputbar.h in Headers */ = {isa = PBXBuildFile; fileRef = 8942B0A1B9CC14F1844A2E8653840AAE /* SLKTextInputbar.h */; };
 		74A33C0DF51EE075469B055FD8631609 /* ASTextKitContext.h in Headers */ = {isa = PBXBuildFile; fileRef = 25107E90D2D45673DDF6C7BE2D0B3D2E /* ASTextKitContext.h */; settings = {ATTRIBUTES = (Project, ); }; };
 		75F18A9C3744A9A3C2CA9C3E6785FAFE /* ASLayoutManager.m in Sources */ = {isa = PBXBuildFile; fileRef = DE2CE31BDE31692326B5755D947994D6 /* ASLayoutManager.m */; };
-		7656D1F69EBE806370B1597E0AEC6577 /* AsyncMessagesCollectionViewDataSource.swift in Sources */ = {isa = PBXBuildFile; fileRef = A007321A62DC1E8A18956273BC29A9D2 /* AsyncMessagesCollectionViewDataSource.swift */; };
 		7743DB7AE72317AF74A7C4D4D3C989BF /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 0D184769027146AD98A3D0E37366EEE3 /* Foundation.framework */; };
+		783FC7D0CB02C407A8FF0094E4044C1F /* SLKTextView.h in Headers */ = {isa = PBXBuildFile; fileRef = 0718D84106E0C69D00AFA84F5F2F9B78 /* SLKTextView.h */; };
 		78B0EF6A1E52290AD6B46B844513C3C9 /* Accelerate.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 09A5D6E537C5F3124940FF396506B802 /* Accelerate.framework */; };
 		792B66EED5A9AB7ED74337FC84F3EBE0 /* ASEnvironmentInternal.h in Headers */ = {isa = PBXBuildFile; fileRef = 153EBA4E1C7F94BB00471000713C4EFD /* ASEnvironmentInternal.h */; settings = {ATTRIBUTES = (Project, ); }; };
 		797322C458A57CAEF4370E2A0FA7F1E1 /* ASCollectionNode+Beta.h in Headers */ = {isa = PBXBuildFile; fileRef = D175714412730F94988E4019B15CDEE8 /* ASCollectionNode+Beta.h */; settings = {ATTRIBUTES = (Public, ); }; };
-		799E7DCD107DBD13374A077A694B8DBA /* AsyncMessagesViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 29B434861ABD2CF4F6F24B3EAD6872B1 /* AsyncMessagesViewController.swift */; };
 		7A05727EFFAB9CE064D77E05F2DDA976 /* ASImageNode+tvOS.m in Sources */ = {isa = PBXBuildFile; fileRef = D25F5497252CE3C9B8B75F19DE3DB674 /* ASImageNode+tvOS.m */; };
 		7B264E7EE566C8DDE2BED6812EE5AF52 /* LoremIpsum-dummy.m in Sources */ = {isa = PBXBuildFile; fileRef = 5866BE7C9CBA64B2D478CCFFEAF10DFF /* LoremIpsum-dummy.m */; };
+		7D02A6CAC7F1EE4426E0DF46BBB52F7C /* DefaultAsyncMessagesCollectionViewDataSource.swift in Sources */ = {isa = PBXBuildFile; fileRef = 44459BB4DC9A840F8B98190E1CAD0632 /* DefaultAsyncMessagesCollectionViewDataSource.swift */; };
 		7DADE4DFED68A53FDF38A6CC874A0D58 /* ASChangeSetDataController.m in Sources */ = {isa = PBXBuildFile; fileRef = 89323B56CBFC62C5A7D9A05301B0245E /* ASChangeSetDataController.m */; };
 		7F31BAE7A61F3F8216B7114DCE91A044 /* ASPhotosFrameworkImageRequest.h in Headers */ = {isa = PBXBuildFile; fileRef = 476583FF5F8FA9A2353F7DF1E6E3EBAD /* ASPhotosFrameworkImageRequest.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		7FED9A18D22422EDCB223860F5432996 /* PINImage+DecodedImage.h in Headers */ = {isa = PBXBuildFile; fileRef = 837FFA9D557FD92C981D6936636FC315 /* PINImage+DecodedImage.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		8048D03E05BE6886FA1C0BC32BC83829 /* PINRemoteImage.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 4D0B2F728FC17D4B6CF08AAA508C12DB /* PINRemoteImage.framework */; };
+		80762EC33826B43039170A21EAD0AC45 /* AsyncMessagesViewController-dummy.m in Sources */ = {isa = PBXBuildFile; fileRef = DCB098F66037E1FF71B4DACD21CC53EA /* AsyncMessagesViewController-dummy.m */; };
 		80985FDF82C49B269E0E0ABEA891A94A /* ASCollectionViewFlowLayoutInspector.m in Sources */ = {isa = PBXBuildFile; fileRef = 42477C978F66C00C692AFC1CD88CD1BB /* ASCollectionViewFlowLayoutInspector.m */; };
 		8122C716C100F9ADBC8D08C058B06923 /* ASTextNode+Beta.h in Headers */ = {isa = PBXBuildFile; fileRef = 83FA1CCAA3BAE24B2B3528D440CF840C /* ASTextNode+Beta.h */; settings = {ATTRIBUTES = (Public, ); }; };
-		8246B24A0CC38FCE13FA449EB8A04F0E /* UIScrollView+SLKAdditions.h in Headers */ = {isa = PBXBuildFile; fileRef = D410EEF65831D63F3463CF60CF15592F /* UIScrollView+SLKAdditions.h */; };
-		829B799E9F217B3B728D10A24073188E /* MessageCellNode.swift in Sources */ = {isa = PBXBuildFile; fileRef = 447A080F5A94598E04DB6F5C2A1A03FC /* MessageCellNode.swift */; };
+		81F7CC700F408CE98586A48DFF00C486 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 0D184769027146AD98A3D0E37366EEE3 /* Foundation.framework */; };
 		83595BE9E53317B031DD709038198B82 /* ASDealloc2MainObject.h in Headers */ = {isa = PBXBuildFile; fileRef = 3F05BF045D82468CE456DD7C841A8467 /* ASDealloc2MainObject.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		83BB1343BEB6F3333C9ADC4D31B19BA3 /* ASInsetLayoutSpec.h in Headers */ = {isa = PBXBuildFile; fileRef = C4282FBB91237B4A959907D1F50F07C8 /* ASInsetLayoutSpec.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		83D9AAA7045EA928C34B28F4CD593EDA /* ASSentinel.m in Sources */ = {isa = PBXBuildFile; fileRef = 239730121BE0A6F5D1323047688BCCA4 /* ASSentinel.m */; };
 		841536F26BDBDF0936456F211A531B8C /* ASMutableAttributedStringBuilder.h in Headers */ = {isa = PBXBuildFile; fileRef = F2CA48234B974C3A3222377687D6F6B7 /* ASMutableAttributedStringBuilder.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		8426AE510D4CC51E714A1EE7C070701C /* SLKTypingIndicatorView.m in Sources */ = {isa = PBXBuildFile; fileRef = BF38D215C0B6D5F87130E7A73F7BB7F7 /* SLKTypingIndicatorView.m */; };
 		847969A5236C11C62C1E87D89261194B /* PINCache.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 17482A981695B1086A92C017C5EF3137 /* PINCache.framework */; };
+		8499A367C7C138FFDF5EE8F4B9CA2E51 /* MessageBubbleNodeFactory.swift in Sources */ = {isa = PBXBuildFile; fileRef = 55E29DE7B150D33447364900D209FF4E /* MessageBubbleNodeFactory.swift */; };
 		86513EA7E55EB8E776FD13380DE82636 /* Pods-AsyncMessagesViewController_Example-umbrella.h in Headers */ = {isa = PBXBuildFile; fileRef = 229BCAC59E35C91CF14590B0DE9450FD /* Pods-AsyncMessagesViewController_Example-umbrella.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		872F6948B5D1159C1AAF7B52FD0AAAD3 /* ASOverlayLayoutSpec.mm in Sources */ = {isa = PBXBuildFile; fileRef = 3B012C0108176916B538510DDAAB5358 /* ASOverlayLayoutSpec.mm */; };
-		878F4A241E9D1771F35F991A1A6689DE /* UIView+SLKAdditions.m in Sources */ = {isa = PBXBuildFile; fileRef = 1914AB26EF5E1530AB561A931442D5D6 /* UIView+SLKAdditions.m */; };
 		87A1930FC75085C8C49CB1DAF1BB39BD /* ASChangeSetDataController.h in Headers */ = {isa = PBXBuildFile; fileRef = 12868DD70341612F0E2D83BA3A1E3776 /* ASChangeSetDataController.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		885F26E786048C81C0B7CCE4630E1740 /* ASStackLayoutSpec.h in Headers */ = {isa = PBXBuildFile; fileRef = 5CF0B6E2E7703120332FF14C91AA149E /* ASStackLayoutSpec.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		88C0D42A670980694660188B69CFE8CC /* AsyncMessagesViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2F5EAB5DD7DE7E1703CF0C5DE5EF841B /* AsyncMessagesViewController.swift */; };
 		89CEDDFA09E7A419B01C0799CBCB82E7 /* ASFlowLayoutController.h in Headers */ = {isa = PBXBuildFile; fileRef = 6B7EE58C3F18EA7B0683368295ADD3D6 /* ASFlowLayoutController.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		89F7212B22F83C4035CF21AAC481AD2A /* ASPendingStateController.mm in Sources */ = {isa = PBXBuildFile; fileRef = F27C4D115A51DF6D8C84601902E4B69B /* ASPendingStateController.mm */; };
 		8A017CFE676024A45CCF9443032009C3 /* ASScrollNode.m in Sources */ = {isa = PBXBuildFile; fileRef = 60D069426F23A1CF7296E9F1572657D2 /* ASScrollNode.m */; };
@@ -231,7 +228,6 @@
 		8C5B0BE73EACDF07CD8B35C894B25661 /* PINRemoteLock.h in Headers */ = {isa = PBXBuildFile; fileRef = E16B240F29F13A951D17123C1E4C5B83 /* PINRemoteLock.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		8C5E90F4CE0674F8997EB95DE7750606 /* PINMemoryCache.h in Headers */ = {isa = PBXBuildFile; fileRef = 12287AADBD55ACAB20AB53F0D3743197 /* PINMemoryCache.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		8C707E21A6603CE00D7FD6909942EC08 /* LoremIpsum.h in Headers */ = {isa = PBXBuildFile; fileRef = 666858E1CF0FFE6F7DEC5672FC184874 /* LoremIpsum.h */; settings = {ATTRIBUTES = (Public, ); }; };
-		8CC88BD7A06B80B75C84DDFF23E09FDF /* UIImage+AsyncMessagesViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0E8834308E620B8E70FB775A27F3C3A8 /* UIImage+AsyncMessagesViewController.swift */; };
 		8CF9840C6559A3C82F993723C3429A66 /* PINRemoteImageManager.m in Sources */ = {isa = PBXBuildFile; fileRef = F34C90741DA3FFB577EBAECFB4DC8112 /* PINRemoteImageManager.m */; };
 		8D25722039703C6025DFBC87E555DBF9 /* _ASDisplayLayer.h in Headers */ = {isa = PBXBuildFile; fileRef = 786D0FD0A94D8AD7FB51FB1E7D6E58DB /* _ASDisplayLayer.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		8D8ED839FE0126A8EF484F6DBB6A516F /* ASWeakProxy.m in Sources */ = {isa = PBXBuildFile; fileRef = 36EF5F7657CA5ED7B8A8F8F80DBA94AE /* ASWeakProxy.m */; };
@@ -241,6 +237,7 @@
 		8F725C66959CE9916DFCF87C27C0B129 /* ASTableViewProtocols.h in Headers */ = {isa = PBXBuildFile; fileRef = BED9ED2B75B06658FFFFE4B6CAB4B84D /* ASTableViewProtocols.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		8FB562B49E529E5DA7E74FB05AE155F7 /* ASAsciiArtBoxCreator.h in Headers */ = {isa = PBXBuildFile; fileRef = C54228BA2BAC460C5C7054817EBB7BE3 /* ASAsciiArtBoxCreator.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		901CB3C0639989CA982E589DDC319DC8 /* PINCache.m in Sources */ = {isa = PBXBuildFile; fileRef = 73C287E05144169354E530C7C888DB2C /* PINCache.m */; settings = {COMPILER_FLAGS = "-DOS_OBJECT_USE_OBJC=0"; }; };
+		90598AFA36308A351132A2A5639A5084 /* SLKTextInput+Implementation.m in Sources */ = {isa = PBXBuildFile; fileRef = 15706EEBDA336E77C25A7B6041848A56 /* SLKTextInput+Implementation.m */; };
 		90E6BA93C7E4E52ADE9746278F882A7B /* ASBatchFetching.h in Headers */ = {isa = PBXBuildFile; fileRef = B51D0C9FA8D56F6BBAE6319CB8DC5C2B /* ASBatchFetching.h */; settings = {ATTRIBUTES = (Project, ); }; };
 		91698E21CF0ADF3BAFFA2DFD8678EC77 /* ASCenterLayoutSpec.mm in Sources */ = {isa = PBXBuildFile; fileRef = F594EED8299849D7FE81CD683010ECE9 /* ASCenterLayoutSpec.mm */; };
 		91761A92F43595F853CD8238303E9125 /* NSArray+Diffing.m in Sources */ = {isa = PBXBuildFile; fileRef = CFA23CE5BB9B32C55D73AFF65701BE3D /* NSArray+Diffing.m */; };
@@ -249,26 +246,28 @@
 		93D784098D0550C534C2378189E5E24B /* ASContextTransitioning.h in Headers */ = {isa = PBXBuildFile; fileRef = 05E30F349FD852E78B84BB2D14B323DE /* ASContextTransitioning.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		945D5D4A93D0F6055CB1C6F8D119BEC9 /* ASWeakProxy.h in Headers */ = {isa = PBXBuildFile; fileRef = 88ACB5C52F26DC81846BDCB69A4DB7E8 /* ASWeakProxy.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		9505A40E9A30866D7B82A7B48FB8D78E /* _ASPendingState.h in Headers */ = {isa = PBXBuildFile; fileRef = 54675538773D14F9C640F3558D85E5D2 /* _ASPendingState.h */; settings = {ATTRIBUTES = (Project, ); }; };
+		9654A88BD95C74976CBB63C7106EB26D /* MessageCellNodeMetadataFactory.swift in Sources */ = {isa = PBXBuildFile; fileRef = 04A276821C2CBA8267607B69487A8F71 /* MessageCellNodeMetadataFactory.swift */; };
+		96BAC528FB90EB348DE542353C5CF831 /* SLKTypingIndicatorProtocol.h in Copy . Public Headers */ = {isa = PBXBuildFile; fileRef = BDA8D0FB8F67E3D0F0ADCEE0D17BE5F6 /* SLKTypingIndicatorProtocol.h */; };
 		97A41A4387BADBE59478A9D3E3E9331E /* ASLayoutableExtensibility.h in Headers */ = {isa = PBXBuildFile; fileRef = 21628DFB4318013351B5E7240DF10609 /* ASLayoutableExtensibility.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		97BC8B78B828D3A5DB7AEA6B58651B36 /* PINButton+PINRemoteImage.h in Headers */ = {isa = PBXBuildFile; fileRef = FA1F1FACA7A0489598B3C3BD0E4BA98E /* PINButton+PINRemoteImage.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		9824FD5CCFD91F6D01F3E7AA7D5716C0 /* SLKTextView.m in Sources */ = {isa = PBXBuildFile; fileRef = 3B460941326C781B1B52683A8BBB4FC0 /* SLKTextView.m */; };
 		99DA3A4A469699E0383CB432C7710854 /* ASCellNode.mm in Sources */ = {isa = PBXBuildFile; fileRef = 8AB056E542E01D3B8AE7F122227784AF /* ASCellNode.mm */; };
-		9B634DDC637F98A285BA956D27812179 /* UIScrollView+SLKAdditions.m in Sources */ = {isa = PBXBuildFile; fileRef = B3D39AE0641656D57E7A511AD9FC54BA /* UIScrollView+SLKAdditions.m */; };
+		9AEB83D97CF0A6F09749A2EE6D632A68 /* MessageData.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6CF285B081ED6C6883E8AEA7C97D23B8 /* MessageData.swift */; };
 		9BBBDE83A764BDF53A50EA5D0CFE5C3D /* ASTableViewInternal.h in Headers */ = {isa = PBXBuildFile; fileRef = F9EFEE6F2CCAE846C134B77FDA4E55FB /* ASTableViewInternal.h */; settings = {ATTRIBUTES = (Public, ); }; };
-		9BF351A882AD256F47F9EA3A5DF8C7D8 /* SLKTypingIndicatorProtocol.h in Copy . Public Headers */ = {isa = PBXBuildFile; fileRef = BDA8D0FB8F67E3D0F0ADCEE0D17BE5F6 /* SLKTypingIndicatorProtocol.h */; };
 		9CD33475BD3BBB43FE0B1AAE4C189034 /* _ASAsyncTransactionContainer.m in Sources */ = {isa = PBXBuildFile; fileRef = AEC2371AA01F78FC4F940C4ECFC42254 /* _ASAsyncTransactionContainer.m */; };
 		9CF755ABFC20FAA03A050ED55408D3B7 /* ASFlowLayoutController.mm in Sources */ = {isa = PBXBuildFile; fileRef = 2D6C84ADC98A78894215417FB041E6DB /* ASFlowLayoutController.mm */; };
 		9EEB1293F8B2327A5E66185E3857D56B /* PINRemoteImageCallbacks.m in Sources */ = {isa = PBXBuildFile; fileRef = A13937A852D6D0D6073085D8DA257F3C /* PINRemoteImageCallbacks.m */; };
+		9EEFB6F780B503ED7ECD2EA6B865D7A6 /* SLKTextInputbar.h in Copy . Public Headers */ = {isa = PBXBuildFile; fileRef = 8942B0A1B9CC14F1844A2E8653840AAE /* SLKTextInputbar.h */; };
+		9EF3FC136F397E36303AFDCA00CF5127 /* MessageTimestampFormatter.swift in Sources */ = {isa = PBXBuildFile; fileRef = DEECF923EAEC6629452DE745BE55B957 /* MessageTimestampFormatter.swift */; };
 		9F329D8DC67675D0883FC08B8E979EE0 /* ASStaticLayoutSpec.h in Headers */ = {isa = PBXBuildFile; fileRef = D5E86F6BDC3F13A5529C08F1938C5EA2 /* ASStaticLayoutSpec.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		9F606F74FEA1ECB852F8484D1A7C876A /* ASDimension.mm in Sources */ = {isa = PBXBuildFile; fileRef = 121CF4BDEB9AACF791578C484BBC56C4 /* ASDimension.mm */; };
 		9FB9BB93CC1D74AC0556BB6130F588F4 /* ASTextNodeWordKerner.m in Sources */ = {isa = PBXBuildFile; fileRef = FAE44CFA060B3A7CC98861117F57EC87 /* ASTextNodeWordKerner.m */; };
-		9FF94A15FFEFAAA650C9ED6475C667E8 /* SLKTypingIndicatorProtocol.h in Headers */ = {isa = PBXBuildFile; fileRef = BDA8D0FB8F67E3D0F0ADCEE0D17BE5F6 /* SLKTypingIndicatorProtocol.h */; };
 		A00CBFA0573828F7EAE5D3964AB09F1B /* PINDiskCache.m in Sources */ = {isa = PBXBuildFile; fileRef = 79E21E233584EC9E0E0D6BBB02E9E205 /* PINDiskCache.m */; settings = {COMPILER_FLAGS = "-DOS_OBJECT_USE_OBJC=0"; }; };
 		A06F2B3883FB75A98AB56E05E8CF0012 /* ASPendingStateController.h in Headers */ = {isa = PBXBuildFile; fileRef = 934B09E81A7F918803AA34215BE414D4 /* ASPendingStateController.h */; settings = {ATTRIBUTES = (Project, ); }; };
 		A0945B23E2D9DD5D470B674AA3625872 /* CGRect+ASConvenience.h in Headers */ = {isa = PBXBuildFile; fileRef = F53BF04B7BCD927CA78D2E5BD3274948 /* CGRect+ASConvenience.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		A2C1B519DE8A52E350FFCC2CCB8BD4E4 /* ASMainSerialQueue.mm in Sources */ = {isa = PBXBuildFile; fileRef = B46EB27BD26EB81ACBF51FD971B88AA9 /* ASMainSerialQueue.mm */; };
 		A359C6806B750B50D09BA07A018ECEC3 /* ASRelativeLayoutSpec.mm in Sources */ = {isa = PBXBuildFile; fileRef = 8D288274F728FE0AD8CE54778F6F98DA /* ASRelativeLayoutSpec.mm */; };
 		A365F7CA388774C5633D528F5C40A80E /* PINRemoteImageDownloadTask.m in Sources */ = {isa = PBXBuildFile; fileRef = 70DAD95E95BF456EB555E52BCDF5DC87 /* PINRemoteImageDownloadTask.m */; };
-		A4F8FDA9B92A418287488AC731C4A9DC /* SLKTextViewController.h in Copy . Public Headers */ = {isa = PBXBuildFile; fileRef = FBC7AD065CEE7AD524457B854450FFBD /* SLKTextViewController.h */; };
 		A516A1428F1BCAFBA067173DA18583E6 /* PINRemoteImage.h in Headers */ = {isa = PBXBuildFile; fileRef = C78E5C841A97DA3EAC276A869C2087A4 /* PINRemoteImage.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		A52DA803D9A2E4CBDB3E43CC942E53EE /* PINRemoteImageMemoryContainer.h in Headers */ = {isa = PBXBuildFile; fileRef = 029C4A73185D643A3C712287FB6F87C6 /* PINRemoteImageMemoryContainer.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		A629546E60E53C8232E75EA37D963CAE /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 0D184769027146AD98A3D0E37366EEE3 /* Foundation.framework */; };
@@ -276,27 +275,21 @@
 		A6CAEFFA9534324EC81E7A1F3A11A3D1 /* ASImageContainerProtocolCategories.m in Sources */ = {isa = PBXBuildFile; fileRef = B437F334C8C35D922E26210D3C35A736 /* ASImageContainerProtocolCategories.m */; };
 		A6E4E8121C4FE921291E866A016EC14E /* ASMultiplexImageNode.h in Headers */ = {isa = PBXBuildFile; fileRef = BCAF57D8020666E060BEA2D3620F180C /* ASMultiplexImageNode.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		A8422B9B65A362486C74F9418A1E1226 /* ASCollectionView.h in Headers */ = {isa = PBXBuildFile; fileRef = 090685E84D73BE3A3A2B270E391FAA45 /* ASCollectionView.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		A9FE2D426207B482558EEBAFBE87466F /* UIResponder+SLKAdditions.h in Copy . Public Headers */ = {isa = PBXBuildFile; fileRef = 21CA42FCC4C97B65F2DD72873FBDFB73 /* UIResponder+SLKAdditions.h */; };
 		AAB07A0A138B2A4E9AE2344E47BB0A9E /* PINImage+WebP.m in Sources */ = {isa = PBXBuildFile; fileRef = 7E0E66DF9351F0DC4E4B6DD7547B40F3 /* PINImage+WebP.m */; };
-		AACBFC315507902468D9258F8615BFBC /* UIImageExtensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 04B4A6B909B77F5E8D7C1C90E6CD3454 /* UIImageExtensions.swift */; };
 		ABD2470ADB88CC03DC02627276F83EC8 /* ASPINRemoteImageDownloader.h in Headers */ = {isa = PBXBuildFile; fileRef = 8C4B4273F91FCBA18B799962565EADE7 /* ASPINRemoteImageDownloader.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		ABE24C46055AAE2AE2973D1E81184BF2 /* PINAnimatedImageManager.h in Headers */ = {isa = PBXBuildFile; fileRef = 2B182953346B42727ED179809447CE1A /* PINAnimatedImageManager.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		AC51C3E4A587174ADFE36866EFE824B6 /* ASPagerFlowLayout.h in Headers */ = {isa = PBXBuildFile; fileRef = 67BEA4AFE7FE6D8B397B15BCC9A9CD96 /* ASPagerFlowLayout.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		ACD63F3DC4DE6A11C9552C8E9BB57E19 /* ASBackgroundLayoutSpec.mm in Sources */ = {isa = PBXBuildFile; fileRef = ED4B177E5E373382F5DB74899AF0C4AB /* ASBackgroundLayoutSpec.mm */; };
 		ACF245A5109966C1CE9887C178E7D807 /* ASDisplayNode+UIViewBridge.mm in Sources */ = {isa = PBXBuildFile; fileRef = 26E8DC2D3D6C1393D321D8F27CCA09F5 /* ASDisplayNode+UIViewBridge.mm */; };
-		AD78D0BF3A454D9226F7B6F485A0F36A /* SLKTextViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 1B40BDDC2EF99A58283B75DE14DB0FC0 /* SLKTextViewController.m */; };
-		AD89E284A0EAB0FE27C4DCFF55E1F13C /* DefaultAsyncMessagesCollectionViewDataSource.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7D505B08E345C610FCBE0ED047981E74 /* DefaultAsyncMessagesCollectionViewDataSource.swift */; };
 		AEFFA527BD663126BEEE6D699D14410A /* PINAnimatedImage.h in Headers */ = {isa = PBXBuildFile; fileRef = A35104D770453768C861B0E27B278BEA /* PINAnimatedImage.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		AFADAD8B8136DE6AC8663A61C8E0CF02 /* ASRatioLayoutSpec.mm in Sources */ = {isa = PBXBuildFile; fileRef = 8C88129D786EE1AAED69C6DB61B842BE /* ASRatioLayoutSpec.mm */; };
 		AFBDFC8EA0067BEFACF0602C64DFA99F /* ASLayoutTransition.mm in Sources */ = {isa = PBXBuildFile; fileRef = E2973E0BEE76ABDA76C98894CC5B5A19 /* ASLayoutTransition.mm */; };
 		B09FCECB2A61DBD4D4D6D50E8C894E1A /* ASDataController.h in Headers */ = {isa = PBXBuildFile; fileRef = 43C0BE317CB382F301E898A7FE1EADF3 /* ASDataController.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		B11A211DFD2C611A590070A532F8A345 /* ASVideoNode.h in Headers */ = {isa = PBXBuildFile; fileRef = AD0EFA17A19F7BADB68713D4B38E6842 /* ASVideoNode.h */; settings = {ATTRIBUTES = (Public, ); }; };
-		B1B166CB2D46AF57F46471E6F62B2581 /* NSBundle+AsyncMessagesViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5C106F83392EBBFC09D958E13F865DB0 /* NSBundle+AsyncMessagesViewController.swift */; };
-		B330C327CE6E9A108C6C88B8506B1823 /* SLKTextView.h in Headers */ = {isa = PBXBuildFile; fileRef = 0718D84106E0C69D00AFA84F5F2F9B78 /* SLKTextView.h */; };
 		B430B3E8D1CB2F036FF6F227D3262051 /* _ASHierarchyChangeSet.h in Headers */ = {isa = PBXBuildFile; fileRef = F11D249F7CE20A00656CD975D86F4468 /* _ASHierarchyChangeSet.h */; settings = {ATTRIBUTES = (Project, ); }; };
-		B45A93FA6A6BA7A8CE295AA4FEC7BCFA /* SLKUIConstants.h in Headers */ = {isa = PBXBuildFile; fileRef = 721375484D8FB53A7CC52C9B54367B52 /* SLKUIConstants.h */; };
 		B4EAFBD07D4FFB46CE62909D244397EB /* ASRangeControllerUpdateRangeProtocol+Beta.h in Headers */ = {isa = PBXBuildFile; fileRef = 721B4413B3E16C3741C8428F9F636EB3 /* ASRangeControllerUpdateRangeProtocol+Beta.h */; settings = {ATTRIBUTES = (Public, ); }; };
-		B57C7DB49901E5ABE52ADEF7AA97E90E /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 0D184769027146AD98A3D0E37366EEE3 /* Foundation.framework */; };
-		B595477EB592FC606C488B6D22843941 /* SLKInputAccessoryView.h in Copy . Public Headers */ = {isa = PBXBuildFile; fileRef = 77E729C106ACCEABC6CD7CA5244C9169 /* SLKInputAccessoryView.h */; };
+		B50583C11E18D1FC27E07938E309763D /* SLKTextView+SLKAdditions.m in Sources */ = {isa = PBXBuildFile; fileRef = CFC3FB97A9857AA65178F281B1371346 /* SLKTextView+SLKAdditions.m */; };
 		B6D913700083376F932238E753A44FF9 /* UICollectionViewLayout+ASConvenience.m in Sources */ = {isa = PBXBuildFile; fileRef = ADDCD3F5CBC589B4627EF40007176323 /* UICollectionViewLayout+ASConvenience.m */; };
 		B7E78639F97174487422CB186E3915FA /* ASVisibilityProtocols.h in Headers */ = {isa = PBXBuildFile; fileRef = F2DFCA7C4F5B72CB7E454379F635C03F /* ASVisibilityProtocols.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		B8E1C2A1E3A41F584BD8E7F9251400F1 /* ASLayoutManager.h in Headers */ = {isa = PBXBuildFile; fileRef = 49C4E2AFDA5978CD86E26EFC0130F05C /* ASLayoutManager.h */; settings = {ATTRIBUTES = (Project, ); }; };
@@ -316,41 +309,44 @@
 		C1454E309278A4F15E34770DF0EC7058 /* ASInternalHelpers.h in Headers */ = {isa = PBXBuildFile; fileRef = F46800FBFB0FFC13719D730EE1570E91 /* ASInternalHelpers.h */; settings = {ATTRIBUTES = (Project, ); }; };
 		C14936FED21EA73CA6E68B66E91AD09E /* ASTextKitRenderer+Positioning.h in Headers */ = {isa = PBXBuildFile; fileRef = 212F1363556891C255CC82B2404BFC46 /* ASTextKitRenderer+Positioning.h */; settings = {ATTRIBUTES = (Project, ); }; };
 		C177029697C17A1C9B6000B4A5608DD9 /* ASStackLayoutable.h in Headers */ = {isa = PBXBuildFile; fileRef = 770D41B7CE0C009C44662170A45B024C /* ASStackLayoutable.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		C180CDCE42693012D1345FC2254B0376 /* SlackTextViewController-dummy.m in Sources */ = {isa = PBXBuildFile; fileRef = F317D957114F08DC613F625954AB0612 /* SlackTextViewController-dummy.m */; };
 		C1C7591A8ECD46A28D08EFE164B2BD26 /* ASHighlightOverlayLayer.mm in Sources */ = {isa = PBXBuildFile; fileRef = 6462ECF4BDA6A68D28A19D5724A8A530 /* ASHighlightOverlayLayer.mm */; };
+		C1FD3FCD9F58F5F2ECCEB1645B8AFEED /* AsyncMessagesViewController.bundle in Resources */ = {isa = PBXBuildFile; fileRef = 644F9701AB3B68DB1B3CB1BD91E0FA83 /* AsyncMessagesViewController.bundle */; };
 		C2C204768397F68B246D510F03E1DFD6 /* ASStackUnpositionedLayout.h in Headers */ = {isa = PBXBuildFile; fileRef = B9E878F44B8123DA060EACDE0ABEB36A /* ASStackUnpositionedLayout.h */; settings = {ATTRIBUTES = (Project, ); }; };
 		C2D0E3284C529EA69141EE25B2311395 /* ASPagerNode.h in Headers */ = {isa = PBXBuildFile; fileRef = FE9E1C2E91A50BA9C70761524B9F3D78 /* ASPagerNode.h */; settings = {ATTRIBUTES = (Public, ); }; };
-		C34C2A4D1900474BD29B37411DE64175 /* SLKUIConstants.h in Copy . Public Headers */ = {isa = PBXBuildFile; fileRef = 721375484D8FB53A7CC52C9B54367B52 /* SLKUIConstants.h */; };
-		C36AA1D17EA0CECE7760ABAFB021C879 /* SLKTypingIndicatorView.h in Copy . Public Headers */ = {isa = PBXBuildFile; fileRef = DB3F81C52D7DB9BF71331D91F26908D0 /* SLKTypingIndicatorView.h */; };
 		C3F44AB1C5E77F21E922ED148FEFB896 /* PINRemoteImageMemoryContainer.m in Sources */ = {isa = PBXBuildFile; fileRef = 8BF9FFDF854BB2C2C352133BBA438768 /* PINRemoteImageMemoryContainer.m */; };
-		C43807D2C87DB73CCD8E200E1A19177D /* SlackTextViewController-dummy.m in Sources */ = {isa = PBXBuildFile; fileRef = F317D957114F08DC613F625954AB0612 /* SlackTextViewController-dummy.m */; };
+		C433FDC116C7ABF2135C6F0F0B215DC2 /* SLKTextInput.h in Copy . Public Headers */ = {isa = PBXBuildFile; fileRef = 8AF4FA582845A2F5C1BAC4C098E8175C /* SLKTextInput.h */; };
 		C4DCD28B1F49EEC66CCAF43C865E72EA /* _ASDisplayView.h in Headers */ = {isa = PBXBuildFile; fileRef = 72B551F9E45FFEB9658650777F965319 /* _ASDisplayView.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		C5E7BFD5F0FF152D60C5DD469205868E /* ASRangeController.h in Headers */ = {isa = PBXBuildFile; fileRef = DEC155FE9BA5D489DAEF4644BABD7BB0 /* ASRangeController.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		C6497AA1F4F3FB381E8CE56EA5AE82CA /* UICollectionViewLayout+ASConvenience.h in Headers */ = {isa = PBXBuildFile; fileRef = 98EAFB55BF0E8E51C393B9956D355588 /* UICollectionViewLayout+ASConvenience.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		C6932A460407D997C156621FBDF8A2E5 /* ASControlNode+tvOS.h in Headers */ = {isa = PBXBuildFile; fileRef = D57B30A8B6E35D87904C9DF16461DDD4 /* ASControlNode+tvOS.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		C8FA68FC4C36D68B8ADF6224003763E3 /* ASDisplayNode+DebugTiming.h in Headers */ = {isa = PBXBuildFile; fileRef = A81F53F23BBFAADCD6344D9CCA69806C /* ASDisplayNode+DebugTiming.h */; settings = {ATTRIBUTES = (Project, ); }; };
+		C9AD720BB0DFEF64D4559A107036BF28 /* SLKTextView.h in Copy . Public Headers */ = {isa = PBXBuildFile; fileRef = 0718D84106E0C69D00AFA84F5F2F9B78 /* SLKTextView.h */; };
 		C9B5DE7E41638FBDC16D1D31C3E7CF75 /* ASImageNode+AnimatedImagePrivate.h in Headers */ = {isa = PBXBuildFile; fileRef = 7894CE4CB2C310C3F6C9E128058241A0 /* ASImageNode+AnimatedImagePrivate.h */; settings = {ATTRIBUTES = (Project, ); }; };
 		C9D901D61ADA0E2C26D70D69046BEA96 /* ASTextNodeTypes.h in Headers */ = {isa = PBXBuildFile; fileRef = 64DB0355CE4039AAB13637EF8557EE37 /* ASTextNodeTypes.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		CA19711F04C0068F758CD2A41CDF5CA6 /* CGRect+ASConvenience.m in Sources */ = {isa = PBXBuildFile; fileRef = FA9530EE6855FCAA1948C855BC7E6B5B /* CGRect+ASConvenience.m */; };
+		CC1122577279B430D6C0372D4DE25F8C /* UIScrollView+SLKAdditions.m in Sources */ = {isa = PBXBuildFile; fileRef = B3D39AE0641656D57E7A511AD9FC54BA /* UIScrollView+SLKAdditions.m */; };
 		CCB6E437C34A760A3BF15FA847B9E0B1 /* PINButton+PINRemoteImage.m in Sources */ = {isa = PBXBuildFile; fileRef = 993878E0ECA5503C3BC9A1986FD8AA1C /* PINButton+PINRemoteImage.m */; };
-		CCB709CD569F5827E7B60986A70D898C /* MessageTextBubbleNode.swift in Sources */ = {isa = PBXBuildFile; fileRef = 757C8AF65DB4D6A2204131FAAB213A09 /* MessageTextBubbleNode.swift */; };
-		CD0ECBCD39A7AF55C328C087F29EA0B1 /* SLKTextView.h in Copy . Public Headers */ = {isa = PBXBuildFile; fileRef = 0718D84106E0C69D00AFA84F5F2F9B78 /* SLKTextView.h */; };
 		CD5F778CD86980DC48137244F80C0D57 /* ASNavigationController.m in Sources */ = {isa = PBXBuildFile; fileRef = 6C8D16CD3E89EADD20D32C16AAF127AC /* ASNavigationController.m */; };
+		CE604AF31FBB2D3499562AA9D8706661 /* SLKInputAccessoryView.m in Sources */ = {isa = PBXBuildFile; fileRef = F91280417386F026DB2817A757F3A982 /* SLKInputAccessoryView.m */; };
 		CE738AC5800D03797EFD93C10D0F9B34 /* ASLayout.h in Headers */ = {isa = PBXBuildFile; fileRef = 2179235D04705A45A90513717C290006 /* ASLayout.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		CFA46524469D55AE3673FBED80A1727A /* Pods-AsyncMessagesViewController_Example-dummy.m in Sources */ = {isa = PBXBuildFile; fileRef = B3C81D65635BAE9D7B2727A02C714B52 /* Pods-AsyncMessagesViewController_Example-dummy.m */; };
 		D05783AD6098392CA7B9C6BAEC70116B /* ASLog.h in Headers */ = {isa = PBXBuildFile; fileRef = BF1D843C8F38BC61C08DCC71F0F276AD /* ASLog.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		D090AC179D1B2847B0F45FF61E3770A6 /* ASBaseDefines.h in Headers */ = {isa = PBXBuildFile; fileRef = 69BECD20E66BEC59A4343F84DC8D55CA /* ASBaseDefines.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		D150A1A253BDD7D4767C28DEF2D2F642 /* SLKUIConstants.h in Headers */ = {isa = PBXBuildFile; fileRef = 721375484D8FB53A7CC52C9B54367B52 /* SLKUIConstants.h */; };
 		D28C58A4C5E6F02B36B610DB318207DF /* ASBasicImageDownloaderInternal.h in Headers */ = {isa = PBXBuildFile; fileRef = 6A3B67469464168D02DC9A13E9E3E82B /* ASBasicImageDownloaderInternal.h */; settings = {ATTRIBUTES = (Project, ); }; };
 		D2B60339AAEA8A2BAAA30633CA5BD721 /* ASTableNode.h in Headers */ = {isa = PBXBuildFile; fileRef = 76AE9BAC907399C81C2CE007DAB8E686 /* ASTableNode.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		D422ACDC22471CFA333AC35069D63B34 /* ASMapNode.h in Headers */ = {isa = PBXBuildFile; fileRef = 2DCC7D0D5EFB68FE1CF980D6B45D8758 /* ASMapNode.h */; settings = {ATTRIBUTES = (Public, ); }; };
-		D6098F307147007ED3FA3EFB110DB477 /* UIResponder+SLKAdditions.h in Headers */ = {isa = PBXBuildFile; fileRef = 21CA42FCC4C97B65F2DD72873FBDFB73 /* UIResponder+SLKAdditions.h */; };
 		D6FC31D6088E19B4199166630234438A /* ASNavigationController.h in Headers */ = {isa = PBXBuildFile; fileRef = 1D541D30070E89C0F98836193713F570 /* ASNavigationController.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		D73DEEC90C58A81BA4305247EFF1EF3F /* SLKTypingIndicatorProtocol.h in Headers */ = {isa = PBXBuildFile; fileRef = BDA8D0FB8F67E3D0F0ADCEE0D17BE5F6 /* SLKTypingIndicatorProtocol.h */; };
 		D7E9DD6181FD46B4F8F7B319F70DDB90 /* ASDisplayNode.h in Headers */ = {isa = PBXBuildFile; fileRef = B9E5317ED40CA15B4C09013B6534B300 /* ASDisplayNode.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		D9DB6396287E4BDFE3C2E4C6F42BA0C5 /* PINImage+DecodedImage.m in Sources */ = {isa = PBXBuildFile; fileRef = 210FC15239832D7F5E87D171FB96A23B /* PINImage+DecodedImage.m */; };
 		D9E7B611B87F00069F31F3148A8BB339 /* PINProgressiveImage.m in Sources */ = {isa = PBXBuildFile; fileRef = 7A48DCBFADB20F9C74757E98EAA52B14 /* PINProgressiveImage.m */; };
 		DAD01291DB78296684888B385B0356BA /* ASDimension.h in Headers */ = {isa = PBXBuildFile; fileRef = 387E2B305220808846D8222467140AD2 /* ASDimension.h */; settings = {ATTRIBUTES = (Public, ); }; };
-		DB346A346AF484D26ACD0B789FA0CCB2 /* SLKTextInputbar.m in Sources */ = {isa = PBXBuildFile; fileRef = 057E2812812D8C94E4392C6CA375C1F4 /* SLKTextInputbar.m */; };
+		DB500EE16B9D0F436DEA6D338653B3A6 /* UIView+SLKAdditions.m in Sources */ = {isa = PBXBuildFile; fileRef = 1914AB26EF5E1530AB561A931442D5D6 /* UIView+SLKAdditions.m */; };
 		DBB0962FB34A124A4F9BA771A2FEF8A7 /* PINRemoteImageMacros.h in Headers */ = {isa = PBXBuildFile; fileRef = 0C272326536BFDE542E5C15EB0F56253 /* PINRemoteImageMacros.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		DC880F072E1A841D62D40D37B57BEFD7 /* ASBasicImageDownloader.h in Headers */ = {isa = PBXBuildFile; fileRef = 86B64F2C52DEB93D77829E423A9B2061 /* ASBasicImageDownloader.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		DCCC8574E3B69A0494968B2A8032C73A /* AsyncMessagesConfiguration.swift in Sources */ = {isa = PBXBuildFile; fileRef = A46158B01032E051243424200A5DD60F /* AsyncMessagesConfiguration.swift */; };
 		DD2C094DA05FE4885F12CB84A09FD1A2 /* PINAlternateRepresentationProvider.m in Sources */ = {isa = PBXBuildFile; fileRef = F40E438CBB5C382115B35F3512F8A247 /* PINAlternateRepresentationProvider.m */; };
 		DE6C5F313FF255374E2AAE980ABF7F3C /* PINCache-umbrella.h in Headers */ = {isa = PBXBuildFile; fileRef = 8DB67640AC7452A7BE9A812B6DB2B4E4 /* PINCache-umbrella.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		DECCDBEB4C54D088A5B5982F5BFD0992 /* PINRemoteImage-dummy.m in Sources */ = {isa = PBXBuildFile; fileRef = E358449072290C77235788429900A79E /* PINRemoteImage-dummy.m */; };
@@ -363,23 +359,23 @@
 		E164E260FAD5E9FEF0CCAF63DBE9DF7E /* ASControlNode.h in Headers */ = {isa = PBXBuildFile; fileRef = CF0FDDF106328CA50E27FFE94BD58B4C /* ASControlNode.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		E1766F798F04B4EB0DDA9C7720324408 /* LoremIpsum-umbrella.h in Headers */ = {isa = PBXBuildFile; fileRef = 33AE22286A957FF4DD0DBED9350E828F /* LoremIpsum-umbrella.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		E501E8E8246B80B0CCC04912E395D877 /* ASTextKitTailTruncater.h in Headers */ = {isa = PBXBuildFile; fileRef = 48D3441DCA6E0EE73ACE27E1FE67C56B /* ASTextKitTailTruncater.h */; settings = {ATTRIBUTES = (Project, ); }; };
+		E55A8B8AC4C48C411895F190C480C386 /* SLKTypingIndicatorView.h in Copy . Public Headers */ = {isa = PBXBuildFile; fileRef = DB3F81C52D7DB9BF71331D91F26908D0 /* SLKTypingIndicatorView.h */; };
 		E5738832EBFFABD83E1F7257CC2C0516 /* ASDelegateProxy.h in Headers */ = {isa = PBXBuildFile; fileRef = E2BB85ADD606302564D8AD5BBDFBBB4A /* ASDelegateProxy.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		E5893136B33763F0D847B3D8424C647D /* PINMemoryCache.m in Sources */ = {isa = PBXBuildFile; fileRef = 634057C2A76C72A2DD20742AAF79584F /* PINMemoryCache.m */; settings = {COMPILER_FLAGS = "-DOS_OBJECT_USE_OBJC=0"; }; };
-		E631224440EFC11E27070F94D8D95EE5 /* AsyncMessagesViewController.bundle in Resources */ = {isa = PBXBuildFile; fileRef = 644F9701AB3B68DB1B3CB1BD91E0FA83 /* AsyncMessagesViewController.bundle */; };
+		E67D8AA2B252F1356DE9BE1210E51DB0 /* MessageNetworkImageBubbleNode.swift in Sources */ = {isa = PBXBuildFile; fileRef = 00D6EB62842534BE1840F11891B08F89 /* MessageNetworkImageBubbleNode.swift */; };
 		E6CADD26A742046F55352D0E771A1ADA /* ASLayoutable.h in Headers */ = {isa = PBXBuildFile; fileRef = 9771AF3917CCED517E0D18AC679956E4 /* ASLayoutable.h */; settings = {ATTRIBUTES = (Public, ); }; };
-		E818D2ACA4DE5B0E48801FB82A506ABE /* SLKTextViewController.h in Headers */ = {isa = PBXBuildFile; fileRef = FBC7AD065CEE7AD524457B854450FFBD /* SLKTextViewController.h */; };
 		EA2D866BD51BD0E43427F5340F15EC3F /* ASDealloc2MainObject.m in Sources */ = {isa = PBXBuildFile; fileRef = 65A95D047E38DC94D440049BE3B8B61C /* ASDealloc2MainObject.m */; settings = {COMPILER_FLAGS = "-fno-objc-arc"; }; };
 		EA480F906C3288BE3935457997F03A38 /* _ASCoreAnimationExtras.mm in Sources */ = {isa = PBXBuildFile; fileRef = BC141904C5C376CF01080EA8C4D856D9 /* _ASCoreAnimationExtras.mm */; };
-		EBAD888EDA2F07A79B3B0C30B1DEAB0B /* SLKTextView+SLKAdditions.m in Sources */ = {isa = PBXBuildFile; fileRef = CFC3FB97A9857AA65178F281B1371346 /* SLKTextView+SLKAdditions.m */; };
+		EAB0256DE267216C800E414E7838C6D7 /* SLKUIConstants.h in Copy . Public Headers */ = {isa = PBXBuildFile; fileRef = 721375484D8FB53A7CC52C9B54367B52 /* SLKUIConstants.h */; };
 		EBC65F6EF20C7FA78BAD8F505452884A /* ASOverlayLayoutSpec.h in Headers */ = {isa = PBXBuildFile; fileRef = 18D3A8D02D8EA5911A7100A8E2FAA718 /* ASOverlayLayoutSpec.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		ED511D5B3A584F8639CC067C07D09EB4 /* ASStackLayoutDefines.h in Headers */ = {isa = PBXBuildFile; fileRef = 64796E3855BC9729EA85158CABF4E720 /* ASStackLayoutDefines.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		EDE3687EA1F86D0AB7E0CEB892424AD3 /* SLKTextInputbar.m in Sources */ = {isa = PBXBuildFile; fileRef = 057E2812812D8C94E4392C6CA375C1F4 /* SLKTextInputbar.m */; };
 		EEED07C724652F29131CF3BFFE1AD8F8 /* ASControlNode+tvOS.m in Sources */ = {isa = PBXBuildFile; fileRef = FA25481A7EFBE9F6827D970E0D1FE63D /* ASControlNode+tvOS.m */; };
 		EF3C367D24683CBA55EED4B85C09A46C /* ASTextKitComponents.m in Sources */ = {isa = PBXBuildFile; fileRef = F20588E819814C01451844E0810D3AB1 /* ASTextKitComponents.m */; };
 		EF8033BC2808A1DC9440B7CDC9F844BC /* ASDisplayNode+Beta.h in Headers */ = {isa = PBXBuildFile; fileRef = 6DBEAA0203B499853D313CAAD8FA832D /* ASDisplayNode+Beta.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		EF91D23ABBB10F5F1D9CB40535E042F8 /* ASSentinel.h in Headers */ = {isa = PBXBuildFile; fileRef = BED2D4657E5FB520C35E464E50EC7571 /* ASSentinel.h */; settings = {ATTRIBUTES = (Project, ); }; };
 		F0ACB4268B779567FD499D33BCFE9F79 /* ASBatchContext.h in Headers */ = {isa = PBXBuildFile; fileRef = AD9799B37BEDAC175FE83FBE61E36A56 /* ASBatchContext.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		F0BFE3F4345CC90BD8E9693AAEA64C95 /* ASTextKitRenderer.h in Headers */ = {isa = PBXBuildFile; fileRef = A790E12EC00E845E987BE3E323C63FEC /* ASTextKitRenderer.h */; settings = {ATTRIBUTES = (Project, ); }; };
-		F21F23CC72342E3DE2AD1F18B131AC2E /* MessageNetworkImageBubbleNode.swift in Sources */ = {isa = PBXBuildFile; fileRef = 876F2561B11D96690C62B1BA7D6BB743 /* MessageNetworkImageBubbleNode.swift */; };
 		F246651A7D7974F9E62FF369E6E28568 /* ASLayoutRangeType.h in Headers */ = {isa = PBXBuildFile; fileRef = BA86B169C53008532E714E56243E13D7 /* ASLayoutRangeType.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		F253E570F1866A7F01EA8A048F48CC7F /* ASVideoNode.mm in Sources */ = {isa = PBXBuildFile; fileRef = 631AABF9D70D2D69C206F50E8CB5E0D2 /* ASVideoNode.mm */; };
 		F2DA43A31EE8D92B11C40F1EFC674D49 /* ASBatchContext.mm in Sources */ = {isa = PBXBuildFile; fileRef = 98D0CE157ADEF3448CF5EEE1DCD93A1F /* ASBatchContext.mm */; };
@@ -392,6 +388,8 @@
 		F4CAEAD40D489252B2AC71D6BB1A3E05 /* ASDefaultPlaybackButton.h in Headers */ = {isa = PBXBuildFile; fileRef = 827C313BF0B7C9FFFCD149E84E4A844D /* ASDefaultPlaybackButton.h */; settings = {ATTRIBUTES = (Project, ); }; };
 		F519B96A7DF50437389B75CB2AFE1400 /* _AS-objc-internal.h in Headers */ = {isa = PBXBuildFile; fileRef = C1AC992697D43F32B7E2057998745827 /* _AS-objc-internal.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		F6F73B6603AE430D84BC46A2E37AAFBD /* ASLayout.mm in Sources */ = {isa = PBXBuildFile; fileRef = BF20CB7D2F2865D12B6D5E0BB18A77DC /* ASLayout.mm */; };
+		F7301B104D7C808726B96C3E47C0C549 /* MessageCellNode.swift in Sources */ = {isa = PBXBuildFile; fileRef = E6030FDA58DB4E10BFFA61D28949D536 /* MessageCellNode.swift */; };
+		F82CC53B49CF2DDDD484E0B821CD8749 /* SlackTextViewController-umbrella.h in Headers */ = {isa = PBXBuildFile; fileRef = 8A5DCD7B26684EE08D8FE06CF6F6A145 /* SlackTextViewController-umbrella.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		F8D9742ACD84777C9182B7348A05B4CD /* ASLayoutSpecUtilities.h in Headers */ = {isa = PBXBuildFile; fileRef = B5E6C0F30ACC4134849EF3E33D8BA422 /* ASLayoutSpecUtilities.h */; settings = {ATTRIBUTES = (Project, ); }; };
 		F9440FAC153388C0483AE9102683664E /* ASTextKitFontSizeAdjuster.h in Headers */ = {isa = PBXBuildFile; fileRef = BC84E312EB3B46DF3206CF0D6CB2DFC4 /* ASTextKitFontSizeAdjuster.h */; settings = {ATTRIBUTES = (Project, ); }; };
 		F94AAD52F97073D4D4CF4A245BBD78C3 /* PINRemoteImageProcessorTask.m in Sources */ = {isa = PBXBuildFile; fileRef = 9B9A9001CAA1E9DB99B8331CC3AC7A04 /* PINRemoteImageProcessorTask.m */; };
@@ -402,6 +400,7 @@
 		FC8F2625F117FD847F63CB9B97BD0759 /* ASStaticLayoutable.h in Headers */ = {isa = PBXBuildFile; fileRef = 0B6DE62EA51BC1F0AB1AA80105D0C961 /* ASStaticLayoutable.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		FD6D9C64A9CEF7930277E90B271E75CE /* ASDefaultPlaybackButton.m in Sources */ = {isa = PBXBuildFile; fileRef = 359655BF586EFAE127C2A3861D8E1016 /* ASDefaultPlaybackButton.m */; };
 		FEF974861277300645E1C78837D8854D /* AsyncDisplayKit+Debug.m in Sources */ = {isa = PBXBuildFile; fileRef = CBCB3E1C4D8DECA8B25B89EA595D5EA9 /* AsyncDisplayKit+Debug.m */; };
+		FF00F711DEAC159442CE413F4E88E6CF /* SLKTextView+SLKAdditions.h in Copy . Public Headers */ = {isa = PBXBuildFile; fileRef = A02EB8F9C59B257406E4EAAFBA4F6A46 /* SLKTextView+SLKAdditions.h */; };
 		FF26FE315FE35CDD12DD186F7C687B61 /* ASTextKitComponents.h in Headers */ = {isa = PBXBuildFile; fileRef = 4CB211D469781AA634AF3470AEF6A17C /* ASTextKitComponents.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		FF9ECC2804D697582584FC6C159F90FA /* PINRemoteImageManagerResult.h in Headers */ = {isa = PBXBuildFile; fileRef = 2FF05F34A8F6DC6F90668EF2141F2A19 /* PINRemoteImageManagerResult.h */; settings = {ATTRIBUTES = (Public, ); }; };
 /* End PBXBuildFile section */
@@ -418,8 +417,15 @@
 			isa = PBXContainerItemProxy;
 			containerPortal = D41D8CD98F00B204E9800998ECF8427E /* Project object */;
 			proxyType = 1;
-			remoteGlobalIDString = 64DD75676C5327C7F1671BD8FE2BA177;
+			remoteGlobalIDString = 6B25D4CD77C69C3A88C93EE5923471BC;
 			remoteInfo = AsyncMessagesViewController;
+		};
+		350CFE98C8F5117E08DE9C6270D4F9B0 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = D41D8CD98F00B204E9800998ECF8427E /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 54B8D73FB6F97DDECD855241804433A2;
+			remoteInfo = SlackTextViewController;
 		};
 		35A693A99C35CB9061D21B038C7968F1 /* PBXContainerItemProxy */ = {
 			isa = PBXContainerItemProxy;
@@ -428,7 +434,7 @@
 			remoteGlobalIDString = AC8432121E84B3F4C381F4D5E457C765;
 			remoteInfo = LoremIpsum;
 		};
-		70B025FC22E3C76C3A9FDEE1163B2888 /* PBXContainerItemProxy */ = {
+		4774B200CBC1D08A9957D2BCA49A1BC7 /* PBXContainerItemProxy */ = {
 			isa = PBXContainerItemProxy;
 			containerPortal = D41D8CD98F00B204E9800998ECF8427E /* Project object */;
 			proxyType = 1;
@@ -453,14 +459,7 @@
 			isa = PBXContainerItemProxy;
 			containerPortal = D41D8CD98F00B204E9800998ECF8427E /* Project object */;
 			proxyType = 1;
-			remoteGlobalIDString = 4F0263462178F6DBD5A8E22FECA2D058;
-			remoteInfo = SlackTextViewController;
-		};
-		95A5003B5791F322EE35D6A60AE12454 /* PBXContainerItemProxy */ = {
-			isa = PBXContainerItemProxy;
-			containerPortal = D41D8CD98F00B204E9800998ECF8427E /* Project object */;
-			proxyType = 1;
-			remoteGlobalIDString = 4F0263462178F6DBD5A8E22FECA2D058;
+			remoteGlobalIDString = 54B8D73FB6F97DDECD855241804433A2;
 			remoteInfo = SlackTextViewController;
 		};
 		C1D269F9FF19AA8C6324F6B9F8B184F4 /* PBXContainerItemProxy */ = {
@@ -487,24 +486,24 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXCopyFilesBuildPhase section */
-		0797022FB284A624A108BAD6F71B3707 /* Copy . Public Headers */ = {
+		642F534D2D95D789A5D5D92105539566 /* Copy . Public Headers */ = {
 			isa = PBXCopyFilesBuildPhase;
 			buildActionMask = 2147483647;
 			dstPath = "$(PUBLIC_HEADERS_FOLDER_PATH)/.";
 			dstSubfolderSpec = 16;
 			files = (
-				B595477EB592FC606C488B6D22843941 /* SLKInputAccessoryView.h in Copy . Public Headers */,
-				6645E87F9D2F4BB26448D6095DBB2542 /* SLKTextInput.h in Copy . Public Headers */,
-				3FD4B5025C26FEEEAE98BCC1A7F5437A /* SLKTextInputbar.h in Copy . Public Headers */,
-				4F3D864D0E813D7703AA29CA57C5E3A1 /* SLKTextView+SLKAdditions.h in Copy . Public Headers */,
-				CD0ECBCD39A7AF55C328C087F29EA0B1 /* SLKTextView.h in Copy . Public Headers */,
-				A4F8FDA9B92A418287488AC731C4A9DC /* SLKTextViewController.h in Copy . Public Headers */,
-				9BF351A882AD256F47F9EA3A5DF8C7D8 /* SLKTypingIndicatorProtocol.h in Copy . Public Headers */,
-				C36AA1D17EA0CECE7760ABAFB021C879 /* SLKTypingIndicatorView.h in Copy . Public Headers */,
-				C34C2A4D1900474BD29B37411DE64175 /* SLKUIConstants.h in Copy . Public Headers */,
-				700E98EE07B85B76C3FFB645D6838638 /* UIResponder+SLKAdditions.h in Copy . Public Headers */,
-				0C75BC21C4579DFC1C2770AEF2244119 /* UIScrollView+SLKAdditions.h in Copy . Public Headers */,
-				0ED5C1E533CFE4A72D2B13895B05EE32 /* UIView+SLKAdditions.h in Copy . Public Headers */,
+				72F219B4587965B4DE40E2A4D325A242 /* SLKInputAccessoryView.h in Copy . Public Headers */,
+				C433FDC116C7ABF2135C6F0F0B215DC2 /* SLKTextInput.h in Copy . Public Headers */,
+				9EEFB6F780B503ED7ECD2EA6B865D7A6 /* SLKTextInputbar.h in Copy . Public Headers */,
+				FF00F711DEAC159442CE413F4E88E6CF /* SLKTextView+SLKAdditions.h in Copy . Public Headers */,
+				C9AD720BB0DFEF64D4559A107036BF28 /* SLKTextView.h in Copy . Public Headers */,
+				5D30FD89FBE16A87CA7D2C9E5CE4A1D0 /* SLKTextViewController.h in Copy . Public Headers */,
+				96BAC528FB90EB348DE542353C5CF831 /* SLKTypingIndicatorProtocol.h in Copy . Public Headers */,
+				E55A8B8AC4C48C411895F190C480C386 /* SLKTypingIndicatorView.h in Copy . Public Headers */,
+				EAB0256DE267216C800E414E7838C6D7 /* SLKUIConstants.h in Copy . Public Headers */,
+				A9FE2D426207B482558EEBAFBE87466F /* UIResponder+SLKAdditions.h in Copy . Public Headers */,
+				5FEDB0A8578A282495249F2036FF9658 /* UIScrollView+SLKAdditions.h in Copy . Public Headers */,
+				245494F2A38F584ECAAC1CD5A04D4C41 /* UIView+SLKAdditions.h in Copy . Public Headers */,
 			);
 			name = "Copy . Public Headers";
 			runOnlyForDeploymentPostprocessing = 0;
@@ -513,6 +512,8 @@
 
 /* Begin PBXFileReference section */
 		006CA9EB2528D673CA6A3D795CA6C24A /* AssetsLibrary.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = AssetsLibrary.framework; path = Platforms/iPhoneOS.platform/Developer/SDKs/iPhoneOS9.3.sdk/System/Library/Frameworks/AssetsLibrary.framework; sourceTree = DEVELOPER_DIR; };
+		0090EE7C7182E9038F7F418EEF35C313 /* AsyncMessagesCollectionViewDataSource.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; path = AsyncMessagesCollectionViewDataSource.swift; sourceTree = "<group>"; };
+		00D6EB62842534BE1840F11891B08F89 /* MessageNetworkImageBubbleNode.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; path = MessageNetworkImageBubbleNode.swift; sourceTree = "<group>"; };
 		013C6FBD34DAC7FDB2AE0C028C430CFF /* _ASTransitionContext.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = _ASTransitionContext.h; path = AsyncDisplayKit/_ASTransitionContext.h; sourceTree = "<group>"; };
 		017D6F11BFA2749856A628BEA44AE9CE /* PINCache.modulemap */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = "sourcecode.module-map"; path = PINCache.modulemap; sourceTree = "<group>"; };
 		026017440665B959ED40BB69FFBC968F /* ASBatchFetching.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = ASBatchFetching.m; path = AsyncDisplayKit/Private/ASBatchFetching.m; sourceTree = "<group>"; };
@@ -522,7 +523,7 @@
 		040D2E5EADC7E3E800A275FB2473A04D /* PINRemoteImageManagerResult.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = PINRemoteImageManagerResult.m; path = Pod/Classes/PINRemoteImageManagerResult.m; sourceTree = "<group>"; };
 		043A6BFF43EE842AECA7BFB440F2A864 /* ASAssert.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = ASAssert.h; path = Base/ASAssert.h; sourceTree = "<group>"; };
 		044AC3CAE0C84488F0EDDEFFEC2E722F /* ASCollectionNode.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = ASCollectionNode.h; path = AsyncDisplayKit/ASCollectionNode.h; sourceTree = "<group>"; };
-		04B4A6B909B77F5E8D7C1C90E6CD3454 /* UIImageExtensions.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; path = UIImageExtensions.swift; sourceTree = "<group>"; };
+		04A276821C2CBA8267607B69487A8F71 /* MessageCellNodeMetadataFactory.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; path = MessageCellNodeMetadataFactory.swift; sourceTree = "<group>"; };
 		04C55558E96617CC68CD100A0F1A256F /* ASViewController.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = ASViewController.h; path = AsyncDisplayKit/ASViewController.h; sourceTree = "<group>"; };
 		05549FBF41CB7FA065CBB1A4B493BAE3 /* _ASCoreAnimationExtras.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = _ASCoreAnimationExtras.h; path = AsyncDisplayKit/Private/_ASCoreAnimationExtras.h; sourceTree = "<group>"; };
 		057E2812812D8C94E4392C6CA375C1F4 /* SLKTextInputbar.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = SLKTextInputbar.m; path = Source/SLKTextInputbar.m; sourceTree = "<group>"; };
@@ -542,7 +543,6 @@
 		0C272326536BFDE542E5C15EB0F56253 /* PINRemoteImageMacros.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = PINRemoteImageMacros.h; path = Pod/Classes/PINRemoteImageMacros.h; sourceTree = "<group>"; };
 		0C9E9AE42DC30C353209BA91DBDA603E /* ASRelativeSize.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = ASRelativeSize.h; path = AsyncDisplayKit/Layout/ASRelativeSize.h; sourceTree = "<group>"; };
 		0D184769027146AD98A3D0E37366EEE3 /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = Platforms/iPhoneOS.platform/Developer/SDKs/iPhoneOS9.3.sdk/System/Library/Frameworks/Foundation.framework; sourceTree = DEVELOPER_DIR; };
-		0E8834308E620B8E70FB775A27F3C3A8 /* UIImage+AsyncMessagesViewController.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; path = "UIImage+AsyncMessagesViewController.swift"; sourceTree = "<group>"; };
 		0EA48617A9129FFDE96446A7A1E0F421 /* ASStaticLayoutSpec.mm */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.cpp.objcpp; name = ASStaticLayoutSpec.mm; path = AsyncDisplayKit/Layout/ASStaticLayoutSpec.mm; sourceTree = "<group>"; };
 		10D9CF8679818D0A3063A97F4D4943FD /* ASWeakSet.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = ASWeakSet.m; path = AsyncDisplayKit/Private/ASWeakSet.m; sourceTree = "<group>"; };
 		121CF4BDEB9AACF791578C484BBC56C4 /* ASDimension.mm */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.cpp.objcpp; name = ASDimension.mm; path = AsyncDisplayKit/Layout/ASDimension.mm; sourceTree = "<group>"; };
@@ -568,6 +568,7 @@
 		1B40BDDC2EF99A58283B75DE14DB0FC0 /* SLKTextViewController.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = SLKTextViewController.m; path = Source/SLKTextViewController.m; sourceTree = "<group>"; };
 		1BF2BEF0440E97AB629650F95DC301FA /* ASEqualityHashHelpers.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = ASEqualityHashHelpers.h; path = AsyncDisplayKit/TextKit/ASEqualityHashHelpers.h; sourceTree = "<group>"; };
 		1D541D30070E89C0F98836193713F570 /* ASNavigationController.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = ASNavigationController.h; path = AsyncDisplayKit/ASNavigationController.h; sourceTree = "<group>"; };
+		1DB67E386F7E05A9AC3244444AE4D5E9 /* NSBundle+AsyncMessagesViewController.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; path = "NSBundle+AsyncMessagesViewController.swift"; sourceTree = "<group>"; };
 		1F40345AA3081CFE8CF401107BC91827 /* _ASTransitionContext.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = _ASTransitionContext.m; path = AsyncDisplayKit/_ASTransitionContext.m; sourceTree = "<group>"; };
 		1FBED623CA075250126A7896478EF4DA /* ASVisibilityProtocols.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = ASVisibilityProtocols.m; path = AsyncDisplayKit/ASVisibilityProtocols.m; sourceTree = "<group>"; };
 		209894DE0999F6936530FB059A733D56 /* ASImageNode.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = ASImageNode.h; path = AsyncDisplayKit/ASImageNode.h; sourceTree = "<group>"; };
@@ -586,18 +587,17 @@
 		259BA08FADC38A08848AE257FC096CFA /* Info.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		26026D1F619ABD474ADD5B4B6767A1BA /* ASTextNodeWordKerner.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = ASTextNodeWordKerner.h; path = AsyncDisplayKit/TextKit/ASTextNodeWordKerner.h; sourceTree = "<group>"; };
 		26E8DC2D3D6C1393D321D8F27CCA09F5 /* ASDisplayNode+UIViewBridge.mm */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.cpp.objcpp; name = "ASDisplayNode+UIViewBridge.mm"; path = "AsyncDisplayKit/Private/ASDisplayNode+UIViewBridge.mm"; sourceTree = "<group>"; };
-		29B434861ABD2CF4F6F24B3EAD6872B1 /* AsyncMessagesViewController.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; path = AsyncMessagesViewController.swift; sourceTree = "<group>"; };
 		29B5FDE8EDF6F850502534D83FC56E6F /* ASCellNode+Internal.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = "ASCellNode+Internal.h"; path = "AsyncDisplayKit/ASCellNode+Internal.h"; sourceTree = "<group>"; };
 		29CD515A383A39D83236CDD75A7D90E5 /* ASDataController+Subclasses.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = "ASDataController+Subclasses.h"; path = "AsyncDisplayKit/Details/ASDataController+Subclasses.h"; sourceTree = "<group>"; };
 		2A0F009D20FC981523BDA9C67DCEF5C3 /* ASDefaultPlayButton.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = ASDefaultPlayButton.h; path = AsyncDisplayKit/Private/ASDefaultPlayButton.h; sourceTree = "<group>"; };
 		2B182953346B42727ED179809447CE1A /* PINAnimatedImageManager.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = PINAnimatedImageManager.h; path = Pod/Classes/PINAnimatedImageManager.h; sourceTree = "<group>"; };
-		2B596A411D1B4FE70037DD5C /* AsyncMessagesConfiguration.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AsyncMessagesConfiguration.swift; sourceTree = "<group>"; };
 		2C5471D2D30C52A255F655D2B0FDA321 /* ASLayoutable.mm */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.cpp.objcpp; name = ASLayoutable.mm; path = AsyncDisplayKit/Layout/ASLayoutable.mm; sourceTree = "<group>"; };
 		2D5D4E5CFBE5790BCB1DED7B9DA20363 /* ASNetworkImageNode.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = ASNetworkImageNode.h; path = AsyncDisplayKit/ASNetworkImageNode.h; sourceTree = "<group>"; };
 		2D6C84ADC98A78894215417FB041E6DB /* ASFlowLayoutController.mm */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.cpp.objcpp; name = ASFlowLayoutController.mm; path = AsyncDisplayKit/Details/ASFlowLayoutController.mm; sourceTree = "<group>"; };
 		2DCC7D0D5EFB68FE1CF980D6B45D8758 /* ASMapNode.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = ASMapNode.h; path = AsyncDisplayKit/ASMapNode.h; sourceTree = "<group>"; };
 		2E76F365A4E8163BE23E75C5B96571AA /* PINCache-prefix.pch */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "PINCache-prefix.pch"; sourceTree = "<group>"; };
 		2F40695E0C3D30E9EA147BC3973BE121 /* ASTextKitRenderer+TextChecking.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = "ASTextKitRenderer+TextChecking.h"; path = "AsyncDisplayKit/TextKit/ASTextKitRenderer+TextChecking.h"; sourceTree = "<group>"; };
+		2F5EAB5DD7DE7E1703CF0C5DE5EF841B /* AsyncMessagesViewController.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; path = AsyncMessagesViewController.swift; sourceTree = "<group>"; };
 		2FCD7B6B81B4E9D220E7801D998BFBF1 /* ASInsetLayoutSpec.mm */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.cpp.objcpp; name = ASInsetLayoutSpec.mm; path = AsyncDisplayKit/Layout/ASInsetLayoutSpec.mm; sourceTree = "<group>"; };
 		2FF05F34A8F6DC6F90668EF2141F2A19 /* PINRemoteImageManagerResult.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = PINRemoteImageManagerResult.h; path = Pod/Classes/PINRemoteImageManagerResult.h; sourceTree = "<group>"; };
 		31D6C874FF694B43A28DB9DEADE077CF /* SlackTextViewController-prefix.pch */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "SlackTextViewController-prefix.pch"; sourceTree = "<group>"; };
@@ -631,7 +631,7 @@
 		41FEE4D02563B09B940826CC1FDFCEC6 /* ASMapNode.mm */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.cpp.objcpp; name = ASMapNode.mm; path = AsyncDisplayKit/ASMapNode.mm; sourceTree = "<group>"; };
 		42477C978F66C00C692AFC1CD88CD1BB /* ASCollectionViewFlowLayoutInspector.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = ASCollectionViewFlowLayoutInspector.m; path = AsyncDisplayKit/Details/ASCollectionViewFlowLayoutInspector.m; sourceTree = "<group>"; };
 		43C0BE317CB382F301E898A7FE1EADF3 /* ASDataController.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = ASDataController.h; path = AsyncDisplayKit/Details/ASDataController.h; sourceTree = "<group>"; };
-		447A080F5A94598E04DB6F5C2A1A03FC /* MessageCellNode.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; path = MessageCellNode.swift; sourceTree = "<group>"; };
+		44459BB4DC9A840F8B98190E1CAD0632 /* DefaultAsyncMessagesCollectionViewDataSource.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; path = DefaultAsyncMessagesCollectionViewDataSource.swift; sourceTree = "<group>"; };
 		452B6767B04ADFF4CE356CA19412852A /* ASDefaultPlayButton.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = ASDefaultPlayButton.m; path = AsyncDisplayKit/Private/ASDefaultPlayButton.m; sourceTree = "<group>"; };
 		470F1B189A2035B5A577A3D6580DE84E /* ASControlNode+Subclasses.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = "ASControlNode+Subclasses.h"; path = "AsyncDisplayKit/ASControlNode+Subclasses.h"; sourceTree = "<group>"; };
 		476583FF5F8FA9A2353F7DF1E6E3EBAD /* ASPhotosFrameworkImageRequest.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = ASPhotosFrameworkImageRequest.h; path = AsyncDisplayKit/Details/ASPhotosFrameworkImageRequest.h; sourceTree = "<group>"; };
@@ -647,12 +647,12 @@
 		52F5852D96560F8CEBBE874D421B18F4 /* ASStackPositionedLayout.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = ASStackPositionedLayout.h; path = AsyncDisplayKit/Private/ASStackPositionedLayout.h; sourceTree = "<group>"; };
 		531077A034834666B75001A5C38A1AC5 /* ASButtonNode.mm */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.cpp.objcpp; name = ASButtonNode.mm; path = AsyncDisplayKit/ASButtonNode.mm; sourceTree = "<group>"; };
 		54675538773D14F9C640F3558D85E5D2 /* _ASPendingState.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = _ASPendingState.h; path = AsyncDisplayKit/Private/_ASPendingState.h; sourceTree = "<group>"; };
+		55E29DE7B150D33447364900D209FF4E /* MessageBubbleNodeFactory.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; path = MessageBubbleNodeFactory.swift; sourceTree = "<group>"; };
 		56B078B761C7803A39D65372AD306F66 /* ASButtonNode.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = ASButtonNode.h; path = AsyncDisplayKit/ASButtonNode.h; sourceTree = "<group>"; };
 		57A22E14D02B2B510792044280AD25E8 /* AsyncDisplayKit-prefix.pch */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "AsyncDisplayKit-prefix.pch"; sourceTree = "<group>"; };
 		57C3B65BF6380997D6B60472B0F68A2A /* ASIndexedNodeContext.mm */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.cpp.objcpp; name = ASIndexedNodeContext.mm; path = AsyncDisplayKit/Details/ASIndexedNodeContext.mm; sourceTree = "<group>"; };
 		57C53B063D1AB039F702C77DE7597944 /* PINImageView+PINRemoteImage.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = "PINImageView+PINRemoteImage.h"; path = "Pod/Classes/Image Categories/PINImageView+PINRemoteImage.h"; sourceTree = "<group>"; };
 		5866BE7C9CBA64B2D478CCFFEAF10DFF /* LoremIpsum-dummy.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = "LoremIpsum-dummy.m"; sourceTree = "<group>"; };
-		5C106F83392EBBFC09D958E13F865DB0 /* NSBundle+AsyncMessagesViewController.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; path = "NSBundle+AsyncMessagesViewController.swift"; sourceTree = "<group>"; };
 		5CF0B6E2E7703120332FF14C91AA149E /* ASStackLayoutSpec.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = ASStackLayoutSpec.h; path = AsyncDisplayKit/Layout/ASStackLayoutSpec.h; sourceTree = "<group>"; };
 		5D9700D8BC8D9A6D366E7BAC1F313007 /* ASPINRemoteImageDownloader.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = ASPINRemoteImageDownloader.m; path = AsyncDisplayKit/Details/ASPINRemoteImageDownloader.m; sourceTree = "<group>"; };
 		5E6916414085B0E2139571D21A2E71B7 /* AsyncDisplayKit-dummy.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = "AsyncDisplayKit-dummy.m"; sourceTree = "<group>"; };
@@ -681,6 +681,7 @@
 		6B1908DAD3BDF0699A1E5ED7610B9ED9 /* _ASAsyncTransaction.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = _ASAsyncTransaction.h; path = AsyncDisplayKit/Details/Transactions/_ASAsyncTransaction.h; sourceTree = "<group>"; };
 		6B7EE58C3F18EA7B0683368295ADD3D6 /* ASFlowLayoutController.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = ASFlowLayoutController.h; path = AsyncDisplayKit/Details/ASFlowLayoutController.h; sourceTree = "<group>"; };
 		6C8D16CD3E89EADD20D32C16AAF127AC /* ASNavigationController.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = ASNavigationController.m; path = AsyncDisplayKit/ASNavigationController.m; sourceTree = "<group>"; };
+		6CF285B081ED6C6883E8AEA7C97D23B8 /* MessageData.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; path = MessageData.swift; sourceTree = "<group>"; };
 		6DBEAA0203B499853D313CAAD8FA832D /* ASDisplayNode+Beta.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = "ASDisplayNode+Beta.h"; path = "AsyncDisplayKit/ASDisplayNode+Beta.h"; sourceTree = "<group>"; };
 		6E46461F7FE530B0DF1FCBCEBD2BE199 /* ASDisplayNode.mm */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.cpp.objcpp; name = ASDisplayNode.mm; path = AsyncDisplayKit/ASDisplayNode.mm; sourceTree = "<group>"; };
 		6EA84983EEA70D6DB8B40DC1ED8FA37D /* ASIndexedNodeContext.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = ASIndexedNodeContext.h; path = AsyncDisplayKit/Details/ASIndexedNodeContext.h; sourceTree = "<group>"; };
@@ -697,7 +698,6 @@
 		72FA703732BB63AA904B4015FB30A143 /* ASMutableAttributedStringBuilder.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = ASMutableAttributedStringBuilder.m; path = AsyncDisplayKit/Details/ASMutableAttributedStringBuilder.m; sourceTree = "<group>"; };
 		7307E9D64DE5D22817B1C78ED4868A39 /* ASEnvironment.mm */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.cpp.objcpp; name = ASEnvironment.mm; path = AsyncDisplayKit/Details/ASEnvironment.mm; sourceTree = "<group>"; };
 		73C287E05144169354E530C7C888DB2C /* PINCache.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = PINCache.m; path = PINCache/PINCache.m; sourceTree = "<group>"; };
-		757C8AF65DB4D6A2204131FAAB213A09 /* MessageTextBubbleNode.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; path = MessageTextBubbleNode.swift; sourceTree = "<group>"; };
 		763F344B26AA9C9BE34B645F1B93105E /* PINCache.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = PINCache.xcconfig; sourceTree = "<group>"; };
 		76AE9BAC907399C81C2CE007DAB8E686 /* ASTableNode.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = ASTableNode.h; path = AsyncDisplayKit/ASTableNode.h; sourceTree = "<group>"; };
 		770D41B7CE0C009C44662170A45B024C /* ASStackLayoutable.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = ASStackLayoutable.h; path = AsyncDisplayKit/Layout/ASStackLayoutable.h; sourceTree = "<group>"; };
@@ -713,11 +713,9 @@
 		7B75FC74DC117866B41FC47FCFE52655 /* SlackTextViewController.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = SlackTextViewController.xcconfig; sourceTree = "<group>"; };
 		7CD6647821288191D43A0CC7FD0FA8A5 /* PINDataTaskOperation.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = PINDataTaskOperation.h; path = Pod/Classes/PINDataTaskOperation.h; sourceTree = "<group>"; };
 		7CD72C4FE595EE151FE47EC5B5A3BB9E /* ASTextNode.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = ASTextNode.h; path = AsyncDisplayKit/ASTextNode.h; sourceTree = "<group>"; };
-		7D505B08E345C610FCBE0ED047981E74 /* DefaultAsyncMessagesCollectionViewDataSource.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; path = DefaultAsyncMessagesCollectionViewDataSource.swift; sourceTree = "<group>"; };
 		7DBAD7782B96E819716198180892DB4E /* ASBasicImageDownloader.mm */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.cpp.objcpp; name = ASBasicImageDownloader.mm; path = AsyncDisplayKit/Details/ASBasicImageDownloader.mm; sourceTree = "<group>"; };
 		7E0E66DF9351F0DC4E4B6DD7547B40F3 /* PINImage+WebP.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = "PINImage+WebP.m"; path = "Pod/Classes/Categories/PINImage+WebP.m"; sourceTree = "<group>"; };
 		7E2CE6EE3CDE439FBF22615138E35566 /* ASMultidimensionalArrayUtils.mm */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.cpp.objcpp; name = ASMultidimensionalArrayUtils.mm; path = AsyncDisplayKit/Private/ASMultidimensionalArrayUtils.mm; sourceTree = "<group>"; };
-		7EBD2E69E7B82D675D42484B76ABD6C4 /* MessageCellNodeMetadataFactory.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; path = MessageCellNodeMetadataFactory.swift; sourceTree = "<group>"; };
 		80988E175E62775C19D58C364A363BFF /* ASCollectionNode.mm */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.cpp.objcpp; name = ASCollectionNode.mm; path = AsyncDisplayKit/ASCollectionNode.mm; sourceTree = "<group>"; };
 		82141F3F115C352AA7F57949EAA9A436 /* Pods-AsyncMessagesViewController_Tests-umbrella.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "Pods-AsyncMessagesViewController_Tests-umbrella.h"; sourceTree = "<group>"; };
 		827C313BF0B7C9FFFCD149E84E4A844D /* ASDefaultPlaybackButton.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = ASDefaultPlaybackButton.h; path = AsyncDisplayKit/Private/ASDefaultPlaybackButton.h; sourceTree = "<group>"; };
@@ -730,7 +728,6 @@
 		86580575FAE06D1717F5FFA921BEA0FC /* _ASDisplayView.mm */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.cpp.objcpp; name = _ASDisplayView.mm; path = AsyncDisplayKit/Details/_ASDisplayView.mm; sourceTree = "<group>"; };
 		8687DA5AAE187C15F520F3CC6E1B5C83 /* ASRelativeLayoutSpec.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = ASRelativeLayoutSpec.h; path = AsyncDisplayKit/Layout/ASRelativeLayoutSpec.h; sourceTree = "<group>"; };
 		86B64F2C52DEB93D77829E423A9B2061 /* ASBasicImageDownloader.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = ASBasicImageDownloader.h; path = AsyncDisplayKit/Details/ASBasicImageDownloader.h; sourceTree = "<group>"; };
-		876F2561B11D96690C62B1BA7D6BB743 /* MessageNetworkImageBubbleNode.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; path = MessageNetworkImageBubbleNode.swift; sourceTree = "<group>"; };
 		87D6B4FBA51F7931168242E5BF1C681B /* ASTableView.mm */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.cpp.objcpp; name = ASTableView.mm; path = AsyncDisplayKit/ASTableView.mm; sourceTree = "<group>"; };
 		88ACB5C52F26DC81846BDCB69A4DB7E8 /* ASWeakProxy.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = ASWeakProxy.h; path = AsyncDisplayKit/Details/ASWeakProxy.h; sourceTree = "<group>"; };
 		89323B56CBFC62C5A7D9A05301B0245E /* ASChangeSetDataController.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = ASChangeSetDataController.m; path = AsyncDisplayKit/Details/ASChangeSetDataController.m; sourceTree = "<group>"; };
@@ -760,6 +757,7 @@
 		934B09E81A7F918803AA34215BE414D4 /* ASPendingStateController.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = ASPendingStateController.h; path = AsyncDisplayKit/Private/ASPendingStateController.h; sourceTree = "<group>"; };
 		93A4A3777CF96A4AAC1D13BA6DCCEA73 /* Podfile */ = {isa = PBXFileReference; explicitFileType = text.script.ruby; includeInIndex = 1; name = Podfile; path = ../Podfile; sourceTree = SOURCE_ROOT; xcLanguageSpecificationIdentifier = xcode.lang.ruby; };
 		93E8CDCE0E87795C0D3A410797559F02 /* PINAlternateRepresentationProvider.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = PINAlternateRepresentationProvider.h; path = Pod/Classes/PINAlternateRepresentationProvider.h; sourceTree = "<group>"; };
+		941D83483E76247688DFB65EB2222471 /* UIImage+AsyncMessagesViewController.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; path = "UIImage+AsyncMessagesViewController.swift"; sourceTree = "<group>"; };
 		95D393CFC260AC688E9AF2CF0D793E74 /* PINRemoteImageTask.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = PINRemoteImageTask.m; path = Pod/Classes/PINRemoteImageTask.m; sourceTree = "<group>"; };
 		9771AF3917CCED517E0D18AC679956E4 /* ASLayoutable.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = ASLayoutable.h; path = AsyncDisplayKit/Layout/ASLayoutable.h; sourceTree = "<group>"; };
 		9801216B275EF4F15CA28929A439D2E7 /* ImageIO.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = ImageIO.framework; path = Platforms/iPhoneOS.platform/Developer/SDKs/iPhoneOS9.3.sdk/System/Library/Frameworks/ImageIO.framework; sourceTree = DEVELOPER_DIR; };
@@ -772,11 +770,11 @@
 		9B9A9001CAA1E9DB99B8331CC3AC7A04 /* PINRemoteImageProcessorTask.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = PINRemoteImageProcessorTask.m; path = Pod/Classes/PINRemoteImageProcessorTask.m; sourceTree = "<group>"; };
 		9C57484D27C8410F864EE280300E3724 /* ASInternalHelpers.mm */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.cpp.objcpp; name = ASInternalHelpers.mm; path = AsyncDisplayKit/Private/ASInternalHelpers.mm; sourceTree = "<group>"; };
 		9E0B501CD7C6EBAE2C13AD9A19A9FFD1 /* AsyncMessagesViewController.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = AsyncMessagesViewController.framework; sourceTree = BUILT_PRODUCTS_DIR; };
-		A007321A62DC1E8A18956273BC29A9D2 /* AsyncMessagesCollectionViewDataSource.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; path = AsyncMessagesCollectionViewDataSource.swift; sourceTree = "<group>"; };
 		A02EB8F9C59B257406E4EAAFBA4F6A46 /* SLKTextView+SLKAdditions.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = "SLKTextView+SLKAdditions.h"; path = "Source/SLKTextView+SLKAdditions.h"; sourceTree = "<group>"; };
 		A13937A852D6D0D6073085D8DA257F3C /* PINRemoteImageCallbacks.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = PINRemoteImageCallbacks.m; path = Pod/Classes/PINRemoteImageCallbacks.m; sourceTree = "<group>"; };
 		A15DA199667F99CAC593A22A46EF289F /* ASWeakSet.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = ASWeakSet.h; path = AsyncDisplayKit/Private/ASWeakSet.h; sourceTree = "<group>"; };
 		A35104D770453768C861B0E27B278BEA /* PINAnimatedImage.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = PINAnimatedImage.h; path = Pod/Classes/PINAnimatedImage.h; sourceTree = "<group>"; };
+		A46158B01032E051243424200A5DD60F /* AsyncMessagesConfiguration.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; path = AsyncMessagesConfiguration.swift; sourceTree = "<group>"; };
 		A61694D0A9C21CD5A55AA0F58FF2B0EC /* Pods-AsyncMessagesViewController_Example.modulemap */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = "sourcecode.module-map"; path = "Pods-AsyncMessagesViewController_Example.modulemap"; sourceTree = "<group>"; };
 		A629A7EA5B7C338319CBDF65BA0EEF15 /* Pods-AsyncMessagesViewController_Tests-frameworks.sh */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.script.sh; path = "Pods-AsyncMessagesViewController_Tests-frameworks.sh"; sourceTree = "<group>"; };
 		A6D2B9EE8E870790B3E2AAB801A78BA1 /* PINRemoteImageTask.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = PINRemoteImageTask.h; path = Pod/Classes/PINRemoteImageTask.h; sourceTree = "<group>"; };
@@ -786,7 +784,6 @@
 		AAD9F44D34A96E8DA5F0FBFF48EFF6FA /* _ASAsyncTransactionContainer.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = _ASAsyncTransactionContainer.h; path = AsyncDisplayKit/Details/Transactions/_ASAsyncTransactionContainer.h; sourceTree = "<group>"; };
 		AC1520A4F81F077494850D211555C53A /* Pods-AsyncMessagesViewController_Tests-dummy.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = "Pods-AsyncMessagesViewController_Tests-dummy.m"; sourceTree = "<group>"; };
 		ACB3EFBF6F4317327BE73796E3DF1A85 /* ASCollectionView.mm */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.cpp.objcpp; name = ASCollectionView.mm; path = AsyncDisplayKit/ASCollectionView.mm; sourceTree = "<group>"; };
-		ACB6F5DBFDC9DB735BAD42B216AD82DE /* MessageBubbleNodeFactory.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; path = MessageBubbleNodeFactory.swift; sourceTree = "<group>"; };
 		ACC7B79C01CFFFD5510A04444DEC17DC /* PINRemoteImage-prefix.pch */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "PINRemoteImage-prefix.pch"; sourceTree = "<group>"; };
 		ACE909FC083947B7A73C788CCAE1FF87 /* ASScrollDirection.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = ASScrollDirection.h; path = AsyncDisplayKit/Details/ASScrollDirection.h; sourceTree = "<group>"; };
 		AD0EFA17A19F7BADB68713D4B38E6842 /* ASVideoNode.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = ASVideoNode.h; path = AsyncDisplayKit/ASVideoNode.h; sourceTree = "<group>"; };
@@ -800,6 +797,7 @@
 		AF8874F4A835F75C9C8A881B60E23458 /* ASEditableTextNode.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = ASEditableTextNode.h; path = AsyncDisplayKit/ASEditableTextNode.h; sourceTree = "<group>"; };
 		AFB6DF7E5A188341185A61E091EB5A06 /* AsyncDisplayKit.modulemap */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = "sourcecode.module-map"; path = AsyncDisplayKit.modulemap; sourceTree = "<group>"; };
 		B14AB1D3B87359BBF86594D929B892C2 /* PINCache.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = PINCache.h; path = PINCache/PINCache.h; sourceTree = "<group>"; };
+		B1E1B8E0874AF34129DEC872AC1AB0A7 /* MessageTextBubbleNode.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; path = MessageTextBubbleNode.swift; sourceTree = "<group>"; };
 		B311E2CBBF7486B39AD4F8A6D849A2BB /* PINRemoteImage.modulemap */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = "sourcecode.module-map"; path = PINRemoteImage.modulemap; sourceTree = "<group>"; };
 		B3C81D65635BAE9D7B2727A02C714B52 /* Pods-AsyncMessagesViewController_Example-dummy.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = "Pods-AsyncMessagesViewController_Example-dummy.m"; sourceTree = "<group>"; };
 		B3D39AE0641656D57E7A511AD9FC54BA /* UIScrollView+SLKAdditions.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = "UIScrollView+SLKAdditions.m"; path = "Source/UIScrollView+SLKAdditions.m"; sourceTree = "<group>"; };
@@ -830,7 +828,6 @@
 		BF20CB7D2F2865D12B6D5E0BB18A77DC /* ASLayout.mm */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.cpp.objcpp; name = ASLayout.mm; path = AsyncDisplayKit/Layout/ASLayout.mm; sourceTree = "<group>"; };
 		BF38D215C0B6D5F87130E7A73F7BB7F7 /* SLKTypingIndicatorView.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = SLKTypingIndicatorView.m; path = Source/SLKTypingIndicatorView.m; sourceTree = "<group>"; };
 		BFE361025F281F88D6566888D4510414 /* ASDisplayNodeInternal.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = ASDisplayNodeInternal.h; path = AsyncDisplayKit/Private/ASDisplayNodeInternal.h; sourceTree = "<group>"; };
-		BFE7F645A6A9BCF6BC2224E44D469CFD /* MessageBubbleImageProvider.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; path = MessageBubbleImageProvider.swift; sourceTree = "<group>"; };
 		C030DBBF0871C650FDA8F381E3422CEB /* PINDiskCache.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = PINDiskCache.h; path = PINCache/PINDiskCache.h; sourceTree = "<group>"; };
 		C1AC992697D43F32B7E2057998745827 /* _AS-objc-internal.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = "_AS-objc-internal.h"; path = "AsyncDisplayKit/Private/_AS-objc-internal.h"; sourceTree = "<group>"; };
 		C3FBD30605ACF98A193E324A6BC1C14F /* ASControlNode.mm */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.cpp.objcpp; name = ASControlNode.mm; path = AsyncDisplayKit/ASControlNode.mm; sourceTree = "<group>"; };
@@ -853,7 +850,6 @@
 		CF0FDDF106328CA50E27FFE94BD58B4C /* ASControlNode.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = ASControlNode.h; path = AsyncDisplayKit/ASControlNode.h; sourceTree = "<group>"; };
 		CFA23CE5BB9B32C55D73AFF65701BE3D /* NSArray+Diffing.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = "NSArray+Diffing.m"; path = "AsyncDisplayKit/Private/NSArray+Diffing.m"; sourceTree = "<group>"; };
 		CFC3FB97A9857AA65178F281B1371346 /* SLKTextView+SLKAdditions.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = "SLKTextView+SLKAdditions.m"; path = "Source/SLKTextView+SLKAdditions.m"; sourceTree = "<group>"; };
-		D103A4FD0271C006378905AF2745FFED /* MessageData.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; path = MessageData.swift; sourceTree = "<group>"; };
 		D175714412730F94988E4019B15CDEE8 /* ASCollectionNode+Beta.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = "ASCollectionNode+Beta.h"; path = "AsyncDisplayKit/ASCollectionNode+Beta.h"; sourceTree = "<group>"; };
 		D1D78CA1EBCB7C31E6F9EE999A0D3DFA /* AsyncDisplayKit.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = AsyncDisplayKit.xcconfig; sourceTree = "<group>"; };
 		D25F5497252CE3C9B8B75F19DE3DB674 /* ASImageNode+tvOS.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = "ASImageNode+tvOS.m"; path = "AsyncDisplayKit/ASImageNode+tvOS.m"; sourceTree = "<group>"; };
@@ -861,7 +857,6 @@
 		D3C4435D0AEFCE3364C40C9F741AD5CD /* ASTextKitShadower.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = ASTextKitShadower.h; path = AsyncDisplayKit/TextKit/ASTextKitShadower.h; sourceTree = "<group>"; };
 		D410EEF65831D63F3463CF60CF15592F /* UIScrollView+SLKAdditions.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = "UIScrollView+SLKAdditions.h"; path = "Source/UIScrollView+SLKAdditions.h"; sourceTree = "<group>"; };
 		D452AC1003A25D6DC01C1AA6F4FC7E40 /* ASScrollDirection.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = ASScrollDirection.m; path = AsyncDisplayKit/Details/ASScrollDirection.m; sourceTree = "<group>"; };
-		D453DD00A909AB0BC97A520EEF43B61C /* MessageTimestampFormatter.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; path = MessageTimestampFormatter.swift; sourceTree = "<group>"; };
 		D4924B1AB174CC5C32DCD143F336D014 /* Pods-AsyncMessagesViewController_Tests-acknowledgements.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = "Pods-AsyncMessagesViewController_Tests-acknowledgements.plist"; sourceTree = "<group>"; };
 		D57B30A8B6E35D87904C9DF16461DDD4 /* ASControlNode+tvOS.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = "ASControlNode+tvOS.h"; path = "AsyncDisplayKit/ASControlNode+tvOS.h"; sourceTree = "<group>"; };
 		D5D76FAB00E538A160F2BE26C2B2DE09 /* ASImageNode+CGExtras.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = "ASImageNode+CGExtras.m"; path = "AsyncDisplayKit/Private/ASImageNode+CGExtras.m"; sourceTree = "<group>"; };
@@ -879,6 +874,7 @@
 		DDDFD80EC04F049564FB61A390E5BD8E /* SlackTextViewController.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = SlackTextViewController.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		DE2CE31BDE31692326B5755D947994D6 /* ASLayoutManager.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = ASLayoutManager.m; path = AsyncDisplayKit/TextKit/ASLayoutManager.m; sourceTree = "<group>"; };
 		DEC155FE9BA5D489DAEF4644BABD7BB0 /* ASRangeController.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = ASRangeController.h; path = AsyncDisplayKit/Details/ASRangeController.h; sourceTree = "<group>"; };
+		DEECF923EAEC6629452DE745BE55B957 /* MessageTimestampFormatter.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; path = MessageTimestampFormatter.swift; sourceTree = "<group>"; };
 		DF2EDD0EAEC100E7A3E9ADD403332675 /* ASLayoutablePrivate.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = ASLayoutablePrivate.h; path = AsyncDisplayKit/Layout/ASLayoutablePrivate.h; sourceTree = "<group>"; };
 		E16B240F29F13A951D17123C1E4C5B83 /* PINRemoteLock.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = PINRemoteLock.h; path = Pod/Classes/PINRemoteLock.h; sourceTree = "<group>"; };
 		E2973E0BEE76ABDA76C98894CC5B5A19 /* ASLayoutTransition.mm */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.cpp.objcpp; name = ASLayoutTransition.mm; path = AsyncDisplayKit/Private/ASLayoutTransition.mm; sourceTree = "<group>"; };
@@ -887,6 +883,7 @@
 		E45ACFE7342F9CD7C6492DB792E8E6AB /* PINRemoteImageProcessorTask.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = PINRemoteImageProcessorTask.h; path = Pod/Classes/PINRemoteImageProcessorTask.h; sourceTree = "<group>"; };
 		E4E72838EFE3E2A04D4FC593C1871086 /* ASTableView.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = ASTableView.h; path = AsyncDisplayKit/ASTableView.h; sourceTree = "<group>"; };
 		E562DC1E61A69747F753A121CF3A1938 /* ASAsciiArtBoxCreator.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = ASAsciiArtBoxCreator.m; path = AsyncDisplayKit/Layout/ASAsciiArtBoxCreator.m; sourceTree = "<group>"; };
+		E6030FDA58DB4E10BFFA61D28949D536 /* MessageCellNode.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; path = MessageCellNode.swift; sourceTree = "<group>"; };
 		E6F709CA6C3F68118FEB783A81BDECD1 /* ASImageNode+tvOS.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = "ASImageNode+tvOS.h"; path = "AsyncDisplayKit/ASImageNode+tvOS.h"; sourceTree = "<group>"; };
 		E85901FDB7CA0B081DB38AF22287E77A /* PINImage+WebP.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = "PINImage+WebP.h"; path = "Pod/Classes/Categories/PINImage+WebP.h"; sourceTree = "<group>"; };
 		E8C2C585142C343908866A9DD8CB5753 /* LoremIpsum.modulemap */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = "sourcecode.module-map"; path = LoremIpsum.modulemap; sourceTree = "<group>"; };
@@ -895,6 +892,7 @@
 		E977A1EDC0C201A5E6F7119B505F6606 /* ASTextKitCoreTextAdditions.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = ASTextKitCoreTextAdditions.m; path = AsyncDisplayKit/TextKit/ASTextKitCoreTextAdditions.m; sourceTree = "<group>"; };
 		E98BD968E421D6F48A767D4CB20E86C6 /* ASImageContainerProtocolCategories.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = ASImageContainerProtocolCategories.h; path = AsyncDisplayKit/Details/ASImageContainerProtocolCategories.h; sourceTree = "<group>"; };
 		E9A1C66F0A2FDF7EF5A730E5EBC30E2E /* ASDataController.mm */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.cpp.objcpp; name = ASDataController.mm; path = AsyncDisplayKit/Details/ASDataController.mm; sourceTree = "<group>"; };
+		E9F068FC04DAC7B1F17C65D2DD39EAC1 /* MessageBubbleImageProvider.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; path = MessageBubbleImageProvider.swift; sourceTree = "<group>"; };
 		EBD6670BC0FC769DEAF4128B78F3F313 /* AsyncDisplayKit.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = AsyncDisplayKit.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		EC272694F064B79DA3FA7CF44B431845 /* PINRemoteImageCategoryManager.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = PINRemoteImageCategoryManager.m; path = Pod/Classes/PINRemoteImageCategoryManager.m; sourceTree = "<group>"; };
 		EC6E2058615517986BEA97C0FE2FE482 /* Pods-AsyncMessagesViewController_Tests-acknowledgements.markdown */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text; path = "Pods-AsyncMessagesViewController_Tests-acknowledgements.markdown"; sourceTree = "<group>"; };
@@ -968,21 +966,21 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
-		3B17ECD6A82D3F85FA9CADE11FAF39D9 /* Frameworks */ = {
+		22C0592C7322916950AA4E945BEAE382 /* Frameworks */ = {
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				6A12F783DDF0E39C04CF19B35D95C192 /* Foundation.framework in Frameworks */,
+				22D987286A75E0D8305BA0C7E646CAC7 /* AsyncDisplayKit.framework in Frameworks */,
+				5C09A99A062C6817FE8CB95637CB50CB /* Foundation.framework in Frameworks */,
+				4033CFE658676863366DD6CB6D933D76 /* SlackTextViewController.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
-		53C9F47E58F1D923570B26CCF925691F /* Frameworks */ = {
+		3880E0033A7C1A017F2067219EADA4CD /* Frameworks */ = {
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				55F9204FC93473DE4F348FBEBBE68D31 /* AsyncDisplayKit.framework in Frameworks */,
-				B57C7DB49901E5ABE52ADEF7AA97E90E /* Foundation.framework in Frameworks */,
-				671797BE62C3FA95CE1E3157FDB09DD2 /* SlackTextViewController.framework in Frameworks */,
+				81F7CC700F408CE98586A48DFF00C486 /* Foundation.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -1316,18 +1314,6 @@
 			path = "Target Support Files/Pods-AsyncMessagesViewController_Example";
 			sourceTree = "<group>";
 		};
-		1400894BA781F203C36EFBAED2A4D0EC /* Views */ = {
-			isa = PBXGroup;
-			children = (
-				ACB6F5DBFDC9DB735BAD42B216AD82DE /* MessageBubbleNodeFactory.swift */,
-				447A080F5A94598E04DB6F5C2A1A03FC /* MessageCellNode.swift */,
-				876F2561B11D96690C62B1BA7D6BB743 /* MessageNetworkImageBubbleNode.swift */,
-				757C8AF65DB4D6A2204131FAAB213A09 /* MessageTextBubbleNode.swift */,
-				04B4A6B909B77F5E8D7C1C90E6CD3454 /* UIImageExtensions.swift */,
-			);
-			path = Views;
-			sourceTree = "<group>";
-		};
 		19D7614C08524D85F07F06643E9B6B09 /* Pods */ = {
 			isa = PBXGroup;
 			children = (
@@ -1432,7 +1418,7 @@
 		4C01693A3A99160BC1DC7949F23ABB32 /* AsyncMessagesViewController */ = {
 			isa = PBXGroup;
 			children = (
-				62CB33155F12557A23479AD98A39AB9C /* Classes */,
+				8096998A22FEF7DE67F5DFE623A2D3B7 /* Classes */,
 			);
 			path = AsyncMessagesViewController;
 			sourceTree = "<group>";
@@ -1474,6 +1460,15 @@
 			path = "Target Support Files/Pods-AsyncMessagesViewController_Tests";
 			sourceTree = "<group>";
 		};
+		620DE9ED4E9ED3E545365C1A2B839500 /* Utilities */ = {
+			isa = PBXGroup;
+			children = (
+				1DB67E386F7E05A9AC3244444AE4D5E9 /* NSBundle+AsyncMessagesViewController.swift */,
+				941D83483E76247688DFB65EB2222471 /* UIImage+AsyncMessagesViewController.swift */,
+			);
+			path = Utilities;
+			sourceTree = "<group>";
+		};
 		627155FA8A3365598A1A94D9EB7900FA /* PINCache */ = {
 			isa = PBXGroup;
 			children = (
@@ -1487,17 +1482,6 @@
 				7EEF5BF94B064AEABB35C62C70F73657 /* Support Files */,
 			);
 			path = PINCache;
-			sourceTree = "<group>";
-		};
-		62CB33155F12557A23479AD98A39AB9C /* Classes */ = {
-			isa = PBXGroup;
-			children = (
-				BEAD14441431EEA50936AC1A62AC3D45 /* Controllers */,
-				D0C35A17108144D185477FF6CCE6AC09 /* Models */,
-				F63DB9FFA2DDD0EF251AAF3E352C8EDF /* Utilities */,
-				1400894BA781F203C36EFBAED2A4D0EC /* Views */,
-			);
-			path = Classes;
 			sourceTree = "<group>";
 		};
 		7658319EB2D1460BFE7CB85BDE6CE5E2 /* Support Files */ = {
@@ -1583,6 +1567,17 @@
 			path = "../Target Support Files/PINCache";
 			sourceTree = "<group>";
 		};
+		8096998A22FEF7DE67F5DFE623A2D3B7 /* Classes */ = {
+			isa = PBXGroup;
+			children = (
+				A31AA1D5DE38AE52B14B207334C012E6 /* Controllers */,
+				9F529209F457C2236369B6B4D415A943 /* Models */,
+				620DE9ED4E9ED3E545365C1A2B839500 /* Utilities */,
+				D4A3855F47C1819659BCD5638EDF19A2 /* Views */,
+			);
+			path = Classes;
+			sourceTree = "<group>";
+		};
 		946BE368D5C306F3105C52527C76A589 /* AsyncDisplayKit */ = {
 			isa = PBXGroup;
 			children = (
@@ -1591,6 +1586,28 @@
 				3FCBFBCDB5A406DF41F298C660B859D7 /* Support Files */,
 			);
 			path = AsyncDisplayKit;
+			sourceTree = "<group>";
+		};
+		9F529209F457C2236369B6B4D415A943 /* Models */ = {
+			isa = PBXGroup;
+			children = (
+				A46158B01032E051243424200A5DD60F /* AsyncMessagesConfiguration.swift */,
+				6CF285B081ED6C6883E8AEA7C97D23B8 /* MessageData.swift */,
+			);
+			path = Models;
+			sourceTree = "<group>";
+		};
+		A31AA1D5DE38AE52B14B207334C012E6 /* Controllers */ = {
+			isa = PBXGroup;
+			children = (
+				0090EE7C7182E9038F7F418EEF35C313 /* AsyncMessagesCollectionViewDataSource.swift */,
+				2F5EAB5DD7DE7E1703CF0C5DE5EF841B /* AsyncMessagesViewController.swift */,
+				44459BB4DC9A840F8B98190E1CAD0632 /* DefaultAsyncMessagesCollectionViewDataSource.swift */,
+				E9F068FC04DAC7B1F17C65D2DD39EAC1 /* MessageBubbleImageProvider.swift */,
+				04A276821C2CBA8267607B69487A8F71 /* MessageCellNodeMetadataFactory.swift */,
+				DEECF923EAEC6629452DE745BE55B957 /* MessageTimestampFormatter.swift */,
+			);
+			path = Controllers;
 			sourceTree = "<group>";
 		};
 		A7B6C13AEE8BF36242EA775F07BE99DA /* Development Pods */ = {
@@ -1611,19 +1628,6 @@
 			path = LoremIpsum;
 			sourceTree = "<group>";
 		};
-		BEAD14441431EEA50936AC1A62AC3D45 /* Controllers */ = {
-			isa = PBXGroup;
-			children = (
-				A007321A62DC1E8A18956273BC29A9D2 /* AsyncMessagesCollectionViewDataSource.swift */,
-				29B434861ABD2CF4F6F24B3EAD6872B1 /* AsyncMessagesViewController.swift */,
-				7D505B08E345C610FCBE0ED047981E74 /* DefaultAsyncMessagesCollectionViewDataSource.swift */,
-				BFE7F645A6A9BCF6BC2224E44D469CFD /* MessageBubbleImageProvider.swift */,
-				7EBD2E69E7B82D675D42484B76ABD6C4 /* MessageCellNodeMetadataFactory.swift */,
-				D453DD00A909AB0BC97A520EEF43B61C /* MessageTimestampFormatter.swift */,
-			);
-			path = Controllers;
-			sourceTree = "<group>";
-		};
 		CD9BB6B7317E1B77524478068007F944 /* Assets */ = {
 			isa = PBXGroup;
 			children = (
@@ -1632,13 +1636,15 @@
 			path = Assets;
 			sourceTree = "<group>";
 		};
-		D0C35A17108144D185477FF6CCE6AC09 /* Models */ = {
+		D4A3855F47C1819659BCD5638EDF19A2 /* Views */ = {
 			isa = PBXGroup;
 			children = (
-				D103A4FD0271C006378905AF2745FFED /* MessageData.swift */,
-				2B596A411D1B4FE70037DD5C /* AsyncMessagesConfiguration.swift */,
+				55E29DE7B150D33447364900D209FF4E /* MessageBubbleNodeFactory.swift */,
+				E6030FDA58DB4E10BFFA61D28949D536 /* MessageCellNode.swift */,
+				00D6EB62842534BE1840F11891B08F89 /* MessageNetworkImageBubbleNode.swift */,
+				B1E1B8E0874AF34129DEC872AC1AB0A7 /* MessageTextBubbleNode.swift */,
 			);
-			path = Models;
+			path = Views;
 			sourceTree = "<group>";
 		};
 		DAD2723EE25FBAB5677B878EC3E6E1F5 /* Frameworks */ = {
@@ -1697,15 +1703,6 @@
 			path = SlackTextViewController;
 			sourceTree = "<group>";
 		};
-		F63DB9FFA2DDD0EF251AAF3E352C8EDF /* Utilities */ = {
-			isa = PBXGroup;
-			children = (
-				5C106F83392EBBFC09D958E13F865DB0 /* NSBundle+AsyncMessagesViewController.swift */,
-				0E8834308E620B8E70FB775A27F3C3A8 /* UIImage+AsyncMessagesViewController.swift */,
-			);
-			path = Utilities;
-			sourceTree = "<group>";
-		};
 		F6E868C97F289F11CB1B9288243A0182 /* Resources */ = {
 			isa = PBXGroup;
 			children = (
@@ -1717,14 +1714,6 @@
 /* End PBXGroup section */
 
 /* Begin PBXHeadersBuildPhase section */
-		0064454D8900AAD851B7F5F05EBF580F /* Headers */ = {
-			isa = PBXHeadersBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-				2167D07D5E488FA75EB1C0914F1FA112 /* AsyncMessagesViewController-umbrella.h in Headers */,
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-		};
 		08C69828F6844E72F9183014FD6E4B85 /* Headers */ = {
 			isa = PBXHeadersBuildPhase;
 			buildActionMask = 2147483647;
@@ -1912,26 +1901,6 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
-		94F5C346CC1317DFC3237861DC9EDFA9 /* Headers */ = {
-			isa = PBXHeadersBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-				3D972262393743335CCBE8A99D60B379 /* SlackTextViewController-umbrella.h in Headers */,
-				58CDAC5C066A94061671DF075E4F70E0 /* SLKInputAccessoryView.h in Headers */,
-				4D26CBD7CE50D725C2F75CA42CDF0592 /* SLKTextInput.h in Headers */,
-				303FB48B6BE85C70765AEC0560147D0C /* SLKTextInputbar.h in Headers */,
-				5725F451A54E47936DDDE59E85A4A6CB /* SLKTextView+SLKAdditions.h in Headers */,
-				B330C327CE6E9A108C6C88B8506B1823 /* SLKTextView.h in Headers */,
-				E818D2ACA4DE5B0E48801FB82A506ABE /* SLKTextViewController.h in Headers */,
-				9FF94A15FFEFAAA650C9ED6475C667E8 /* SLKTypingIndicatorProtocol.h in Headers */,
-				07CA11884E024E7E958F03E882190FE8 /* SLKTypingIndicatorView.h in Headers */,
-				B45A93FA6A6BA7A8CE295AA4FEC7BCFA /* SLKUIConstants.h in Headers */,
-				D6098F307147007ED3FA3EFB110DB477 /* UIResponder+SLKAdditions.h in Headers */,
-				8246B24A0CC38FCE13FA449EB8A04F0E /* UIScrollView+SLKAdditions.h in Headers */,
-				2384743DAEF311699953AD0C2FB4EBDB /* UIView+SLKAdditions.h in Headers */,
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-		};
 		A370DB509685BC7A8ECC002E95DD60FF /* Headers */ = {
 			isa = PBXHeadersBuildPhase;
 			buildActionMask = 2147483647;
@@ -1967,6 +1936,34 @@
 			buildActionMask = 2147483647;
 			files = (
 				86513EA7E55EB8E776FD13380DE82636 /* Pods-AsyncMessagesViewController_Example-umbrella.h in Headers */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		DABF14274CEB5CE6604341A86785DF0B /* Headers */ = {
+			isa = PBXHeadersBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				F82CC53B49CF2DDDD484E0B821CD8749 /* SlackTextViewController-umbrella.h in Headers */,
+				4AEBABC9308F30AA0C95F389C7D2D763 /* SLKInputAccessoryView.h in Headers */,
+				31C591186E6EE6FA99B6E4F567C74A47 /* SLKTextInput.h in Headers */,
+				742F9B9A24D713F41EE8E35CD5009E47 /* SLKTextInputbar.h in Headers */,
+				6F91F32334FA4530DD211082F72A388D /* SLKTextView+SLKAdditions.h in Headers */,
+				783FC7D0CB02C407A8FF0094E4044C1F /* SLKTextView.h in Headers */,
+				01A5B92A4ECADEED54094F4C9AA9F528 /* SLKTextViewController.h in Headers */,
+				D73DEEC90C58A81BA4305247EFF1EF3F /* SLKTypingIndicatorProtocol.h in Headers */,
+				19D132E7E9C521360DC2D81ACC65BC86 /* SLKTypingIndicatorView.h in Headers */,
+				D150A1A253BDD7D4767C28DEF2D2F642 /* SLKUIConstants.h in Headers */,
+				2C5BC978A7B4BE24F139FD61BD30CE4E /* UIResponder+SLKAdditions.h in Headers */,
+				57522668F35E6DB5EDC46410DC36F409 /* UIScrollView+SLKAdditions.h in Headers */,
+				436E8E378690A54EBB80A5D1BDE01B0C /* UIView+SLKAdditions.h in Headers */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		F7F2A2AEA23FD99E51C9CAD5F93A7817 /* Headers */ = {
+			isa = PBXHeadersBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				2C8A3D74A0E3D74334035E4A69DE9A37 /* AsyncMessagesViewController-umbrella.h in Headers */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -2007,14 +2004,14 @@
 			productReference = 156178DF6198CC179E60D2E1462DC588 /* Pods_AsyncMessagesViewController_Tests.framework */;
 			productType = "com.apple.product-type.framework";
 		};
-		4F0263462178F6DBD5A8E22FECA2D058 /* SlackTextViewController */ = {
+		54B8D73FB6F97DDECD855241804433A2 /* SlackTextViewController */ = {
 			isa = PBXNativeTarget;
-			buildConfigurationList = 24E785C3E5B173428F37F8A9C9C9A8A0 /* Build configuration list for PBXNativeTarget "SlackTextViewController" */;
+			buildConfigurationList = D9C643409AD39E6F89B032D85F2FFF0F /* Build configuration list for PBXNativeTarget "SlackTextViewController" */;
 			buildPhases = (
-				34FCB2F60E8670659AB21AF39887D0AD /* Sources */,
-				3B17ECD6A82D3F85FA9CADE11FAF39D9 /* Frameworks */,
-				94F5C346CC1317DFC3237861DC9EDFA9 /* Headers */,
-				0797022FB284A624A108BAD6F71B3707 /* Copy . Public Headers */,
+				CA3A1A7AFA7E99AD4C16D5A12AEE3D03 /* Sources */,
+				3880E0033A7C1A017F2067219EADA4CD /* Frameworks */,
+				DABF14274CEB5CE6604341A86785DF0B /* Headers */,
+				642F534D2D95D789A5D5D92105539566 /* Copy . Public Headers */,
 			);
 			buildRules = (
 			);
@@ -2025,20 +2022,20 @@
 			productReference = 1723D44055B624D8E4C39FDFB4582B40 /* SlackTextViewController.framework */;
 			productType = "com.apple.product-type.framework";
 		};
-		64DD75676C5327C7F1671BD8FE2BA177 /* AsyncMessagesViewController */ = {
+		6B25D4CD77C69C3A88C93EE5923471BC /* AsyncMessagesViewController */ = {
 			isa = PBXNativeTarget;
-			buildConfigurationList = 31DC985EC7FD1CE81FBEF0BAAEA4D9E9 /* Build configuration list for PBXNativeTarget "AsyncMessagesViewController" */;
+			buildConfigurationList = 54541E6C3C3E7599807F40352D614CC1 /* Build configuration list for PBXNativeTarget "AsyncMessagesViewController" */;
 			buildPhases = (
-				A04E1101A7C9DE9170DD90AD4372F6DC /* Sources */,
-				53C9F47E58F1D923570B26CCF925691F /* Frameworks */,
-				B8ECB046AEA1D8AB4536E7D44FF06E80 /* Resources */,
-				0064454D8900AAD851B7F5F05EBF580F /* Headers */,
+				995FC94EF66A918495F43C341D1DBD0A /* Sources */,
+				22C0592C7322916950AA4E945BEAE382 /* Frameworks */,
+				0E93C80DB21DEE56D83969EF80A91B3E /* Resources */,
+				F7F2A2AEA23FD99E51C9CAD5F93A7817 /* Headers */,
 			);
 			buildRules = (
 			);
 			dependencies = (
-				9E06A5292D819EB0C777F643B5DA16AF /* PBXTargetDependency */,
-				D706F28B88ACBF16E1DEBA61D51113E3 /* PBXTargetDependency */,
+				6FC516C520C03240EBFD1B164999AA3F /* PBXTargetDependency */,
+				92B55508A590CD8FBE86BEB18532C845 /* PBXTargetDependency */,
 			);
 			name = AsyncMessagesViewController;
 			productName = AsyncMessagesViewController;
@@ -2144,23 +2141,23 @@
 			projectRoot = "";
 			targets = (
 				B7F15CCF5F05845F918A076D12C2B59C /* AsyncDisplayKit */,
-				64DD75676C5327C7F1671BD8FE2BA177 /* AsyncMessagesViewController */,
+				6B25D4CD77C69C3A88C93EE5923471BC /* AsyncMessagesViewController */,
 				AC8432121E84B3F4C381F4D5E457C765 /* LoremIpsum */,
 				2CE8F50D44C0B59B0F338F0402E226C1 /* PINCache */,
 				7732E18AEE66B3F854503654C90FBA1C /* PINRemoteImage */,
 				EA0E01AAB6B9413A179D0CBA0F6A84BC /* Pods-AsyncMessagesViewController_Example */,
 				30F4250F4F52E4744280ACD033675C84 /* Pods-AsyncMessagesViewController_Tests */,
-				4F0263462178F6DBD5A8E22FECA2D058 /* SlackTextViewController */,
+				54B8D73FB6F97DDECD855241804433A2 /* SlackTextViewController */,
 			);
 		};
 /* End PBXProject section */
 
 /* Begin PBXResourcesBuildPhase section */
-		B8ECB046AEA1D8AB4536E7D44FF06E80 /* Resources */ = {
+		0E93C80DB21DEE56D83969EF80A91B3E /* Resources */ = {
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				E631224440EFC11E27070F94D8D95EE5 /* AsyncMessagesViewController.bundle in Resources */,
+				C1FD3FCD9F58F5F2ECCEB1645B8AFEED /* AsyncMessagesViewController.bundle in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -2178,21 +2175,25 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
-		34FCB2F60E8670659AB21AF39887D0AD /* Sources */ = {
+		995FC94EF66A918495F43C341D1DBD0A /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				C43807D2C87DB73CCD8E200E1A19177D /* SlackTextViewController-dummy.m in Sources */,
-				010E8C7282DA10F6FC17C29DB6D99DD4 /* SLKInputAccessoryView.m in Sources */,
-				239D40114A8939E23E8B976245EE8626 /* SLKTextInput+Implementation.m in Sources */,
-				DB346A346AF484D26ACD0B789FA0CCB2 /* SLKTextInputbar.m in Sources */,
-				EBAD888EDA2F07A79B3B0C30B1DEAB0B /* SLKTextView+SLKAdditions.m in Sources */,
-				10BC113149BC98BAC9002A208C05839A /* SLKTextView.m in Sources */,
-				AD78D0BF3A454D9226F7B6F485A0F36A /* SLKTextViewController.m in Sources */,
-				553C1A203F8D495F541152372061ACAF /* SLKTypingIndicatorView.m in Sources */,
-				36325729781C01113C5FB1FA0DC3A2BB /* UIResponder+SLKAdditions.m in Sources */,
-				9B634DDC637F98A285BA956D27812179 /* UIScrollView+SLKAdditions.m in Sources */,
-				878F4A241E9D1771F35F991A1A6689DE /* UIView+SLKAdditions.m in Sources */,
+				4B0C4186C2ED28E6AB9B7881BAFA32EA /* AsyncMessagesCollectionViewDataSource.swift in Sources */,
+				DCCC8574E3B69A0494968B2A8032C73A /* AsyncMessagesConfiguration.swift in Sources */,
+				80762EC33826B43039170A21EAD0AC45 /* AsyncMessagesViewController-dummy.m in Sources */,
+				88C0D42A670980694660188B69CFE8CC /* AsyncMessagesViewController.swift in Sources */,
+				7D02A6CAC7F1EE4426E0DF46BBB52F7C /* DefaultAsyncMessagesCollectionViewDataSource.swift in Sources */,
+				49510CC954ADCE622154870ACD338823 /* MessageBubbleImageProvider.swift in Sources */,
+				8499A367C7C138FFDF5EE8F4B9CA2E51 /* MessageBubbleNodeFactory.swift in Sources */,
+				F7301B104D7C808726B96C3E47C0C549 /* MessageCellNode.swift in Sources */,
+				9654A88BD95C74976CBB63C7106EB26D /* MessageCellNodeMetadataFactory.swift in Sources */,
+				9AEB83D97CF0A6F09749A2EE6D632A68 /* MessageData.swift in Sources */,
+				E67D8AA2B252F1356DE9BE1210E51DB0 /* MessageNetworkImageBubbleNode.swift in Sources */,
+				46D7553C268280F2ACEB94B1905E72E0 /* MessageTextBubbleNode.swift in Sources */,
+				9EF3FC136F397E36303AFDCA00CF5127 /* MessageTimestampFormatter.swift in Sources */,
+				184E84A291256C4BA4A07846177FD2D3 /* NSBundle+AsyncMessagesViewController.swift in Sources */,
+				1AA3AECB92FE64843CE79578DDB29BC0 /* UIImage+AsyncMessagesViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -2325,29 +2326,6 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
-		A04E1101A7C9DE9170DD90AD4372F6DC /* Sources */ = {
-			isa = PBXSourcesBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-				7656D1F69EBE806370B1597E0AEC6577 /* AsyncMessagesCollectionViewDataSource.swift in Sources */,
-				52CBA6B80751A7432C82F0933B4638ED /* AsyncMessagesViewController-dummy.m in Sources */,
-				2B596A421D1B4FE70037DD5C /* AsyncMessagesConfiguration.swift in Sources */,
-				799E7DCD107DBD13374A077A694B8DBA /* AsyncMessagesViewController.swift in Sources */,
-				AD89E284A0EAB0FE27C4DCFF55E1F13C /* DefaultAsyncMessagesCollectionViewDataSource.swift in Sources */,
-				03078F64E8126ABBB76C08E44B294311 /* MessageBubbleImageProvider.swift in Sources */,
-				2BE5DE30584717322B6688492A82B658 /* MessageBubbleNodeFactory.swift in Sources */,
-				829B799E9F217B3B728D10A24073188E /* MessageCellNode.swift in Sources */,
-				6AC3479149A7E1AA1780F1C468901F44 /* MessageCellNodeMetadataFactory.swift in Sources */,
-				5F2F6FC934FE13A487099FFFCC83C40F /* MessageData.swift in Sources */,
-				F21F23CC72342E3DE2AD1F18B131AC2E /* MessageNetworkImageBubbleNode.swift in Sources */,
-				CCB709CD569F5827E7B60986A70D898C /* MessageTextBubbleNode.swift in Sources */,
-				48787890AE2CB9A822CCD53DBE909820 /* MessageTimestampFormatter.swift in Sources */,
-				B1B166CB2D46AF57F46471E6F62B2581 /* NSBundle+AsyncMessagesViewController.swift in Sources */,
-				8CC88BD7A06B80B75C84DDFF23E09FDF /* UIImage+AsyncMessagesViewController.swift in Sources */,
-				AACBFC315507902468D9258F8615BFBC /* UIImageExtensions.swift in Sources */,
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-		};
 		A4CE72BA02DF5B7B38FE8D407BBC22D6 /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
@@ -2362,6 +2340,24 @@
 			buildActionMask = 2147483647;
 			files = (
 				CFA46524469D55AE3673FBED80A1727A /* Pods-AsyncMessagesViewController_Example-dummy.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		CA3A1A7AFA7E99AD4C16D5A12AEE3D03 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				C180CDCE42693012D1345FC2254B0376 /* SlackTextViewController-dummy.m in Sources */,
+				CE604AF31FBB2D3499562AA9D8706661 /* SLKInputAccessoryView.m in Sources */,
+				90598AFA36308A351132A2A5639A5084 /* SLKTextInput+Implementation.m in Sources */,
+				EDE3687EA1F86D0AB7E0CEB892424AD3 /* SLKTextInputbar.m in Sources */,
+				B50583C11E18D1FC27E07938E309763D /* SLKTextView+SLKAdditions.m in Sources */,
+				9824FD5CCFD91F6D01F3E7AA7D5716C0 /* SLKTextView.m in Sources */,
+				573D7FD551B30770E98C6F85E41D7121 /* SLKTextViewController.m in Sources */,
+				8426AE510D4CC51E714A1EE7C070701C /* SLKTypingIndicatorView.m in Sources */,
+				0F3F7B5194942F01CE4BFDC00F8882BB /* UIResponder+SLKAdditions.m in Sources */,
+				CC1122577279B430D6C0372D4DE25F8C /* UIScrollView+SLKAdditions.m in Sources */,
+				DB500EE16B9D0F436DEA6D338653B3A6 /* UIView+SLKAdditions.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -2420,29 +2416,29 @@
 			target = 2CE8F50D44C0B59B0F338F0402E226C1 /* PINCache */;
 			targetProxy = E6511C08AA613291BA274C1378AB8A99 /* PBXContainerItemProxy */;
 		};
+		6FC516C520C03240EBFD1B164999AA3F /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			name = AsyncDisplayKit;
+			target = B7F15CCF5F05845F918A076D12C2B59C /* AsyncDisplayKit */;
+			targetProxy = 4774B200CBC1D08A9957D2BCA49A1BC7 /* PBXContainerItemProxy */;
+		};
 		898862C2627E8DB56D4F187692563A34 /* PBXTargetDependency */ = {
 			isa = PBXTargetDependency;
 			name = PINRemoteImage;
 			target = 7732E18AEE66B3F854503654C90FBA1C /* PINRemoteImage */;
 			targetProxy = C1D269F9FF19AA8C6324F6B9F8B184F4 /* PBXContainerItemProxy */;
 		};
-		9E06A5292D819EB0C777F643B5DA16AF /* PBXTargetDependency */ = {
+		92B55508A590CD8FBE86BEB18532C845 /* PBXTargetDependency */ = {
 			isa = PBXTargetDependency;
-			name = AsyncDisplayKit;
-			target = B7F15CCF5F05845F918A076D12C2B59C /* AsyncDisplayKit */;
-			targetProxy = 70B025FC22E3C76C3A9FDEE1163B2888 /* PBXContainerItemProxy */;
+			name = SlackTextViewController;
+			target = 54B8D73FB6F97DDECD855241804433A2 /* SlackTextViewController */;
+			targetProxy = 350CFE98C8F5117E08DE9C6270D4F9B0 /* PBXContainerItemProxy */;
 		};
 		D686C3EA45AD0B7A6C804C5D980157A7 /* PBXTargetDependency */ = {
 			isa = PBXTargetDependency;
 			name = SlackTextViewController;
-			target = 4F0263462178F6DBD5A8E22FECA2D058 /* SlackTextViewController */;
+			target = 54B8D73FB6F97DDECD855241804433A2 /* SlackTextViewController */;
 			targetProxy = 8A64B4C051AA44C2666054A894FC47FC /* PBXContainerItemProxy */;
-		};
-		D706F28B88ACBF16E1DEBA61D51113E3 /* PBXTargetDependency */ = {
-			isa = PBXTargetDependency;
-			name = SlackTextViewController;
-			target = 4F0263462178F6DBD5A8E22FECA2D058 /* SlackTextViewController */;
-			targetProxy = 95A5003B5791F322EE35D6A60AE12454 /* PBXContainerItemProxy */;
 		};
 		F8D3CBA30930C8240326178291F11EC7 /* PBXTargetDependency */ = {
 			isa = PBXTargetDependency;
@@ -2453,7 +2449,7 @@
 		FEE66677B1118E16E53B1C8824B0363F /* PBXTargetDependency */ = {
 			isa = PBXTargetDependency;
 			name = AsyncMessagesViewController;
-			target = 64DD75676C5327C7F1671BD8FE2BA177 /* AsyncMessagesViewController */;
+			target = 6B25D4CD77C69C3A88C93EE5923471BC /* AsyncMessagesViewController */;
 			targetProxy = 2F221F3D5ECE3B9B68EF67E591B7E978 /* PBXContainerItemProxy */;
 		};
 		FF1ACAA5A9F141A6D4097430F5776550 /* PBXTargetDependency */ = {
@@ -2535,6 +2531,35 @@
 				VERSION_INFO_PREFIX = "";
 			};
 			name = Debug;
+		};
+		10B4A4D2E3CFAA3DBCA33CB45D7E4F4A /* Release */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 16D08F1D1BF849F501A4F005DA3A8E92 /* AsyncMessagesViewController.xcconfig */;
+			buildSettings = {
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				CURRENT_PROJECT_VERSION = 1;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				DEFINES_MODULE = YES;
+				DYLIB_COMPATIBILITY_VERSION = 1;
+				DYLIB_CURRENT_VERSION = 1;
+				DYLIB_INSTALL_NAME_BASE = "@rpath";
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_PREFIX_HEADER = "Target Support Files/AsyncMessagesViewController/AsyncMessagesViewController-prefix.pch";
+				INFOPLIST_FILE = "Target Support Files/AsyncMessagesViewController/Info.plist";
+				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
+				IPHONEOS_DEPLOYMENT_TARGET = 9.0;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				MODULEMAP_FILE = "Target Support Files/AsyncMessagesViewController/AsyncMessagesViewController.modulemap";
+				MTL_ENABLE_DEBUG_INFO = NO;
+				PRODUCT_NAME = AsyncMessagesViewController;
+				SDKROOT = iphoneos;
+				SKIP_INSTALL = YES;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				VERSIONING_SYSTEM = "apple-generic";
+				VERSION_INFO_PREFIX = "";
+			};
+			name = Release;
 		};
 		19C55BF041CE18D9AC436C8D741B0AF6 /* Debug */ = {
 			isa = XCBuildConfiguration;
@@ -2685,36 +2710,6 @@
 			};
 			name = Release;
 		};
-		46646C06270FA8815F3415D88F2B0B3E /* Debug */ = {
-			isa = XCBuildConfiguration;
-			baseConfigurationReference = 16D08F1D1BF849F501A4F005DA3A8E92 /* AsyncMessagesViewController.xcconfig */;
-			buildSettings = {
-				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
-				CURRENT_PROJECT_VERSION = 1;
-				DEBUG_INFORMATION_FORMAT = dwarf;
-				DEFINES_MODULE = YES;
-				DYLIB_COMPATIBILITY_VERSION = 1;
-				DYLIB_CURRENT_VERSION = 1;
-				DYLIB_INSTALL_NAME_BASE = "@rpath";
-				ENABLE_STRICT_OBJC_MSGSEND = YES;
-				GCC_NO_COMMON_BLOCKS = YES;
-				GCC_PREFIX_HEADER = "Target Support Files/AsyncMessagesViewController/AsyncMessagesViewController-prefix.pch";
-				INFOPLIST_FILE = "Target Support Files/AsyncMessagesViewController/Info.plist";
-				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
-				IPHONEOS_DEPLOYMENT_TARGET = 9.0;
-				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
-				MODULEMAP_FILE = "Target Support Files/AsyncMessagesViewController/AsyncMessagesViewController.modulemap";
-				MTL_ENABLE_DEBUG_INFO = YES;
-				PRODUCT_NAME = AsyncMessagesViewController;
-				SDKROOT = iphoneos;
-				SKIP_INSTALL = YES;
-				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
-				TARGETED_DEVICE_FAMILY = "1,2";
-				VERSIONING_SYSTEM = "apple-generic";
-				VERSION_INFO_PREFIX = "";
-			};
-			name = Debug;
-		};
 		504A1EC1E50860BD69FA8D694580771E /* Debug */ = {
 			isa = XCBuildConfiguration;
 			baseConfigurationReference = EC72AF5B34392AA80CB38E49CD324FC8 /* PINRemoteImage.xcconfig */;
@@ -2744,7 +2739,7 @@
 			};
 			name = Debug;
 		};
-		53E886157CD54CAF312A51AF6F79C8F2 /* Debug */ = {
+		61D76DDAA2BB2CA3893F9017CDD45FA0 /* Debug */ = {
 			isa = XCBuildConfiguration;
 			baseConfigurationReference = 7B75FC74DC117866B41FC47FCFE52655 /* SlackTextViewController.xcconfig */;
 			buildSettings = {
@@ -2772,35 +2767,6 @@
 				VERSION_INFO_PREFIX = "";
 			};
 			name = Debug;
-		};
-		6A8A7D059A15B5EB7B7BD60E58B35FD1 /* Release */ = {
-			isa = XCBuildConfiguration;
-			baseConfigurationReference = 7B75FC74DC117866B41FC47FCFE52655 /* SlackTextViewController.xcconfig */;
-			buildSettings = {
-				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
-				CURRENT_PROJECT_VERSION = 1;
-				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
-				DEFINES_MODULE = YES;
-				DYLIB_COMPATIBILITY_VERSION = 1;
-				DYLIB_CURRENT_VERSION = 1;
-				DYLIB_INSTALL_NAME_BASE = "@rpath";
-				ENABLE_STRICT_OBJC_MSGSEND = YES;
-				GCC_NO_COMMON_BLOCKS = YES;
-				GCC_PREFIX_HEADER = "Target Support Files/SlackTextViewController/SlackTextViewController-prefix.pch";
-				INFOPLIST_FILE = "Target Support Files/SlackTextViewController/Info.plist";
-				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
-				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
-				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
-				MODULEMAP_FILE = "Target Support Files/SlackTextViewController/SlackTextViewController.modulemap";
-				MTL_ENABLE_DEBUG_INFO = NO;
-				PRODUCT_NAME = SlackTextViewController;
-				SDKROOT = iphoneos;
-				SKIP_INSTALL = YES;
-				TARGETED_DEVICE_FAMILY = "1,2";
-				VERSIONING_SYSTEM = "apple-generic";
-				VERSION_INFO_PREFIX = "";
-			};
-			name = Release;
 		};
 		88FA4FBED85887139CBDA813B0484EDF /* Release */ = {
 			isa = XCBuildConfiguration;
@@ -2831,13 +2797,42 @@
 			};
 			name = Release;
 		};
-		AC78C750DD3C07E7419D579D2D11935C /* Release */ = {
+		93DC4038CED6EBEE71D8199281410F0E /* Release */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 7B75FC74DC117866B41FC47FCFE52655 /* SlackTextViewController.xcconfig */;
+			buildSettings = {
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				CURRENT_PROJECT_VERSION = 1;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				DEFINES_MODULE = YES;
+				DYLIB_COMPATIBILITY_VERSION = 1;
+				DYLIB_CURRENT_VERSION = 1;
+				DYLIB_INSTALL_NAME_BASE = "@rpath";
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_PREFIX_HEADER = "Target Support Files/SlackTextViewController/SlackTextViewController-prefix.pch";
+				INFOPLIST_FILE = "Target Support Files/SlackTextViewController/Info.plist";
+				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
+				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				MODULEMAP_FILE = "Target Support Files/SlackTextViewController/SlackTextViewController.modulemap";
+				MTL_ENABLE_DEBUG_INFO = NO;
+				PRODUCT_NAME = SlackTextViewController;
+				SDKROOT = iphoneos;
+				SKIP_INSTALL = YES;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				VERSIONING_SYSTEM = "apple-generic";
+				VERSION_INFO_PREFIX = "";
+			};
+			name = Release;
+		};
+		9A3EAE75E9C0365B016C42B764CA1023 /* Debug */ = {
 			isa = XCBuildConfiguration;
 			baseConfigurationReference = 16D08F1D1BF849F501A4F005DA3A8E92 /* AsyncMessagesViewController.xcconfig */;
 			buildSettings = {
 				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
 				CURRENT_PROJECT_VERSION = 1;
-				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				DEBUG_INFORMATION_FORMAT = dwarf;
 				DEFINES_MODULE = YES;
 				DYLIB_COMPATIBILITY_VERSION = 1;
 				DYLIB_CURRENT_VERSION = 1;
@@ -2850,15 +2845,16 @@
 				IPHONEOS_DEPLOYMENT_TARGET = 9.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
 				MODULEMAP_FILE = "Target Support Files/AsyncMessagesViewController/AsyncMessagesViewController.modulemap";
-				MTL_ENABLE_DEBUG_INFO = NO;
+				MTL_ENABLE_DEBUG_INFO = YES;
 				PRODUCT_NAME = AsyncMessagesViewController;
 				SDKROOT = iphoneos;
 				SKIP_INSTALL = YES;
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
 				TARGETED_DEVICE_FAMILY = "1,2";
 				VERSIONING_SYSTEM = "apple-generic";
 				VERSION_INFO_PREFIX = "";
 			};
-			name = Release;
+			name = Debug;
 		};
 		C022B53C466C27F5C0A5F4D51E0F2556 /* Debug */ = {
 			isa = XCBuildConfiguration;
@@ -3030,15 +3026,6 @@
 /* End XCBuildConfiguration section */
 
 /* Begin XCConfigurationList section */
-		24E785C3E5B173428F37F8A9C9C9A8A0 /* Build configuration list for PBXNativeTarget "SlackTextViewController" */ = {
-			isa = XCConfigurationList;
-			buildConfigurations = (
-				53E886157CD54CAF312A51AF6F79C8F2 /* Debug */,
-				6A8A7D059A15B5EB7B7BD60E58B35FD1 /* Release */,
-			);
-			defaultConfigurationIsVisible = 0;
-			defaultConfigurationName = Release;
-		};
 		27D448FE614897458081F4ACB10DF021 /* Build configuration list for PBXNativeTarget "AsyncDisplayKit" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
@@ -3057,11 +3044,11 @@
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
 		};
-		31DC985EC7FD1CE81FBEF0BAAEA4D9E9 /* Build configuration list for PBXNativeTarget "AsyncMessagesViewController" */ = {
+		54541E6C3C3E7599807F40352D614CC1 /* Build configuration list for PBXNativeTarget "AsyncMessagesViewController" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
-				46646C06270FA8815F3415D88F2B0B3E /* Debug */,
-				AC78C750DD3C07E7419D579D2D11935C /* Release */,
+				9A3EAE75E9C0365B016C42B764CA1023 /* Debug */,
+				10B4A4D2E3CFAA3DBCA33CB45D7E4F4A /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
@@ -3098,6 +3085,15 @@
 			buildConfigurations = (
 				D5FB57B3096263AB65E129B0C2310DDF /* Debug */,
 				CC14177155B95070B3F4DAA47C41ACBE /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		D9C643409AD39E6F89B032D85F2FFF0F /* Build configuration list for PBXNativeTarget "SlackTextViewController" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				61D76DDAA2BB2CA3893F9017CDD45FA0 /* Debug */,
+				93DC4038CED6EBEE71D8199281410F0E /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;

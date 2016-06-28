@@ -77,7 +77,7 @@ public class MessageCellNode: ASCellNode {
         let contentTopFinal : ASLayoutSpec? = contentTopTextNode == nil ? nil : ASInsetLayoutSpec(insets: UIEdgeInsetsMake(0, 22 + avatarImageSize, 0, 0), child: contentTopTextNode!)
         
         return ASInsetLayoutSpec(
-            insets: UIEdgeInsetsMake(1, 4, 1, 4),
+            insets: UIEdgeInsetsMake(1, 4, 5, 4),
             child: ASStackLayoutSpec(
                 direction: .Vertical,
                 spacing: 0,

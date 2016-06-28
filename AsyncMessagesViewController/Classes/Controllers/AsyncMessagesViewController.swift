@@ -23,8 +23,6 @@ public class AsyncMessagesViewController: SLKTextViewController {
 
         let layout = UICollectionViewFlowLayout()
         layout.scrollDirection = UICollectionViewScrollDirection.Vertical
-        //TODO: consider enabling asyncDataFetching
-       // let asyncCollectionView = ASCollectionView(frame: CGRectZero, collectionViewLayout: layout, asyncDataFetching: false)
         
         let asyncCollectionView = ASCollectionView(frame: CGRectZero, collectionViewLayout: layout)
         
