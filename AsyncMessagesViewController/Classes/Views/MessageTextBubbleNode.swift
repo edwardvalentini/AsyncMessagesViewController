@@ -15,6 +15,8 @@ private let kAMMessageTextBubbleNodeIncomingTextAttributes = [NSForegroundColorA
 private let kAMMessageTextBubbleNodeOutgoingTextAttributes = [NSForegroundColorAttributeName: UIColor.whiteColor(),
     NSFontAttributeName: UIFont.systemFontOfSize(14)]
 
+
+
 public class MessageTextBubbleNodeFactory: MessageBubbleNodeFactory {
     
     public func build(message: MessageData, isOutgoing: Bool, bubbleImage: UIImage) -> ASDisplayNode {
@@ -69,6 +71,7 @@ public class MessageTextBubbleNode: ASDisplayNode {
     
     override public func layoutSpecThatFits(constrainedSize: ASSizeRange) -> ASLayoutSpec {
         let textNodeVerticalOffset = CGFloat(6)
+        
         return ASBackgroundLayoutSpec(
             child: ASInsetLayoutSpec(
                 insets: UIEdgeInsetsMake(

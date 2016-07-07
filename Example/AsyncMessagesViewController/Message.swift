@@ -12,20 +12,20 @@ import AsyncMessagesViewController
 
 class Message: MessageData {
 
-    private let _contentType: MessageDataContentType
+    private let _serializedContentType: String
     private let _content: String
     private let _date: NSDate
     private let sender: User
     
-    init(contentType: MessageDataContentType, content: String, date: NSDate, sender: User) {
-        _contentType = contentType
+    init(serializedContentType: String, content: String, date: NSDate, sender: User) {
+        _serializedContentType = serializedContentType
         _content = content
         _date = date
         self.sender = sender
     }
     
-    @objc func contentType() -> MessageDataContentType {
-        return _contentType
+    @objc func contentType() -> String {
+        return _serializedContentType
     }
     
     @objc func content() -> String {

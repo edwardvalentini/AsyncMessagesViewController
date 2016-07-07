@@ -55,7 +55,7 @@ class ViewController: AsyncMessagesViewController, ASCollectionDelegate {
     override func didPressRightButton(sender: AnyObject!) {
         if let user = currentUser {
             let message = Message(
-                contentType: kAMMessageDataContentTypeText,
+                serializedContentType: ContentTypeSerializer.serialize(MessageDataContentType.text),
                 content: textView.text,
                 date: NSDate(),
                 sender: user)
@@ -68,10 +68,10 @@ class ViewController: AsyncMessagesViewController, ASCollectionDelegate {
 
     private func generateMessages() {
         var messages = [Message]()
-        for i in 0..<200 {
+        for i in 0..<1 {
             let isTextMessage = arc4random_uniform(4) <= 2 // 75%
             //let isTextMessage = true // arc4random_uniform(4) <= 2 // 75%
-            let contentType = isTextMessage ? kAMMessageDataContentTypeText : kAMMessageDataContentTypeNetworkImage
+            let contentType = isTextMessage ? ContentTypeSerializer.serialize(MessageDataContentType.text) : ContentTypeSerializer.serialize(MessageDataContentType.networkImage)
             
             //let contentType = kAMMessageDataContentTypeText
             let content = isTextMessage
@@ -90,14 +90,14 @@ class ViewController: AsyncMessagesViewController, ASCollectionDelegate {
             let date = hasSameSender ? previousMessage!.date().dateByAddingTimeInterval(5) : LoremIpsum.date()
             
             let message = Message(
-                contentType: contentType,
+                serializedContentType: contentType,
                 content: content,
                 date: date,
                 sender: sender)
             messages.append(message)
         }
-        //dataSource!.collectionView(collectionView, insertMessages: messages, completion: nil)
-        dataSource?.collectionView(collectionView, insertMessages: messages, completion: { [unowned self] (boolVal) in
+//        dataSource!.collectionView(collectionView, insertMessages: messages, completion: nil)
+        dataSource?.collectionView(collectionView, insertMessages: messages, completion: { [unowned self] (_) in
             self.scrollCollectionViewToBottom()
         })
     }

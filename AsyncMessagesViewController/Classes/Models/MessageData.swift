@@ -8,22 +8,22 @@
 
 import Foundation
 
-public typealias MessageDataContentType = Int
-public let kAMMessageDataContentTypeText: MessageDataContentType = 0
-public let kAMMessageDataContentTypeNetworkImage: MessageDataContentType = 1
+//public typealias MessageDataContentType = Int
+//public let kAMMessageDataContentTypeText: MessageDataContentType = 0
+//public let kAMMessageDataContentTypeNetworkImage: MessageDataContentType = 1
 
 @objc public protocol MessageData {
     
-    func contentType() -> MessageDataContentType
+    @objc func contentType() -> String
     
-    func content() -> String
+    @objc func content() -> String
     
-    func date() -> NSDate
+    @objc func date() -> NSDate
     
-    func senderID() -> String
+    @objc func senderID() -> String
     
-    func senderDisplayName() -> String
+    @objc func senderDisplayName() -> String
     
-    func senderAvatarURL() -> NSURL
+    @objc func senderAvatarURL() -> NSURL
     
 }

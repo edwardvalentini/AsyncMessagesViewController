@@ -15,7 +15,7 @@ public class DefaultAsyncMessagesCollectionViewDataSource: NSObject, AsyncMessag
     private let nodeMetadataFactory: MessageCellNodeMetadataFactory
     private let bubbleImageProvider: MessageBubbleImageProvider
     private let timestampFormatter: MessageTimestampFormatter
-    private let bubbleNodeFactories: [MessageDataContentType: MessageBubbleNodeFactory]
+    private let bubbleNodeFactories: [String: MessageBubbleNodeFactory]
     private var _currentUserID: String?
     /// Managed messages. They are sorted in ascending order of their date. The order is enforced during insertion.
     private var messages: [MessageData]
@@ -25,9 +25,9 @@ public class DefaultAsyncMessagesCollectionViewDataSource: NSObject, AsyncMessag
         nodeMetadataFactory: MessageCellNodeMetadataFactory = MessageCellNodeMetadataFactory(),
         bubbleImageProvider: MessageBubbleImageProvider = MessageBubbleImageProvider(),
         timestampFormatter: MessageTimestampFormatter = MessageTimestampFormatter(),
-        bubbleNodeFactories: [MessageDataContentType: MessageBubbleNodeFactory] = [
-            kAMMessageDataContentTypeText: MessageTextBubbleNodeFactory(),
-            kAMMessageDataContentTypeNetworkImage: MessageNetworkImageBubbleNodeFactory()
+        bubbleNodeFactories: [String: MessageBubbleNodeFactory] = [
+        ContentTypeSerializer.serialize(MessageDataContentType.text) : MessageTextBubbleNodeFactory(),
+            ContentTypeSerializer.serialize(MessageDataContentType.networkImage) : MessageNetworkImageBubbleNodeFactory()
         ]) {
             _currentUserID = currentUserID
             self.nodeMetadataFactory = nodeMetadataFactory
