@@ -10,34 +10,11 @@ import Foundation
 import AsyncDisplayKit
 
 
-private let kAMMessageTextBubbleNodeIncomingTextAttributes = [NSForegroundColorAttributeName: UIColor.blackColor(),
-    NSFontAttributeName: UIFont.systemFontOfSize(14)]
-private let kAMMessageTextBubbleNodeOutgoingTextAttributes = [NSForegroundColorAttributeName: UIColor.whiteColor(),
-    NSFontAttributeName: UIFont.systemFontOfSize(14)]
-
-
-
-public class MessageTextBubbleNodeFactory: MessageBubbleNodeFactory {
-    
-    public func build(message: MessageData, isOutgoing: Bool, bubbleImage: UIImage) -> ASDisplayNode {
-        let attributes = isOutgoing
-            ? kAMMessageTextBubbleNodeOutgoingTextAttributes
-            : kAMMessageTextBubbleNodeIncomingTextAttributes
-        let text = NSAttributedString(string: message.content(), attributes: attributes)
-        return MessageTextBubbleNode(text: text, isOutgoing: isOutgoing, bubbleImage: bubbleImage)
-    }
-    
-    public init() {
-        
-    }
-    
-}
-
 private class MessageTextNode: ASTextNode {
     
     override init() {
         super.init()
-        placeholderColor = UIColor.clearColor()
+        placeholderColor = UIColor.grayColor()
         layerBacked = true
     }
     

@@ -85,6 +85,8 @@
 		2B4C1910E4B9C3FBA4D285A2DCE5FFD1 /* PINRemoteImageManagerResult.m in Sources */ = {isa = PBXBuildFile; fileRef = 040D2E5EADC7E3E800A275FB2473A04D /* PINRemoteImageManagerResult.m */; };
 		2BDAECF51D2EB009001A1161 /* MessageDataContentType.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2BDAECF41D2EB009001A1161 /* MessageDataContentType.swift */; };
 		2BDAECF61D2EB00F001A1161 /* ExtensibleEnum.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2BDAECF21D2EAF9F001A1161 /* ExtensibleEnum.swift */; };
+		2BDAECF81D2EF2D0001A1161 /* MessageNetworkImageBubbleNodeFactory.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2BDAECF71D2EF2D0001A1161 /* MessageNetworkImageBubbleNodeFactory.swift */; };
+		2BDAECFA1D2EF359001A1161 /* MessageTextBubbleNodeFactory.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2BDAECF91D2EF359001A1161 /* MessageTextBubbleNodeFactory.swift */; };
 		2C5BC978A7B4BE24F139FD61BD30CE4E /* UIResponder+SLKAdditions.h in Headers */ = {isa = PBXBuildFile; fileRef = 21CA42FCC4C97B65F2DD72873FBDFB73 /* UIResponder+SLKAdditions.h */; };
 		2C8A3D74A0E3D74334035E4A69DE9A37 /* AsyncMessagesViewController-umbrella.h in Headers */ = {isa = PBXBuildFile; fileRef = 411D941BD42D55C5B1A132A1D97AB230 /* AsyncMessagesViewController-umbrella.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		2CADD53F4098185A671E19624B17EB22 /* ASBatchFetching.m in Sources */ = {isa = PBXBuildFile; fileRef = 026017440665B959ED40BB69FFBC968F /* ASBatchFetching.m */; };
@@ -595,6 +597,8 @@
 		2B182953346B42727ED179809447CE1A /* PINAnimatedImageManager.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = PINAnimatedImageManager.h; path = Pod/Classes/PINAnimatedImageManager.h; sourceTree = "<group>"; };
 		2BDAECF21D2EAF9F001A1161 /* ExtensibleEnum.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ExtensibleEnum.swift; sourceTree = "<group>"; };
 		2BDAECF41D2EB009001A1161 /* MessageDataContentType.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MessageDataContentType.swift; sourceTree = "<group>"; };
+		2BDAECF71D2EF2D0001A1161 /* MessageNetworkImageBubbleNodeFactory.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MessageNetworkImageBubbleNodeFactory.swift; sourceTree = "<group>"; };
+		2BDAECF91D2EF359001A1161 /* MessageTextBubbleNodeFactory.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MessageTextBubbleNodeFactory.swift; sourceTree = "<group>"; };
 		2C5471D2D30C52A255F655D2B0FDA321 /* ASLayoutable.mm */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.cpp.objcpp; name = ASLayoutable.mm; path = AsyncDisplayKit/Layout/ASLayoutable.mm; sourceTree = "<group>"; };
 		2D5D4E5CFBE5790BCB1DED7B9DA20363 /* ASNetworkImageNode.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = ASNetworkImageNode.h; path = AsyncDisplayKit/ASNetworkImageNode.h; sourceTree = "<group>"; };
 		2D6C84ADC98A78894215417FB041E6DB /* ASFlowLayoutController.mm */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.cpp.objcpp; name = ASFlowLayoutController.mm; path = AsyncDisplayKit/Details/ASFlowLayoutController.mm; sourceTree = "<group>"; };
@@ -1648,7 +1652,9 @@
 				55E29DE7B150D33447364900D209FF4E /* MessageBubbleNodeFactory.swift */,
 				E6030FDA58DB4E10BFFA61D28949D536 /* MessageCellNode.swift */,
 				00D6EB62842534BE1840F11891B08F89 /* MessageNetworkImageBubbleNode.swift */,
+				2BDAECF71D2EF2D0001A1161 /* MessageNetworkImageBubbleNodeFactory.swift */,
 				B1E1B8E0874AF34129DEC872AC1AB0A7 /* MessageTextBubbleNode.swift */,
+				2BDAECF91D2EF359001A1161 /* MessageTextBubbleNodeFactory.swift */,
 			);
 			path = Views;
 			sourceTree = "<group>";
@@ -2192,10 +2198,12 @@
 				88C0D42A670980694660188B69CFE8CC /* AsyncMessagesViewController.swift in Sources */,
 				7D02A6CAC7F1EE4426E0DF46BBB52F7C /* DefaultAsyncMessagesCollectionViewDataSource.swift in Sources */,
 				49510CC954ADCE622154870ACD338823 /* MessageBubbleImageProvider.swift in Sources */,
+				2BDAECFA1D2EF359001A1161 /* MessageTextBubbleNodeFactory.swift in Sources */,
 				8499A367C7C138FFDF5EE8F4B9CA2E51 /* MessageBubbleNodeFactory.swift in Sources */,
 				F7301B104D7C808726B96C3E47C0C549 /* MessageCellNode.swift in Sources */,
 				9654A88BD95C74976CBB63C7106EB26D /* MessageCellNodeMetadataFactory.swift in Sources */,
 				9AEB83D97CF0A6F09749A2EE6D632A68 /* MessageData.swift in Sources */,
+				2BDAECF81D2EF2D0001A1161 /* MessageNetworkImageBubbleNodeFactory.swift in Sources */,
 				E67D8AA2B252F1356DE9BE1210E51DB0 /* MessageNetworkImageBubbleNode.swift in Sources */,
 				2BDAECF61D2EB00F001A1161 /* ExtensibleEnum.swift in Sources */,
 				46D7553C268280F2ACEB94B1905E72E0 /* MessageTextBubbleNode.swift in Sources */,

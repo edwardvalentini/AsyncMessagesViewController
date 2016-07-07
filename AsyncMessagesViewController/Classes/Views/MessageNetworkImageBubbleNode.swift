@@ -10,19 +10,6 @@ import Foundation
 import AsyncDisplayKit
 
 
-public class MessageNetworkImageBubbleNodeFactory: MessageBubbleNodeFactory {
-    
-    public func build(message: MessageData, isOutgoing: Bool, bubbleImage: UIImage) -> ASDisplayNode {
-        let URL = NSURL(string: message.content())
-        return MessageNetworkImageBubbleNode(URL: URL, bubbleImage: bubbleImage)
-    }
-    
-    public init() {
-        
-    }
-    
-}
-
 public class MessageNetworkImageBubbleNode: ASNetworkImageNode {
     private let minSize: CGSize
     private let bubbleImage: UIImage
