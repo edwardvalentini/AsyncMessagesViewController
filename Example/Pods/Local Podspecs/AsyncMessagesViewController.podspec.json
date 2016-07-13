@@ -33,7 +33,7 @@
   ],
   "dependencies": {
     "AsyncDisplayKit": [
-      "~> 1.9.80"
+      "~> 1.9.81"
     ],
     "SlackTextViewController": [
       "~> 1.9.3"

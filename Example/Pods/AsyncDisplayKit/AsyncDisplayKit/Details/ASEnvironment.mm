@@ -1,16 +1,15 @@
-/*
- *  Copyright (c) 2014-present, Facebook, Inc.
- *  All rights reserved.
- *
- *  This source code is licensed under the BSD-style license found in the
- *  LICENSE file in the root directory of this source tree. An additional grant
- *  of patent rights can be found in the PATENTS file in the same directory.
- *
- */
+//
+//  ASEnvironment.mm
+//  AsyncDisplayKit
+//
+//  Copyright (c) 2014-present, Facebook, Inc.  All rights reserved.
+//  This source code is licensed under the BSD-style license found in the
+//  LICENSE file in the root directory of this source tree. An additional grant
+//  of patent rights can be found in the PATENTS file in the same directory.
+//
 
-#import "ASEnvironment.h"
 #import "ASEnvironmentInternal.h"
-#import <AsyncDisplayKit/ASAvailability.h>
+#import "ASAvailability.h"
 
 ASEnvironmentLayoutOptionsState _ASEnvironmentLayoutOptionsStateMakeDefault()
 {
@@ -26,23 +25,11 @@ ASEnvironmentHierarchyState _ASEnvironmentHierarchyStateMakeDefault()
   };
 }
 
-extern void ASEnvironmentTraitCollectionUpdateDisplayContext(id<ASEnvironment> rootEnvironment, id context)
-{
-  ASEnvironmentState envState = [rootEnvironment environmentState];
-  ASEnvironmentTraitCollection environmentTraitCollection = envState.environmentTraitCollection;
-  environmentTraitCollection.displayContext = context;
-  envState.environmentTraitCollection = environmentTraitCollection;
-  [rootEnvironment setEnvironmentState:envState];
-  
-  for (id<ASEnvironment> child in [rootEnvironment children]) {
-    ASEnvironmentStatePropagateDown(child, environmentTraitCollection);
-  }
-}
-
 ASEnvironmentTraitCollection _ASEnvironmentTraitCollectionMakeDefault()
 {
   return (ASEnvironmentTraitCollection) {
     // Default values can be defined in here
+    .containerSize = CGSizeZero,
   };
 }
 
@@ -69,7 +56,7 @@ BOOL ASEnvironmentTraitCollectionIsEqualToASEnvironmentTraitCollection(ASEnviron
     lhs.displayScale == rhs.displayScale &&
     lhs.userInterfaceIdiom == rhs.userInterfaceIdiom &&
     lhs.forceTouchCapability == rhs.forceTouchCapability &&
-    lhs.displayContext == rhs.displayContext;
+    CGSizeEqualToSize(lhs.containerSize, rhs.containerSize);
 }
 
 ASEnvironmentState ASEnvironmentStateMakeDefault()

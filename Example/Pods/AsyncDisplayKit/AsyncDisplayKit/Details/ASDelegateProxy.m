@@ -1,10 +1,12 @@
-/* Copyright (c) 2015-present, Facebook, Inc.
- * All rights reserved.
- *
- * This source code is licensed under the BSD-style license found in the
- * LICENSE file in the root directory of this source tree. An additional grant
- * of patent rights can be found in the PATENTS file in the same directory.
- */
+//
+//  ASDelegateProxy.m
+//  AsyncDisplayKit
+//
+//  Copyright (c) 2014-present, Facebook, Inc.  All rights reserved.
+//  This source code is licensed under the BSD-style license found in the
+//  LICENSE file in the root directory of this source tree. An additional grant
+//  of patent rights can be found in the PATENTS file in the same directory.
+//
 
 #import "ASDelegateProxy.h"
 #import "ASTableView.h"
@@ -89,7 +91,8 @@
           selector == @selector(collectionView:nodeForItemAtIndexPath:) ||
           selector == @selector(collectionView:nodeBlockForItemAtIndexPath:) ||
           selector == @selector(collectionView:numberOfItemsInSection:) ||
-          selector == @selector(collectionView:constrainedSizeForNodeAtIndexPath:)
+          selector == @selector(collectionView:constrainedSizeForNodeAtIndexPath:) ||
+          selector == @selector(scrollViewWillEndDragging:withVelocity:targetContentOffset:)
           );
 }
 
@@ -113,6 +116,15 @@
   _interceptor = interceptor;
   
   return self;
+}
+
+- (BOOL)conformsToProtocol:(Protocol *)aProtocol
+{
+  if (_target) {
+    return [_target conformsToProtocol:aProtocol];
+  } else {
+    return [super conformsToProtocol:aProtocol];
+  }
 }
 
 - (BOOL)respondsToSelector:(SEL)aSelector
