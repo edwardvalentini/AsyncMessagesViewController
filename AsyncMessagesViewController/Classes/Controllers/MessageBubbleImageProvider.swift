@@ -12,9 +12,10 @@ import AsyncDisplayKit
 private struct MessageProperties: Hashable {
     let isOutgoing: Bool
     let hasTail: Bool
+    let color: UIColor
     
     var hashValue: Int {
-        return (31 &* isOutgoing.hashValue) &+ hasTail.hashValue
+        return (31 &* isOutgoing.hashValue) &+ hasTail.hashValue &+ (17 &* color.hashValue)
     }
 }
 
@@ -36,8 +37,15 @@ public class MessageBubbleImageProvider {
         self.outgoingColor = outgoingColor
     }
     
-    public func bubbleImage(isOutgoing: Bool, hasTail: Bool) -> UIImage {
-        let properties = MessageProperties(isOutgoing: isOutgoing, hasTail: hasTail)
+    public func bubbleImage(isOutgoing: Bool, hasTail: Bool, color: UIColor? = nil) -> UIImage {
+        
+        var chosenColor =  isOutgoing ? outgoingColor : incomingColor
+        
+        if let color = color {
+            chosenColor = color
+        }
+        
+        let properties = MessageProperties(isOutgoing: isOutgoing, hasTail: hasTail, color: chosenColor)
         return bubbleImage(properties)
     }
     
@@ -56,13 +64,8 @@ public class MessageBubbleImageProvider {
         
         let bubble = NSBundle.asyncImage(imageName, ofType: "png")
         
-//        let bubblePath = bubbleBundle.pathForResource(imageName, ofType: "png", inDirectory: "images")
-//        
-//        let bubble = UIImage(contentsOfFile: bubblePath!)!
-        
-        //let bubble = UIImage(named: imageName)!
-        
-        var normalBubble = bubble.imageMaskedWith(properties.isOutgoing ? outgoingColor : incomingColor)
+        //   var normalBubble = bubble.imageMaskedWith(properties.isOutgoing ? outgoingColor : incomingColor)
+        var normalBubble = bubble.imageMaskedWith(properties.color)
         
         // make image stretchable from center point
         let center = CGPointMake(bubble.size.width / 2.0, bubble.size.height / 2.0)
