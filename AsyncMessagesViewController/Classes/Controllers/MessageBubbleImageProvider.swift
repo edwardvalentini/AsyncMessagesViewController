@@ -23,8 +23,8 @@ private func ==(lhs: MessageProperties, rhs: MessageProperties) -> Bool {
     return lhs.hashValue == rhs.hashValue
 }
 
-private let kDefaultIncomingColor = UIColor(red: 239 / 255, green: 237 / 255, blue: 237 / 255, alpha: 1)
-private let kDefaultOutgoingColor = UIColor(red: 17 / 255, green: 107 / 255, blue: 254 / 255, alpha: 1)
+private let kDefaultIncomingColor = AsyncMessagesConfiguration.defaultIncomingTextBubbleColor //UIColor(red: 239 / 255, green: 237 / 255, blue: 237 / 255, alpha: 1)
+private let kDefaultOutgoingColor = AsyncMessagesConfiguration.defaultOutgoingTextBubbleColor //UIColor(red: 17 / 255, green: 107 / 255, blue: 254 / 255, alpha: 1)
 
 public class MessageBubbleImageProvider {
     

@@ -10,10 +10,10 @@ import Foundation
 import AsyncDisplayKit
 
 
-private let kAMMessageTextBubbleNodeIncomingTextAttributes = [NSForegroundColorAttributeName: UIColor.blackColor(),
-                                                              NSFontAttributeName: UIFont.systemFontOfSize(14)]
-private let kAMMessageTextBubbleNodeOutgoingTextAttributes = [NSForegroundColorAttributeName: UIColor.whiteColor(),
-                                                              NSFontAttributeName: UIFont.systemFontOfSize(14)]
+private let kAMMessageTextBubbleNodeIncomingTextAttributes = [NSForegroundColorAttributeName: AsyncMessagesConfiguration.defaultIncomingTextFontColor,
+                                                              NSFontAttributeName: UIFont.systemFontOfSize(AsyncMessagesConfiguration.defaultTextSize)]
+private let kAMMessageTextBubbleNodeOutgoingTextAttributes = [NSForegroundColorAttributeName: AsyncMessagesConfiguration.defaultOutgoingTextFontColor,
+                                                              NSFontAttributeName: UIFont.systemFontOfSize(AsyncMessagesConfiguration.defaultTextSize)]
 
 
 
