@@ -67,7 +67,7 @@ task :release do
   sh "git commit #{podspec_path} -m 'Release #{spec_version}'"
   sh "git tag -a #{spec_version} -m 'Release #{spec_version}'"
   sh "git push origin #{branch}"
-  sh "git push origin --tags"
+  sh "git push origin --tags --force"
   if PODREPO == "trunk"
 	   sh "pod trunk push #{podspec_path} --allow-warnings"
   else
