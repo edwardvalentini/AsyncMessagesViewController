@@ -1,4 +1,5 @@
-PODREPO = "trunk"
+# PODREPO = "trunk"
+PODREPO = "chatloudcocoapods"
 
 desc "Runs the specs [EMPTY]"
 task :spec do
@@ -67,8 +68,8 @@ task :release do
   sh "git tag -a #{spec_version} -m 'Release #{spec_version}'"
   sh "git push origin #{branch}"
   sh "git push origin --tags"
-  if PODREPO == "trunk" 
-	sh "pod trunk push #{podspec_path} --allow-warnings"
+  if PODREPO == "trunk"
+	   sh "pod trunk push #{podspec_path} --allow-warnings"
   else
   	sh "pod repo push #{PODREPO} #{podspec_path} --allow-warnings" # --verbose"
   end
