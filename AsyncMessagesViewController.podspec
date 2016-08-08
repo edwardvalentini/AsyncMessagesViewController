@@ -26,6 +26,6 @@ A smooth, responsive and flexible messages UI library for iOS. Built on top of t
   s.resources = ['AsyncMessagesViewController/Assets/AsyncMessagesViewController.bundle']
 
   s.dependency 'AsyncDisplayKit', '~> 1.9.81'
-  s.dependency 'SlackTextViewController', '~> 1.9.3'
+  s.dependency 'SlackTextViewController', '~> 1.9.4'
 
 end
