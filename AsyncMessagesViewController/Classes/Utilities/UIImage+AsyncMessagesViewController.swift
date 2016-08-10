@@ -6,6 +6,9 @@
 //
 //
 
+import UIKit
+import Foundation
+
 extension UIImage {
     func makeCircularImageWithSize(size: CGSize) -> UIImage {
         let circleRect = CGRectMake(0.0, 0.0, size.width, size.height)
