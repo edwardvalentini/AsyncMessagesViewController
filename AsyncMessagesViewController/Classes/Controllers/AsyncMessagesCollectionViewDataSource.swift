@@ -13,14 +13,14 @@ public protocol AsyncMessagesCollectionViewDataSource: ASCollectionDataSource {
     
     func currentUserID() -> String?
     
-    func collectionView(collectionView: ASCollectionView, updateCurrentUserID newUserID: String?)
+    func collectionView(_ collectionView: ASCollectionView, updateCurrentUserID newUserID: String?)
     
-    func collectionView(collectionView: ASCollectionView, messageForItemAtIndexPath indexPath: NSIndexPath) -> MessageData
+    func collectionView(_ collectionView: ASCollectionView, messageForItemAtIndexPath indexPath: IndexPath) -> MessageData
     
-    func collectionView(collectionView: ASCollectionView, insertMessages newMessages: [MessageData], completion: ((Bool) -> ())?)
+    func collectionView(_ collectionView: ASCollectionView, insertMessages newMessages: [MessageData], completion: ((Bool) -> ())?)
     
-    func collectionView(collectionView: ASCollectionView, replaceMessages newMessages: [MessageData], completion: ((Bool) -> ())?)
+    func collectionView(_ collectionView: ASCollectionView, replaceMessages newMessages: [MessageData], completion: ((Bool) -> ())?)
     
-    func collectionView(collectionView: ASCollectionView, deleteMessagesAtIndexPaths indexPaths: [NSIndexPath], completion: ((Bool) -> ())?)
+    func collectionView(_ collectionView: ASCollectionView, deleteMessagesAtIndexPaths indexPaths: [IndexPath], completion: ((Bool) -> ())?)
     
 }

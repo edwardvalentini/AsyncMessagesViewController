@@ -11,12 +11,12 @@ import AsyncDisplayKit
 
 public let kAMMessageCellNodeAvatarImageSize: CGFloat = 34
 
-public let kAMMessageCellNodeTopTextAttributes = [NSForegroundColorAttributeName: UIColor.lightGrayColor(),
-    NSFontAttributeName: UIFont.boldSystemFontOfSize(12)]
-public let kAMMessageCellNodeContentTopTextAttributes = [NSForegroundColorAttributeName: UIColor.lightGrayColor(),
-    NSFontAttributeName: UIFont.systemFontOfSize(12)]
-public let kAMMessageCellNodeBottomTextAttributes = [NSForegroundColorAttributeName: UIColor.lightGrayColor(),
-    NSFontAttributeName: UIFont.systemFontOfSize(11)]
+public let kAMMessageCellNodeTopTextAttributes = [NSForegroundColorAttributeName: UIColor.lightGray,
+    NSFontAttributeName: UIFont.boldSystemFont(ofSize: 12)]
+public let kAMMessageCellNodeContentTopTextAttributes = [NSForegroundColorAttributeName: UIColor.lightGray,
+    NSFontAttributeName: UIFont.systemFont(ofSize: 12)]
+public let kAMMessageCellNodeBottomTextAttributes = [NSForegroundColorAttributeName: UIColor.lightGray,
+    NSFontAttributeName: UIFont.systemFont(ofSize: 11)]
 
 public class MessageCellNode: ASCellNode {
     
@@ -28,36 +28,36 @@ public class MessageCellNode: ASCellNode {
     private let avatarImageSize: CGFloat
     private let avatarImageNode: ASNetworkImageNode?
 
-    public init(isOutgoing: Bool, topText: NSAttributedString?, contentTopText: NSAttributedString?, bottomText: NSAttributedString?, senderAvatarURL: NSURL?, senderAvatarImageSize: CGFloat = kAMMessageCellNodeAvatarImageSize, bubbleNode: ASDisplayNode) {
+    public init(isOutgoing: Bool, topText: NSAttributedString?, contentTopText: NSAttributedString?, bottomText: NSAttributedString?, senderAvatarURL: URL?, senderAvatarImageSize: CGFloat = kAMMessageCellNodeAvatarImageSize, bubbleNode: ASDisplayNode) {
         self.isOutgoing = isOutgoing
 
         topTextNode = topText != nil ? ASTextNode() : nil
-        topTextNode?.layerBacked = true
+        topTextNode?.isLayerBacked = true
         topTextNode?.attributedString = topText
-        topTextNode?.alignSelf = .Center
+        topTextNode?.alignSelf = .center
 
         contentTopTextNode = contentTopText != nil ? ASTextNode() : nil
-        contentTopTextNode?.layerBacked = true
+        contentTopTextNode?.isLayerBacked = true
         contentTopTextNode?.attributedString = contentTopText
         
         avatarImageSize = senderAvatarImageSize
         avatarImageNode = avatarImageSize > 0 ? ASNetworkImageNode() : nil
-        avatarImageNode?.preferredFrameSize = CGSizeMake(avatarImageSize, avatarImageSize)
-        avatarImageNode?.backgroundColor = UIColor.clearColor()
+        avatarImageNode?.preferredFrameSize = CGSize(width: avatarImageSize, height: avatarImageSize)
+        avatarImageNode?.backgroundColor = UIColor.clear
         // This line below causes a bug ... need to ask about it on Slack.
         //avatarImageNode?.imageModificationBlock = ASImageNodeRoundBorderModificationBlock(0, nil)
         avatarImageNode?.imageModificationBlock = { (image: UIImage) -> UIImage in
-            let preferredSize = CGSizeMake(senderAvatarImageSize, senderAvatarImageSize)
+            let preferredSize = CGSize(width: senderAvatarImageSize, height: senderAvatarImageSize)
             let newImage = image.makeCircularImageWithSize(preferredSize)
             return newImage
         }
-        avatarImageNode?.URL = senderAvatarURL
+        avatarImageNode?.url = senderAvatarURL
         
         self.bubbleNode = bubbleNode
         self.bubbleNode.flexShrink = true
         
         bottomTextNode = bottomText != nil ? ASTextNode() : nil
-        bottomTextNode?.layerBacked = true
+        bottomTextNode?.isLayerBacked = true
         bottomTextNode?.attributedString = bottomText
 
         super.init()
@@ -68,10 +68,10 @@ public class MessageCellNode: ASCellNode {
         addSubnode(bubbleNode)
         if let node = bottomTextNode { addSubnode(node) }
         
-        selectionStyle = .None
+        selectionStyle = .none
     }
     
-    override public func layoutSpecThatFits(constrainedSize: ASSizeRange) -> ASLayoutSpec {
+    override public func layoutSpecThatFits(_ constrainedSize: ASSizeRange) -> ASLayoutSpec {
         
         
         let contentTopFinal : ASLayoutSpec? = contentTopTextNode == nil ? nil : ASInsetLayoutSpec(insets: UIEdgeInsetsMake(0, 22 + avatarImageSize, 0, 0), child: contentTopTextNode!)
@@ -79,18 +79,18 @@ public class MessageCellNode: ASCellNode {
         return ASInsetLayoutSpec(
             insets: UIEdgeInsetsMake(1, 4, 5, 4),
             child: ASStackLayoutSpec(
-                direction: .Vertical,
+                direction: .vertical,
                 spacing: 0,
-                justifyContent: .Start, // Never used
-                alignItems: isOutgoing == true ? .End : .Start,
+                justifyContent: .start, // Never used
+                alignItems: isOutgoing == true ? .end : .start,
                 children: Array.filterNils([
                     topTextNode,
                     contentTopFinal,
                     ASStackLayoutSpec(
-                        direction: .Horizontal,
+                        direction: .horizontal,
                         spacing: 2,
-                        justifyContent: .Start, // Never used
-                        alignItems: .End,
+                        justifyContent: .start, // Never used
+                        alignItems: .end,
                         children: Array.filterNils(isOutgoing == true ? [bubbleNode, self.avatarImageNode! ] : [self.avatarImageNode!, bubbleNode])),
                     bottomTextNode])))
     }
@@ -100,7 +100,7 @@ public class MessageCellNode: ASCellNode {
 private extension Array {
     
     // Credits: http://stackoverflow.com/a/28190873/1136669
-    static func filterNils(array: [Element?]) -> [Element] {
+    static func filterNils(_ array: [Element?]) -> [Element] {
         return array.filter { $0 != nil }.map { $0! }
     }
     

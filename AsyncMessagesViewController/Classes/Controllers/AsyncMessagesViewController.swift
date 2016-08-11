@@ -22,17 +22,17 @@ public class AsyncMessagesViewController: SLKTextViewController {
         self.dataSource = dataSource
 
         let layout = UICollectionViewFlowLayout()
-        layout.scrollDirection = UICollectionViewScrollDirection.Vertical
+        layout.scrollDirection = UICollectionViewScrollDirection.vertical
         
-        let asyncCollectionView = ASCollectionView(frame: CGRectZero, collectionViewLayout: layout)
+        let asyncCollectionView = ASCollectionView(frame: CGRect.zero, collectionViewLayout: layout)
         
-        asyncCollectionView.backgroundColor = UIColor.whiteColor()
+        asyncCollectionView.backgroundColor = UIColor.white
         asyncCollectionView.scrollsToTop = AsyncMessagesConfiguration.messageTranscriptScrollsToTop
         asyncCollectionView.asyncDataSource = dataSource
         
         super.init(scrollView: asyncCollectionView)
         
-        inverted = AsyncMessagesConfiguration.invertScrollView
+        isInverted = AsyncMessagesConfiguration.invertScrollView
     }
 
     required public init(coder aDecoder: NSCoder) {
@@ -54,16 +54,16 @@ public class AsyncMessagesViewController: SLKTextViewController {
         
         let numberOfItems = dataSource?.collectionView(collectionView, numberOfItemsInSection: 0)
         if numberOfItems! > 0 {
-            let lastItemIndexPath = NSIndexPath(forItem: numberOfItems! - 1, inSection: 0)
-            collectionView.scrollToItemAtIndexPath(lastItemIndexPath, atScrollPosition: .Bottom, animated: true)
+            let lastItemIndexPath = IndexPath(item: numberOfItems! - 1, section: 0)
+            collectionView.scrollToItem(at: lastItemIndexPath, at: .bottom, animated: true)
         }
     }
     
     public func scrollCollectionViewToTop() {
         let numberOfItems = dataSource?.collectionView(collectionView, numberOfItemsInSection: 0)
         if numberOfItems! > 0 {
-            let firstItemIndexPath = NSIndexPath(forItem: 0, inSection: 0)
-            collectionView.scrollToItemAtIndexPath(firstItemIndexPath, atScrollPosition: .Top, animated: true)
+            let firstItemIndexPath = IndexPath(item: 0, section: 0)
+            collectionView.scrollToItem(at: firstItemIndexPath, at: .top, animated: true)
         }
     }
     

@@ -1,6 +1,6 @@
 {
   "name": "AsyncMessagesViewController",
-  "version": "0.0.1",
+  "version": "0.2.0",
   "summary": "A smooth, responsive and flexible messages UI library for iOS.",
   "description": "A smooth, responsive and flexible messages UI library for iOS. Built on top of the awesome AsyncDisplayKit framework, it takes full advantage of asynchronous sizing, (non-auto) layout and text rendering to deliver a 5x fps (subject to increase) scrolling experience.",
   "homepage": "https://github.com/nguyenhuy/AsyncMessagesViewController",
@@ -15,7 +15,7 @@
   },
   "source": {
     "git": "https://github.com/edwardvalentini/AsyncMessagesViewController.git",
-    "tag": "0.0.1"
+    "tag": "0.2.0"
   },
   "platforms": {
     "ios": "9.0"
@@ -36,7 +36,7 @@
       "~> 1.9.81"
     ],
     "SlackTextViewController": [
-      "~> 1.9.3"
+      "~> 1.9.4"
     ]
   }
 }

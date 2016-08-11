@@ -7,16 +7,16 @@ PODS:
   - AsyncDisplayKit/PINRemoteImage (1.9.81):
     - AsyncDisplayKit/Core
     - PINRemoteImage/iOS (>= 3.0.0-beta.2)
-  - AsyncMessagesViewController (0.0.1):
+  - AsyncMessagesViewController (0.2.0):
     - AsyncDisplayKit (~> 1.9.81)
-    - SlackTextViewController (~> 1.9.3)
+    - SlackTextViewController (~> 1.9.4)
   - LoremIpsum (1.0.0)
-  - PINCache (2.2.2)
-  - PINRemoteImage/Core (3.0.0-beta.2):
-    - PINCache (>= 2.1)
-  - PINRemoteImage/iOS (3.0.0-beta.2):
+  - PINCache (3.0.1-beta)
+  - PINRemoteImage/Core (3.0.0-beta.3):
+    - PINCache (>= 3.0.0-beta)
+  - PINRemoteImage/iOS (3.0.0-beta.3):
     - PINRemoteImage/Core
-  - SlackTextViewController (1.9.3)
+  - SlackTextViewController (1.9.4)
 
 DEPENDENCIES:
   - AsyncMessagesViewController (from `../`)
@@ -28,12 +28,12 @@ EXTERNAL SOURCES:
 
 SPEC CHECKSUMS:
   AsyncDisplayKit: 011ea22a76a79a5bbfc14501fede6e0196a3c2f0
-  AsyncMessagesViewController: fe741e2be5c761db22c216192b876e11b2e1edca
+  AsyncMessagesViewController: 6977d46e30d5fd03410c8a411dcd2ab1003db77c
   LoremIpsum: 9029c55d36501b2ee0b05cc9ecda11d3a0479160
-  PINCache: 078426d356ab95ef875e9e62e5c35a2ea3333c28
-  PINRemoteImage: 197554c5ba57a6ae90f5db441651180039fc9062
-  SlackTextViewController: bd2a34c188d4f7dec93cf42388f38551263fac82
+  PINCache: 6911fe422a633e18b3d3ddf2bd4f0e55e36e2892
+  PINRemoteImage: 308731aa6534500e58fc211b9cc2bb7252df25ba
+  SlackTextViewController: d490f354dba963bc469a6b9ce3213978eaed67a5
 
 PODFILE CHECKSUM: 6dc1c5b476ab8d7578a0183a4c6486ab6bca099b
 
-COCOAPODS: 1.0.1
+COCOAPODS: 1.1.0.beta.1

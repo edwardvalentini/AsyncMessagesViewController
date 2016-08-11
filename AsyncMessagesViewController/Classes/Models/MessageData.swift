@@ -18,12 +18,12 @@ import Foundation
     
     @objc func content() -> String
     
-    @objc func date() -> NSDate
+    @objc func date() -> Date
     
     @objc func senderID() -> String
     
     @objc func senderDisplayName() -> String
     
-    @objc func senderAvatarURL() -> NSURL
+    @objc func senderAvatarURL() -> URL
     
 }

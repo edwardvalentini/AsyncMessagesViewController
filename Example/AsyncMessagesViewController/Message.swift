@@ -14,10 +14,10 @@ class Message: MessageData {
 
     private let _serializedContentType: String
     private let _content: String
-    private let _date: NSDate
+    private let _date: Date
     private let sender: User
     
-    init(serializedContentType: String, content: String, date: NSDate, sender: User) {
+    init(serializedContentType: String, content: String, date: Date, sender: User) {
         _serializedContentType = serializedContentType
         _content = content
         _date = date
@@ -32,7 +32,7 @@ class Message: MessageData {
         return _content
     }
     
-    @objc func date() -> NSDate {
+    @objc func date() -> Date {
         return _date
     }
     
@@ -44,8 +44,8 @@ class Message: MessageData {
         return sender.name
     }
     
-    @objc func senderAvatarURL() -> NSURL {
-        return sender.avatarURL
+    @objc func senderAvatarURL() -> URL {
+        return sender.avatarURL as URL
     }
    
 }

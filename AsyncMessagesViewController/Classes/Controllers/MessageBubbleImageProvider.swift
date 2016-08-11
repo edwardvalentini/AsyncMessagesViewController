@@ -37,7 +37,7 @@ public class MessageBubbleImageProvider {
         self.outgoingColor = outgoingColor
     }
     
-    public func bubbleImage(isOutgoing: Bool, hasTail: Bool, color: UIColor? = nil) -> UIImage {
+    public func bubbleImage(_ isOutgoing: Bool, hasTail: Bool, color: UIColor? = nil) -> UIImage {
         
         var chosenColor =  isOutgoing ? outgoingColor : incomingColor
         
@@ -49,7 +49,7 @@ public class MessageBubbleImageProvider {
         return bubbleImage(properties)
     }
     
-    private func bubbleImage(properties: MessageProperties) -> UIImage {
+    private func bubbleImage(_ properties: MessageProperties) -> UIImage {
         if let image = imageCache[properties] {
             return image
         }
@@ -59,24 +59,24 @@ public class MessageBubbleImageProvider {
         return image
     }
     
-    private func buildBubbleImage(properties: MessageProperties) -> UIImage {
+    private func buildBubbleImage(_ properties: MessageProperties) -> UIImage {
         let imageName = "bubble" + (properties.isOutgoing ? "_outgoing" : "_incoming") + (properties.hasTail ? "" : "_tailless")
         
-        let bubble = NSBundle.asyncImage(imageName, ofType: "png")
+        let bubble = Bundle.asyncImage(imageName, ofType: "png")
         
         //   var normalBubble = bubble.imageMaskedWith(properties.isOutgoing ? outgoingColor : incomingColor)
         var normalBubble = bubble.imageMaskedWith(properties.color)
         
         // make image stretchable from center point
-        let center = CGPointMake(bubble.size.width / 2.0, bubble.size.height / 2.0)
+        let center = CGPoint(x: bubble.size.width / 2.0, y: bubble.size.height / 2.0)
         let capInsets = UIEdgeInsetsMake(center.y, center.x, center.y, center.x);
         
         normalBubble = MessageBubbleImageProvider.stretchableImage(normalBubble, capInsets: capInsets)
         return normalBubble
     }
     
-    private class func stretchableImage(source: UIImage, capInsets: UIEdgeInsets) -> UIImage {
-        return source.resizableImageWithCapInsets(capInsets, resizingMode: .Stretch)
+    private class func stretchableImage(_ source: UIImage, capInsets: UIEdgeInsets) -> UIImage {
+        return source.resizableImage(withCapInsets: capInsets, resizingMode: .stretch)
     }
     
 }

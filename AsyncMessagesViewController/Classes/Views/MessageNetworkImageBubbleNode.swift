@@ -14,16 +14,16 @@ public class MessageNetworkImageBubbleNode: ASNetworkImageNode {
     private let minSize: CGSize
     private let bubbleImage: UIImage
     
-    public init(URL: NSURL?, bubbleImage: UIImage, minSize: CGSize = CGSizeMake(210, 150)) {
+    public init(URL: Foundation.URL?, bubbleImage: UIImage, minSize: CGSize = CGSize(width: 210, height: 150)) {
         self.minSize = minSize
         self.bubbleImage = bubbleImage
-        super.init(cache: nil, downloader: ASBasicImageDownloader.sharedImageDownloader())
+        super.init(cache: nil, downloader: ASBasicImageDownloader.shared())
 
-        self.URL = URL
+        self.url = URL
     }
     
-    override public func calculateSizeThatFits(constrainedSize: CGSize) -> CGSize {
-        return CGSizeMake(min(constrainedSize.width, minSize.width), min(constrainedSize.height, minSize.height))
+    override public func calculateSizeThatFits(_ constrainedSize: CGSize) -> CGSize {
+        return CGSize(width: min(constrainedSize.width, minSize.width), height: min(constrainedSize.height, minSize.height))
     }
     
     override public func didLoad() {

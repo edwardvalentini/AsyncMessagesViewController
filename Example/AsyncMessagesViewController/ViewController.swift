@@ -20,10 +20,10 @@ class ViewController: AsyncMessagesViewController, ASCollectionDelegate {
     
     init() {
         // Assume the default image size is used for message cell nodes
-        let avatarImageSize = CGSizeMake(kAMMessageCellNodeAvatarImageSize, kAMMessageCellNodeAvatarImageSize)
+        let avatarImageSize = CGSize(width: kAMMessageCellNodeAvatarImageSize, height: kAMMessageCellNodeAvatarImageSize)
         users = (0..<5).map() {
-            let avatarURL = LoremIpsum.URLForPlaceholderImageFromService(.LoremPixel, withSize: avatarImageSize)
-            return User(ID: "user-\($0)", name: LoremIpsum.name(), avatarURL: avatarURL)
+            let avatarURL = LoremIpsum.urlForPlaceholderImage(from: .loremPixel, with: avatarImageSize)
+            return User(ID: "user-\($0)", name: LoremIpsum.name(), avatarURL: avatarURL!)
         }
         
         let dataSource = DefaultAsyncMessagesCollectionViewDataSource(currentUserID: users[0].ID)
@@ -44,26 +44,30 @@ class ViewController: AsyncMessagesViewController, ASCollectionDelegate {
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        navigationItem.rightBarButtonItem = UIBarButtonItem(title: "Change user", style: .Plain, target: self, action: #selector(ViewController.changeCurrentUser))
+        navigationItem.rightBarButtonItem = UIBarButtonItem(title: "Change user", style: .plain, target: self, action: #selector(ViewController.changeCurrentUser))
     }
 
-    override func viewDidAppear(animated: Bool) {
+    override func viewDidAppear(_ animated: Bool) {
         super.viewDidAppear(animated)
         generateMessages()
     }
     
-    override func didPressRightButton(sender: AnyObject!) {
+    override func didPressRightButton(_ sender: AnyObject!) {
         if let user = currentUser {
             let message = Message(
                 serializedContentType: ContentTypeSerializer.serialize(MessageDataContentType.text),
                 content: textView.text,
-                date: NSDate(),
+                date: Date(),
                 sender: user)
             dataSource!.collectionView(collectionView, insertMessages: [message]) {completed in
                 self.scrollCollectionViewToBottom()
             }
         }
         super.didPressRightButton(sender)
+    }
+    
+    private func random() -> Int {
+        return Int(arc4random())
     }
 
     private func generateMessages() {
@@ -73,10 +77,11 @@ class ViewController: AsyncMessagesViewController, ASCollectionDelegate {
             //let isTextMessage = true // arc4random_uniform(4) <= 2 // 75%
             let contentType = isTextMessage ? ContentTypeSerializer.serialize(MessageDataContentType.text) : ContentTypeSerializer.serialize(MessageDataContentType.networkImage)
             
+            
             //let contentType = kAMMessageDataContentTypeText
             let content = isTextMessage
-                ? LoremIpsum.wordsWithNumber((random() % 100) + 1)
-                : LoremIpsum.URLForPlaceholderImageFromService(.LoremPixel, withSize: CGSizeMake(200, 200)).absoluteString
+                ? LoremIpsum.words(withNumber: (random() % 100) + 1)
+                : LoremIpsum.urlForPlaceholderImage(from: .loremPixel, with: CGSize(width: 200, height: 200)).absoluteString
 
             
      //       let content =  LoremIpsum.wordsWithNumber((random() % 100) + 1)
@@ -87,12 +92,12 @@ class ViewController: AsyncMessagesViewController, ASCollectionDelegate {
             
             let previousMessage: Message? = i > 0 ? messages[i - 1] : nil
             let hasSameSender = (sender.ID == previousMessage?.senderID()) ?? false
-            let date = hasSameSender ? previousMessage!.date().dateByAddingTimeInterval(5) : LoremIpsum.date()
+            let date = hasSameSender ? previousMessage!.date().addingTimeInterval(5) : LoremIpsum.date()
             
             let message = Message(
                 serializedContentType: contentType,
-                content: content,
-                date: date,
+                content: content!,
+                date: date!,
                 sender: sender)
             messages.append(message)
         }

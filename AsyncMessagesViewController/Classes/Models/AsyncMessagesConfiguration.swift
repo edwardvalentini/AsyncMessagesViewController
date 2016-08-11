@@ -35,8 +35,8 @@ public class AsyncMessagesConfiguration {
     public static var defaultOutgoingEnhancedBubbleColor : UIColor = UIColor(red: 17 / 255, green: 107 / 255, blue: 254 / 255, alpha: 1)
     public static var defaultIncomingTextBubbleColor : UIColor = UIColor(red: 239 / 255, green: 237 / 255, blue: 237 / 255, alpha: 1)
     public static var defaultIncomingEnhancedBubbleColor : UIColor = UIColor(red: 239 / 255, green: 237 / 255, blue: 237 / 255, alpha: 1)
-    public static var defaultIncomingTextFontColor : UIColor = UIColor.blackColor()
-    public static var defaultOutgoingTextFontColor : UIColor = UIColor.whiteColor()
+    public static var defaultIncomingTextFontColor : UIColor = UIColor.black
+    public static var defaultOutgoingTextFontColor : UIColor = UIColor.white
     public static var defaultTextSize : CGFloat = 14.0
     
 }

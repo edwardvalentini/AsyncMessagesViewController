@@ -12,6 +12,6 @@ import AsyncDisplayKit
 
 public protocol MessageBubbleNodeFactory {
     
-    func build(message: MessageData, isOutgoing: Bool, bubbleImage: UIImage) -> ASDisplayNode
+    func build(_ message: MessageData, isOutgoing: Bool, bubbleImage: UIImage) -> ASDisplayNode
     
 }

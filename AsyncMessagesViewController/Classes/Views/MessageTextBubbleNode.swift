@@ -14,11 +14,11 @@ private class MessageTextNode: ASTextNode {
     
     override init() {
         super.init()
-        placeholderColor = UIColor.grayColor()
-        layerBacked = true
+        placeholderColor = UIColor.gray
+        isLayerBacked = true
     }
     
-    override func calculateSizeThatFits(constrainedSize: CGSize) -> CGSize {
+    override func calculateSizeThatFits(_ constrainedSize: CGSize) -> CGSize {
         let size = super.calculateSizeThatFits(constrainedSize)
         return CGSize(width: max(size.width, 15), height: size.height)
     }
@@ -46,7 +46,7 @@ public class MessageTextBubbleNode: ASDisplayNode {
         addSubnode(textNode)
     }
     
-    override public func layoutSpecThatFits(constrainedSize: ASSizeRange) -> ASLayoutSpec {
+    override public func layoutSpecThatFits(_ constrainedSize: ASSizeRange) -> ASLayoutSpec {
         let textNodeVerticalOffset = CGFloat(6)
         
         return ASBackgroundLayoutSpec(

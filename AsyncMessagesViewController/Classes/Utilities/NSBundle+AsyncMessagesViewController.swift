@@ -12,25 +12,25 @@ import Foundation
 let kBundleName = "AsyncMessagesViewController.bundle"
 let kTableName = "AsyncMessagesViewController"
 
-public extension NSBundle {
-    public class func asyncBundle() -> NSBundle {
-        return NSBundle(forClass: AsyncMessagesViewController.self)
+public extension Bundle {
+    public class func asyncBundle() -> Bundle {
+        return Bundle(for: AsyncMessagesViewController.self)
     }
     
     
-    public class func asyncAssetsBundle() -> NSBundle {
-        let path : NSString = NSBundle.asyncBundle().resourcePath! as NSString
-        let assetPath = path.stringByAppendingPathComponent(kBundleName)
-        return NSBundle(path: assetPath)!
+    public class func asyncAssetsBundle() -> Bundle {
+        let path : NSString = Bundle.asyncBundle().resourcePath! as NSString
+        let assetPath = path.appendingPathComponent(kBundleName)
+        return Bundle(path: assetPath)!
     }
     
-    public class func asyncImage(name: String, ofType: String) -> UIImage {
-        let bund = NSBundle.asyncAssetsBundle()
-        let path = bund.pathForResource(name, ofType: ofType, inDirectory: "images")
+    public class func asyncImage(_ name: String, ofType: String) -> UIImage {
+        let bund = Bundle.asyncAssetsBundle()
+        let path = bund.path(forResource: name, ofType: ofType, inDirectory: "images")
         return UIImage(contentsOfFile: path!)!
     }
     
-    public class func asyncLocalizedStringForKey(key: String) -> String {
-        return NSLocalizedString(key, tableName: kTableName, bundle: NSBundle.asyncAssetsBundle(), comment: "")
+    public class func asyncLocalizedStringForKey(_ key: String) -> String {
+        return NSLocalizedString(key, tableName: kTableName, bundle: Bundle.asyncAssetsBundle(), comment: "")
     }
 }

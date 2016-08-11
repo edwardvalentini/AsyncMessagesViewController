@@ -26,7 +26,7 @@ extension MessageDataContentType {
 
 @objc public class ContentTypeSerializer : NSObject {
     
-    public class func serialize(contentType: MessageDataContentType) -> String {
+    public class func serialize(_ contentType: MessageDataContentType) -> String {
         return contentType.description
     }
 }
