@@ -52,7 +52,7 @@ class ViewController: AsyncMessagesViewController, ASCollectionDelegate {
         generateMessages()
     }
     
-    override func didPressRightButton(_ sender: AnyObject!) {
+    override func didPressRightButton(_ sender: Any?) {
         if let user = currentUser {
             let message = Message(
                 serializedContentType: ContentTypeSerializer.serialize(MessageDataContentType.text),
@@ -91,7 +91,7 @@ class ViewController: AsyncMessagesViewController, ASCollectionDelegate {
             let sender = users[random() % users.count]
             
             let previousMessage: Message? = i > 0 ? messages[i - 1] : nil
-            let hasSameSender = (sender.ID == previousMessage?.senderID()) ?? false
+            let hasSameSender = (sender.ID == previousMessage?.senderID())
             let date = hasSameSender ? previousMessage!.date().addingTimeInterval(5) : LoremIpsum.date()
             
             let message = Message(

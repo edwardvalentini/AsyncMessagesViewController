@@ -10,11 +10,11 @@ import Foundation
 import AsyncDisplayKit
 import SlackTextViewController
 
-public class AsyncMessagesViewController: SLKTextViewController {
+open class AsyncMessagesViewController: SLKTextViewController {
 
     public let dataSource: AsyncMessagesCollectionViewDataSource?
     
-    override public var collectionView: ASCollectionView {
+    override open var collectionView: ASCollectionView {
         return scrollView as! ASCollectionView
     }
 
@@ -42,7 +42,7 @@ public class AsyncMessagesViewController: SLKTextViewController {
       //fatalError("init(coder:) has not been implemented")
     }
 
-    override public func viewWillLayoutSubviews() {
+    override open func viewWillLayoutSubviews() {
         let insets = UIEdgeInsetsMake(topLayoutGuide.length, 0, 5, 0)
         collectionView.contentInset = insets
         collectionView.scrollIndicatorInsets = insets
@@ -66,5 +66,16 @@ public class AsyncMessagesViewController: SLKTextViewController {
             collectionView.scrollToItem(at: firstItemIndexPath, at: .top, animated: true)
         }
     }
+    
+//    override open func didPressLeftButton(_ sender: Any?) {
+//        super.didPressLeftButton(sender)
+//    }
+//    
+//
+//    override open func didPressRightButton(_ sender: Any?) {
+//        super.didPressRightButton(sender)
+//
+//    }
+    
     
 }
