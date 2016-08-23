@@ -52,7 +52,6 @@
 #import "ASCollectionInternal.h"
 #import "ASCollectionViewFlowLayoutInspector.h"
 #import "ASCollectionViewLayoutController.h"
-#import "ASDataController+Subclasses.h"
 #import "ASDataController.h"
 #import "ASDelegateProxy.h"
 #import "ASEnvironment.h"
