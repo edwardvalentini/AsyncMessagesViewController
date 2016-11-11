@@ -29,12 +29,12 @@ class ViewController: AsyncMessagesViewController, ASCollectionDelegate {
         let dataSource = DefaultAsyncMessagesCollectionViewDataSource(currentUserID: users[0].ID)
         super.init(dataSource: dataSource)
       
-        collectionView.asyncDelegate = self
+        collectionNode.delegate = self
     }
     
     deinit {
         // Tell ASCollectionView that this object is being deallocated (Issue #4)
-        collectionView.asyncDelegate = nil
+        collectionNode.delegate = nil
     }
     
     required init(coder aDecoder: NSCoder) {
@@ -59,7 +59,7 @@ class ViewController: AsyncMessagesViewController, ASCollectionDelegate {
                 content: textView.text,
                 date: Date(),
                 sender: user)
-            dataSource!.collectionView(collectionView, insertMessages: [message]) {completed in
+            dataSource!.collectionNode(collectionNode, insertMessages: [message]) {completed in
                 self.scrollCollectionViewToBottom()
             }
         }
@@ -102,7 +102,7 @@ class ViewController: AsyncMessagesViewController, ASCollectionDelegate {
             messages.append(message)
         }
 //        dataSource!.collectionView(collectionView, insertMessages: messages, completion: nil)
-        dataSource?.collectionView(collectionView, insertMessages: messages, completion: { [unowned self] (_) in
+        dataSource?.collectionNode(collectionNode, insertMessages: messages, completion: { [unowned self] (_) in
             self.scrollCollectionViewToBottom()
         })
     }
@@ -110,7 +110,7 @@ class ViewController: AsyncMessagesViewController, ASCollectionDelegate {
     func changeCurrentUser() {
         let otherUsers = users.filter({$0.ID != self.dataSource!.currentUserID()})
         let newUser = otherUsers[random() % otherUsers.count]
-        dataSource!.collectionView(collectionView, updateCurrentUserID: newUser.ID)
+        dataSource!.collectionNode(collectionNode, updateCurrentUserID: newUser.ID)
     }
 
 }

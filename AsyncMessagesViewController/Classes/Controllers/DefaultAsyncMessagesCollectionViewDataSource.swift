@@ -39,13 +39,15 @@ public class DefaultAsyncMessagesCollectionViewDataSource: NSObject, AsyncMessag
     }
 
     //MARK: ASCollectionViewDataSource methods
-    public func collectionView(_ collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int {
+
+    public func collectionNode(_ collectionNode: ASCollectionNode, numberOfItemsInSection section: Int) -> Int {
         assert(nodeMetadatas.count == messages.count, "Node metadata is required for each message.")
         return messages.count
     }
 
-    public func collectionView(_ collectionView: ASCollectionView, nodeForItemAt indexPath: IndexPath) -> ASCellNode {
-        let message = self.collectionView(collectionView, messageForItemAtIndexPath: indexPath)
+    public func collectionNode(_ collectionNode: ASCollectionNode, nodeForItemAt indexPath: IndexPath) -> ASCellNode {
+        
+        let message = self.collectionNode(collectionNode, messageForItemAtIndexPath: indexPath)
         let metadata = nodeMetadatas[(indexPath as NSIndexPath).item]
         let isOutgoing = metadata.isOutgoing
 
@@ -72,8 +74,9 @@ public class DefaultAsyncMessagesCollectionViewDataSource: NSObject, AsyncMessag
         return cellNode
     }
   
-    public func collectionView(_ collectionView: ASCollectionView, constrainedSizeForNodeAt indexPath: IndexPath) -> ASSizeRange {
-        let width = collectionView.bounds.width;
+    public func collectionNode(_ collectionNode: ASCollectionNode, constrainedSizeForNodeAt indexPath: IndexPath) -> ASSizeRange {
+        
+        let width = collectionNode.bounds.width;
         // Assume horizontal scroll directions
         return ASSizeRangeMake(CGSize(width: width, height: 0), CGSize(width: width, height: CGFloat.greatestFiniteMagnitude))
     }
@@ -83,7 +86,7 @@ public class DefaultAsyncMessagesCollectionViewDataSource: NSObject, AsyncMessag
         return _currentUserID
     }
     
-    public func collectionView(_ collectionView: ASCollectionView, updateCurrentUserID newUserID: String?) {
+    public func collectionNode(_ collectionNode: ASCollectionNode, updateCurrentUserID newUserID: String?) {
         if newUserID == _currentUserID {
             return
         }
@@ -95,18 +98,18 @@ public class DefaultAsyncMessagesCollectionViewDataSource: NSObject, AsyncMessag
         nodeMetadatas = updatedMetadatas
         
         let reloadIndicies = Array<MessageCellNodeMetadata>.computeDiff(outdatedMetadatas, rhs: updatedMetadatas)
-        collectionView.reloadItems(at: IndexPath.createIndexPaths(0, items: reloadIndicies))
+        collectionNode.reloadItems(at: IndexPath.createIndexPaths(0, items: reloadIndicies))
     }
 
-    public func collectionView(_ collectionView: ASCollectionView, messageForItemAtIndexPath indexPath: IndexPath) -> MessageData {
+    public func collectionNode(_ collectionNode: ASCollectionNode, messageForItemAtIndexPath indexPath: IndexPath) -> MessageData {
         return messages[(indexPath as NSIndexPath).item]
     }
     
-    public func collectionView(_ collectionView: ASCollectionView, replaceMessages newMessages: [MessageData], completion: ((Bool) -> ())?) {
+    public func collectionNode(_ collectionNode: ASCollectionNode, replaceMessages newMessages: [MessageData], completion: ((Bool) -> ())?) {
         // fill in later. work in progress.
     }
     
-    public func collectionView(_ collectionView: ASCollectionView, insertMessages newMessages: [MessageData], completion: ((Bool) -> ())?) {
+    public func collectionNode(_ collectionNode: ASCollectionNode, insertMessages newMessages: [MessageData], completion: ((Bool) -> ())?) {
         
         if newMessages.isEmpty {
             return
@@ -131,18 +134,18 @@ public class DefaultAsyncMessagesCollectionViewDataSource: NSObject, AsyncMessag
         }
         let reloadIndicies = Array<MessageCellNodeMetadata>.computeDiff(outdatedNodeMetadatas, rhs: updatedNodeMetadatas)
         
-        collectionView.performBatchUpdates(
+        collectionNode.performBatchUpdates(
             {
-                collectionView.insertItems(at: IndexPath.createIndexPaths(0, items: insertedIndices))
+                collectionNode.insertItems(at: IndexPath.createIndexPaths(0, items: insertedIndices))
                 if !reloadIndicies.isEmpty {
-                    collectionView.reloadItems(at: IndexPath.createIndexPaths(0, items: reloadIndicies))
+                    collectionNode.reloadItems(at: IndexPath.createIndexPaths(0, items: reloadIndicies))
                 }
             },
             completion: completion)
     }
   
   
-    public func collectionView(_ collectionView: ASCollectionView, deleteMessagesAtIndexPaths indexPaths: [IndexPath], completion: ((Bool) -> ())?) {
+    public func collectionNode(_ collectionNode: ASCollectionNode, deleteMessagesAtIndexPaths indexPaths: [IndexPath], completion: ((Bool) -> ())?) {
         if indexPaths.isEmpty {
             return
         }
@@ -163,11 +166,11 @@ public class DefaultAsyncMessagesCollectionViewDataSource: NSObject, AsyncMessag
 
         let reloadIndicies = Array<MessageCellNodeMetadata>.computeDiff(outdatedNodesMetadata, rhs: updatedNodeMetadatas)
         
-        collectionView.performBatchUpdates(
+        collectionNode.performBatchUpdates(
             {
-                collectionView.deleteItems(at: sortedIndexPaths)
+                collectionNode.deleteItems(at: sortedIndexPaths)
                 if !reloadIndicies.isEmpty {
-                    collectionView.reloadItems(at: IndexPath.createIndexPaths(0, items: reloadIndicies))
+                    collectionNode.reloadItems(at: IndexPath.createIndexPaths(0, items: reloadIndicies))
                 }
             },
             completion: completion)
@@ -203,7 +206,7 @@ private extension Array {
         return low
     }
     
-    static func computeDiff<T where T: Equatable>(_ lhs: Array<T>, rhs: Array<T>) -> [Int] {
+    static func computeDiff<T>(_ lhs: Array<T>, rhs: Array<T>) -> [Int] where T: Equatable {
         assert(lhs.count == rhs.count, "Expect arrays with the same size.")
         var diffIndices = [Int]()
         for i in 0..<lhs.count {

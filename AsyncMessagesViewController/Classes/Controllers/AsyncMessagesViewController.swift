@@ -17,6 +17,8 @@ open class AsyncMessagesViewController: SLKTextViewController {
     override open var collectionView: ASCollectionView {
         return scrollView as! ASCollectionView
     }
+    
+    open var collectionNode : ASCollectionNode
 
     public init(dataSource: AsyncMessagesCollectionViewDataSource) {
         self.dataSource = dataSource
@@ -24,26 +26,28 @@ open class AsyncMessagesViewController: SLKTextViewController {
         let layout = UICollectionViewFlowLayout()
         layout.scrollDirection = UICollectionViewScrollDirection.vertical
         
-        let asyncCollectionView = ASCollectionView(frame: CGRect.zero, collectionViewLayout: layout)
+        collectionNode = ASCollectionNode(frame: CGRect.zero, collectionViewLayout: layout)
+       // let asyncCollectionView = ASCollectionView(frame: CGRect.zero, collectionViewLayout: layout)
         
-        asyncCollectionView.backgroundColor = UIColor.white
-        asyncCollectionView.scrollsToTop = AsyncMessagesConfiguration.messageTranscriptScrollsToTop
-        asyncCollectionView.asyncDataSource = dataSource
-        
-        super.init(scrollView: asyncCollectionView)
+        collectionNode.backgroundColor = UIColor.white
+        collectionNode.view.scrollsToTop = AsyncMessagesConfiguration.messageTranscriptScrollsToTop
+        collectionNode.dataSource = dataSource
+        super.init(scrollView: collectionNode.view)
         
         isInverted = AsyncMessagesConfiguration.invertScrollView
     }
 
     required public init(coder aDecoder: NSCoder) {
-      //  super.init()
-        dataSource = nil
-        super.init(coder: aDecoder)
-      //fatalError("init(coder:) has not been implemented")
+//      //  super.init()
+//        dataSource = nil
+//        
+//        super.init(coder: aDecoder)
+      fatalError("init(coder:) has not been implemented")
     }
 
     override open func viewWillLayoutSubviews() {
         let insets = UIEdgeInsetsMake(topLayoutGuide.length, 0, 5, 0)
+    
         collectionView.contentInset = insets
         collectionView.scrollIndicatorInsets = insets
 
@@ -52,18 +56,19 @@ open class AsyncMessagesViewController: SLKTextViewController {
     
     public func scrollCollectionViewToBottom() {
         
-        let numberOfItems = dataSource?.collectionView?(collectionView, numberOfItemsInSection: 0)
+        let numberOfItems = dataSource?.collectionNode?(collectionNode, numberOfItemsInSection: 0)
+        
         if numberOfItems! > 0 {
             let lastItemIndexPath = IndexPath(item: numberOfItems! - 1, section: 0)
-            collectionView.scrollToItem(at: lastItemIndexPath, at: .bottom, animated: true)
+            collectionNode.scrollToItem(at: lastItemIndexPath, at: .bottom, animated: true)
         }
     }
     
     public func scrollCollectionViewToTop() {
-        let numberOfItems = dataSource?.collectionView?(collectionView, numberOfItemsInSection: 0)
+        let numberOfItems = dataSource?.collectionNode?(collectionNode, numberOfItemsInSection: 0)
         if numberOfItems! > 0 {
             let firstItemIndexPath = IndexPath(item: 0, section: 0)
-            collectionView.scrollToItem(at: firstItemIndexPath, at: .top, animated: true)
+            collectionNode.scrollToItem(at: firstItemIndexPath, at: .top, animated: true)
         }
     }
     
