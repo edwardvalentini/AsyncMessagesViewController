@@ -1,5 +1,5 @@
 //
-//  ASStaticLayoutable.h
+//  ASAbsoluteLayoutElement.h
 //  AsyncDisplayKit
 //
 //  Copyright (c) 2014-present, Facebook, Inc.  All rights reserved.
@@ -8,22 +8,25 @@
 //  of patent rights can be found in the PATENTS file in the same directory.
 //
 
-#import <AsyncDisplayKit/ASRelativeSize.h>
+#import <AsyncDisplayKit/ASBaseDefines.h>
+#import <AsyncDisplayKit/ASDimension.h>
 
 NS_ASSUME_NONNULL_BEGIN
 
 /**
- *  Layout options that can be defined for an ASLayoutable being added to a ASStaticLayoutSpec. 
+ *  Layout options that can be defined for an ASLayoutElement being added to a ASAbsoluteLayoutSpec.
  */
-@protocol ASStaticLayoutable
+@protocol ASAbsoluteLayoutElement
 
 /**
- If specified, the child's size is restricted according to this size. Percentages are resolved relative to the static layout spec.
+ * @abstract The position of this object within its parent spec.
  */
-@property (nonatomic, assign) ASRelativeSizeRange sizeRange;
-
-/** The position of this object within its parent spec. */
 @property (nonatomic, assign) CGPoint layoutPosition;
+
+
+#pragma mark Deprecated
+
+@property (nonatomic, assign) ASRelativeSizeRange sizeRange ASDISPLAYNODE_DEPRECATED;
 
 @end
 

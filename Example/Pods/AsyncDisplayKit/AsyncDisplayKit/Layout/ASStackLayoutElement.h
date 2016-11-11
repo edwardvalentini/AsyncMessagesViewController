@@ -1,5 +1,5 @@
 //
-//  ASStackLayoutable.h
+//  ASStackLayoutElement.h
 //  AsyncDisplayKit
 //
 //  Copyright (c) 2014-present, Facebook, Inc.  All rights reserved.
@@ -8,15 +8,15 @@
 //  of patent rights can be found in the PATENTS file in the same directory.
 //
 
-#import <AsyncDisplayKit/ASDimension.h>
-#import <AsyncDisplayKit/ASStackLayoutDefines.h>
+#import "ASDimension.h"
+#import "ASStackLayoutDefines.h"
 
 NS_ASSUME_NONNULL_BEGIN
 
 /**
- *  Layout options that can be defined for an ASLayoutable being added to a ASStackLayoutSpec.
+ *  Layout options that can be defined for an ASLayoutElement being added to a ASStackLayoutSpec.
  */
-@protocol ASStackLayoutable <NSObject>
+@protocol ASStackLayoutElement <NSObject>
 
 /**
  * @abstract Additional space to place before this object in the stacking direction.
@@ -31,23 +31,25 @@ NS_ASSUME_NONNULL_BEGIN
 @property (nonatomic, readwrite) CGFloat spacingAfter;
 
 /**
- * @abstract If the sum of childrens' stack dimensions is less than the minimum size, should this object grow?
- * Used when attached to a stack layout.
+ * @abstract If the sum of childrens' stack dimensions is less than the minimum size, how much should this component grow?
+ * This value represents the "flex grow factor" and determines how much this component should grow in relation to any
+ * other flexible children.
  */
-@property (nonatomic, readwrite) BOOL flexGrow;
+@property (nonatomic, readwrite) CGFloat flexGrow;
 
 /**
- * @abstract If the sum of childrens' stack dimensions is greater than the maximum size, should this object shrink?
- * Used when attached to a stack layout.
+ * @abstract If the sum of childrens' stack dimensions is greater than the maximum size, how much should this component shrink?
+ * This value represents the "flex shrink factor" and determines how much this component should shink in relation to
+ * other flexible children.
  */
-@property (nonatomic, readwrite) BOOL flexShrink;
+@property (nonatomic, readwrite) CGFloat flexShrink;
 
 /**
  * @abstract Specifies the initial size in the stack dimension for this object.
- * Default to ASRelativeDimensionUnconstrained.
+ * Default to ASDimensionAuto
  * Used when attached to a stack layout.
  */
-@property (nonatomic, readwrite) ASRelativeDimension flexBasis;
+@property (nonatomic, readwrite) ASDimension flexBasis;
 
 /**
  * @abstract Orientation of the object along cross axis, overriding alignItems

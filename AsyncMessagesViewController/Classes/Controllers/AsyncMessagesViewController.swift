@@ -52,7 +52,7 @@ open class AsyncMessagesViewController: SLKTextViewController {
     
     public func scrollCollectionViewToBottom() {
         
-        let numberOfItems = dataSource?.collectionView(collectionView, numberOfItemsInSection: 0)
+        let numberOfItems = dataSource?.collectionView?(collectionView, numberOfItemsInSection: 0)
         if numberOfItems! > 0 {
             let lastItemIndexPath = IndexPath(item: numberOfItems! - 1, section: 0)
             collectionView.scrollToItem(at: lastItemIndexPath, at: .bottom, animated: true)
@@ -60,7 +60,7 @@ open class AsyncMessagesViewController: SLKTextViewController {
     }
     
     public func scrollCollectionViewToTop() {
-        let numberOfItems = dataSource?.collectionView(collectionView, numberOfItemsInSection: 0)
+        let numberOfItems = dataSource?.collectionView?(collectionView, numberOfItemsInSection: 0)
         if numberOfItems! > 0 {
             let firstItemIndexPath = IndexPath(item: 0, section: 0)
             collectionView.scrollToItem(at: firstItemIndexPath, at: .top, animated: true)

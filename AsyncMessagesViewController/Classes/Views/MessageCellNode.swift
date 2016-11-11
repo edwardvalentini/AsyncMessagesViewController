@@ -54,7 +54,7 @@ public class MessageCellNode: ASCellNode {
         avatarImageNode?.url = senderAvatarURL
         
         self.bubbleNode = bubbleNode
-        self.bubbleNode.flexShrink = true
+        self.bubbleNode.flexShrink = 1.0
         
         bottomTextNode = bottomText != nil ? ASTextNode() : nil
         bottomTextNode?.isLayerBacked = true

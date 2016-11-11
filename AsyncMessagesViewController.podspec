@@ -1,6 +1,6 @@
 Pod::Spec.new do |s|
   s.name             = "AsyncMessagesViewController"
-  s.version          = "0.3.1"
+  s.version          = "0.4.0"
   s.summary          = "A smooth, responsive and flexible messages UI library for iOS."
   s.description      = <<-DESC
 A smooth, responsive and flexible messages UI library for iOS. Built on top of the awesome AsyncDisplayKit framework, it takes full advantage of asynchronous sizing, (non-auto) layout and text rendering to deliver a 5x fps (subject to increase) scrolling experience.
@@ -25,7 +25,7 @@ A smooth, responsive and flexible messages UI library for iOS. Built on top of t
 
   s.resources = ['AsyncMessagesViewController/Assets/AsyncMessagesViewController.bundle']
 
-  s.dependency 'AsyncDisplayKit', '~> 1.9.90'
-  s.dependency 'SlackTextViewController', '~> 1.9.4'
+  s.dependency 'AsyncDisplayKit', '>= 2.0-beta.1'
+  s.dependency 'SlackTextViewController', '~> 1.9.5'
 
 end
