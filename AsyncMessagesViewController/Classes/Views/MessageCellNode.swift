@@ -33,16 +33,16 @@ public class MessageCellNode: ASCellNode {
 
         topTextNode = topText != nil ? ASTextNode() : nil
         topTextNode?.isLayerBacked = true
-        topTextNode?.attributedString = topText
-        topTextNode?.alignSelf = .center
+        topTextNode?.attributedText = topText
+        topTextNode?.style.alignSelf = .center
 
         contentTopTextNode = contentTopText != nil ? ASTextNode() : nil
         contentTopTextNode?.isLayerBacked = true
-        contentTopTextNode?.attributedString = contentTopText
+        contentTopTextNode?.attributedText = contentTopText
         
         avatarImageSize = senderAvatarImageSize
         avatarImageNode = avatarImageSize > 0 ? ASNetworkImageNode() : nil
-        avatarImageNode?.preferredFrameSize = CGSize(width: avatarImageSize, height: avatarImageSize)
+        avatarImageNode?.style.preferredSize = CGSize(width: avatarImageSize, height: avatarImageSize)
         avatarImageNode?.backgroundColor = UIColor.clear
         // This line below causes a bug ... need to ask about it on Slack.
         //avatarImageNode?.imageModificationBlock = ASImageNodeRoundBorderModificationBlock(0, nil)
@@ -54,11 +54,11 @@ public class MessageCellNode: ASCellNode {
         avatarImageNode?.url = senderAvatarURL
         
         self.bubbleNode = bubbleNode
-        self.bubbleNode.flexShrink = 1.0
+        self.bubbleNode.style.flexShrink = 1.0
         
         bottomTextNode = bottomText != nil ? ASTextNode() : nil
         bottomTextNode?.isLayerBacked = true
-        bottomTextNode?.attributedString = bottomText
+        bottomTextNode?.attributedText = bottomText
 
         super.init()
         

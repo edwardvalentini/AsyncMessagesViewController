@@ -38,7 +38,7 @@ public class MessageTextBubbleNode: ASDisplayNode {
         bubbleImageNode.image = bubbleImage
 
         textNode = MessageTextNode()
-        textNode.attributedString = text
+        textNode.attributedText = text
         
         super.init()
         
