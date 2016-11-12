@@ -12,14 +12,13 @@ import AsyncDisplayKit
 public let kAMMessageCellNodeAvatarImageSize: CGFloat = 34
 
 public let kAMMessageCellNodeTopTextAttributes = [NSForegroundColorAttributeName: UIColor.lightGray,
-    NSFontAttributeName: UIFont.boldSystemFont(ofSize: 12)]
+                                                  NSFontAttributeName: UIFont.boldSystemFont(ofSize: 12)]
 public let kAMMessageCellNodeContentTopTextAttributes = [NSForegroundColorAttributeName: UIColor.lightGray,
-    NSFontAttributeName: UIFont.systemFont(ofSize: 12)]
+                                                         NSFontAttributeName: UIFont.systemFont(ofSize: 12)]
 public let kAMMessageCellNodeBottomTextAttributes = [NSForegroundColorAttributeName: UIColor.lightGray,
-    NSFontAttributeName: UIFont.systemFont(ofSize: 11)]
+                                                     NSFontAttributeName: UIFont.systemFont(ofSize: 11)]
 
 public class MessageCellNode: ASCellNode {
-    
     private let isOutgoing: Bool
     private let topTextNode: ASTextNode?
     private let contentTopTextNode: ASTextNode?
@@ -27,15 +26,15 @@ public class MessageCellNode: ASCellNode {
     private let bubbleNode: ASDisplayNode
     private let avatarImageSize: CGFloat
     private let avatarImageNode: ASNetworkImageNode?
-
+    
     public init(isOutgoing: Bool, topText: NSAttributedString?, contentTopText: NSAttributedString?, bottomText: NSAttributedString?, senderAvatarURL: URL?, senderAvatarImageSize: CGFloat = kAMMessageCellNodeAvatarImageSize, bubbleNode: ASDisplayNode) {
         self.isOutgoing = isOutgoing
-
+        
         topTextNode = topText != nil ? ASTextNode() : nil
         topTextNode?.isLayerBacked = true
         topTextNode?.attributedText = topText
         topTextNode?.style.alignSelf = .center
-
+        
         contentTopTextNode = contentTopText != nil ? ASTextNode() : nil
         contentTopTextNode?.isLayerBacked = true
         contentTopTextNode?.attributedText = contentTopText
@@ -44,8 +43,6 @@ public class MessageCellNode: ASCellNode {
         avatarImageNode = avatarImageSize > 0 ? ASNetworkImageNode() : nil
         avatarImageNode?.style.preferredSize = CGSize(width: avatarImageSize, height: avatarImageSize)
         avatarImageNode?.backgroundColor = UIColor.clear
-        // This line below causes a bug ... need to ask about it on Slack.
-        //avatarImageNode?.imageModificationBlock = ASImageNodeRoundBorderModificationBlock(0, nil)
         avatarImageNode?.imageModificationBlock = { (image: UIImage) -> UIImage in
             let preferredSize = CGSize(width: senderAvatarImageSize, height: senderAvatarImageSize)
             let newImage = image.makeCircularImageWithSize(preferredSize)
@@ -59,7 +56,7 @@ public class MessageCellNode: ASCellNode {
         bottomTextNode = bottomText != nil ? ASTextNode() : nil
         bottomTextNode?.isLayerBacked = true
         bottomTextNode?.attributedText = bottomText
-
+        
         super.init()
         
         if let node = topTextNode { addSubnode(node) }
@@ -72,34 +69,58 @@ public class MessageCellNode: ASCellNode {
     }
     
     override public func layoutSpecThatFits(_ constrainedSize: ASSizeRange) -> ASLayoutSpec {
-        
-        
         let contentTopFinal : ASLayoutSpec? = contentTopTextNode == nil ? nil : ASInsetLayoutSpec(insets: UIEdgeInsetsMake(0, 22 + avatarImageSize, 0, 0), child: contentTopTextNode!)
         
-        return ASInsetLayoutSpec(
-            insets: UIEdgeInsetsMake(1, 4, 5, 4),
-            child: ASStackLayoutSpec(
-                direction: .vertical,
-                spacing: 0,
-                justifyContent: .start, // Never used
-                alignItems: isOutgoing == true ? .end : .start,
-                children: Array.filterNils([
-                    topTextNode,
-                    contentTopFinal,
-                    ASStackLayoutSpec(
-                        direction: .horizontal,
-                        spacing: 2,
-                        justifyContent: .start, // Never used
-                        alignItems: .end,
-                        children: Array.filterNils(isOutgoing == true ? [bubbleNode, self.avatarImageNode! ] : [self.avatarImageNode!, bubbleNode])),
-                    bottomTextNode])))
+        let horizontalSpec = ASStackLayoutSpec()
+        horizontalSpec.style.width = ASDimensionMakeWithPoints(constrainedSize.max.width)
+        horizontalSpec.direction = .horizontal
+        horizontalSpec.spacing = 2
+        horizontalSpec.justifyContent = .start
+        if isOutgoing {
+            horizontalSpec.setChild(bubbleNode, at: 0)
+            horizontalSpec.setChild(self.avatarImageNode!, at: 1)
+            horizontalSpec.alignItems = .end
+            horizontalSpec.style.alignSelf = .end
+            horizontalSpec.horizontalAlignment = .horizontalAlignmentRight
+            
+        } else {
+            horizontalSpec.setChild(self.avatarImageNode!, at: 0)
+            horizontalSpec.setChild(bubbleNode, at: 1)
+            horizontalSpec.alignItems = .start
+            horizontalSpec.style.alignSelf = .end
+            horizontalSpec.horizontalAlignment = .horizontalAlignmentLeft
+        }
+        
+        horizontalSpec.style.flexShrink = 1.0
+        horizontalSpec.style.flexGrow = 1.0
+        
+        let verticalSpec = ASStackLayoutSpec()
+        verticalSpec.direction = .vertical
+        verticalSpec.spacing = 0
+        verticalSpec.justifyContent = .start
+        verticalSpec.alignItems = isOutgoing == true ? .end : .start
+        
+        if let topTextNode = topTextNode {
+            verticalSpec.setChild(topTextNode, at: 0)
+        }
+        
+        if let contentTopFinal = contentTopFinal {
+            verticalSpec.setChild(contentTopFinal, at: 1)
+        }
+        
+        verticalSpec.setChild(horizontalSpec, at: 2)
+        
+        if let bottomTextNode = bottomTextNode {
+            verticalSpec.setChild(bottomTextNode, at: 3)
+        }
+        
+        let insets = UIEdgeInsetsMake(1, 4, 5, 4)
+        let insetSpec = ASInsetLayoutSpec(insets: insets, child: verticalSpec)
+        return insetSpec
     }
-    
 }
 
 private extension Array {
-    
-    // Credits: http://stackoverflow.com/a/28190873/1136669
     static func filterNils(_ array: [Element?]) -> [Element] {
         return array.filter { $0 != nil }.map { $0! }
     }
