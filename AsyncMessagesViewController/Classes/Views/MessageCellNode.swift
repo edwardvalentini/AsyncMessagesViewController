@@ -76,17 +76,17 @@ public class MessageCellNode: ASCellNode {
         horizontalSpec.direction = .horizontal
         horizontalSpec.spacing = 2
         horizontalSpec.justifyContent = .start
+        horizontalSpec.verticalAlignment = .verticalAlignmentBottom
+
         if isOutgoing {
             horizontalSpec.setChild(bubbleNode, at: 0)
             horizontalSpec.setChild(self.avatarImageNode!, at: 1)
-            horizontalSpec.alignItems = .end
             horizontalSpec.style.alignSelf = .end
             horizontalSpec.horizontalAlignment = .horizontalAlignmentRight
             
         } else {
             horizontalSpec.setChild(self.avatarImageNode!, at: 0)
             horizontalSpec.setChild(bubbleNode, at: 1)
-            horizontalSpec.alignItems = .start
             horizontalSpec.style.alignSelf = .end
             horizontalSpec.horizontalAlignment = .horizontalAlignmentLeft
         }
