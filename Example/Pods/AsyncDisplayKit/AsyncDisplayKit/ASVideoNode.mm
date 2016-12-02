@@ -11,6 +11,7 @@
 #import <AVFoundation/AVFoundation.h>
 #import "ASDisplayNodeInternal.h"
 #import "ASDisplayNode+Subclasses.h"
+#import "ASDisplayNode+FrameworkPrivate.h"
 #import "ASVideoNode.h"
 #import "ASEqualityHelpers.h"
 #import "ASInternalHelpers.h"
@@ -53,11 +54,6 @@ static NSString * const kRate = @"rate";
     unsigned int delegateVideoNodeDidSetCurrentItem:1;
     unsigned int delegateVideoNodeDidStallAtTimeInterval:1;
     unsigned int delegateVideoNodeDidRecoverFromStall:1;
-    
-    //Flags for deprecated methods
-    unsigned int delegateVideoPlaybackDidFinish_deprecated:1;
-    unsigned int delegateVideoNodeWasTapped_deprecated:1;
-    unsigned int delegateVideoNodeDidPlayToSecond_deprecated:1;
   } _delegateFlags;
   
   BOOL _shouldBePlaying;
@@ -370,9 +366,9 @@ static NSString * const kRate = @"rate";
   }
 }
 
-- (void)fetchData
+- (void)didEnterPreloadState
 {
-  [super fetchData];
+  [super didEnterPreloadState];
   
   ASDN::MutexLocker l(__instanceLock__);
   AVAsset *asset = self.asset;
@@ -410,9 +406,9 @@ static NSString * const kRate = @"rate";
   }
 }
 
-- (void)clearFetchedData
+- (void)didExitPreloadState
 {
-  [super clearFetchedData];
+  [super didExitPreloadState];
   
   {
     ASDN::MutexLocker l(__instanceLock__);
@@ -510,10 +506,10 @@ static NSString * const kRate = @"rate";
 
 - (void)_setAndFetchAsset:(AVAsset *)asset url:(NSURL *)assetURL
 {
-  [self clearFetchedData];
+  [self didExitPreloadState];
   _asset = asset;
   _assetURL = assetURL;
-  [self setNeedsDataFetch];
+  [self setNeedsPreload];
 }
 
 - (void)setVideoComposition:(AVVideoComposition *)videoComposition
@@ -622,7 +618,7 @@ static NSString * const kRate = @"rate";
   }
 
   if (_player == nil) {
-    [self setNeedsDataFetch];
+    [self setNeedsPreload];
   }
 
   if (_playerNode == nil) {
@@ -669,6 +665,19 @@ static NSString * const kRate = @"rate";
     }
   }
   return YES;
+}
+
+- (void)resetToPlaceholder
+{
+  ASDN::MutexLocker l(__instanceLock__);
+  
+  if (_playerNode != nil) {
+    [_playerNode removeFromSupernode];
+    _playerNode = nil;
+  }
+  
+  [_player seekToTime:kCMTimeZero];
+  [self pause];
 }
 
 

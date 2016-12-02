@@ -24,6 +24,10 @@
 
 #define AS_RANGECONTROLLER_LOG_UPDATE_FREQ 0
 
+#ifndef ASRangeControllerAutomaticLowMemoryHandling
+#define ASRangeControllerAutomaticLowMemoryHandling 1
+#endif
+
 @interface ASRangeController ()
 {
   BOOL _rangeIsValid;
@@ -32,9 +36,9 @@
   BOOL _layoutControllerImplementsSetViewportSize;
   NSSet<NSIndexPath *> *_allPreviousIndexPaths;
   ASLayoutRangeMode _currentRangeMode;
-  BOOL _didUpdateCurrentRange;
+  BOOL _preserveCurrentRangeMode;
   BOOL _didRegisterForNodeDisplayNotifications;
-  CFAbsoluteTime _pendingDisplayNodesTimestamp;
+  CFTimeInterval _pendingDisplayNodesTimestamp;
   
 #if AS_RANGECONTROLLER_LOG_UPDATE_FREQ
   NSUInteger _updateCountThisFrame;
@@ -58,7 +62,7 @@ static UIApplicationState __ApplicationState = UIApplicationStateActive;
   
   _rangeIsValid = YES;
   _currentRangeMode = ASLayoutRangeModeInvalid;
-  _didUpdateCurrentRange = NO;
+  _preserveCurrentRangeMode = NO;
   
   [[[self class] allRangeControllersWeakSet] addObject:self];
   
@@ -140,9 +144,9 @@ static UIApplicationState __ApplicationState = UIApplicationStateActive;
 
 - (void)updateCurrentRangeWithMode:(ASLayoutRangeMode)rangeMode
 {
+  _preserveCurrentRangeMode = YES;
   if (_currentRangeMode != rangeMode) {
     _currentRangeMode = rangeMode;
-    _didUpdateCurrentRange = YES;
 
     [self setNeedsUpdate];
   }
@@ -216,7 +220,7 @@ static UIApplicationState __ApplicationState = UIApplicationStateActive;
   ASLayoutRangeMode rangeMode = _currentRangeMode;
   // If the range mode is explicitly set via updateCurrentRangeWithMode: it will last in that mode until the
   // range controller becomes visible again or explicitly changes the range mode again
-  if ((!_didUpdateCurrentRange && ASInterfaceStateIncludesVisible(selfInterfaceState)) || [[self class] isFirstRangeUpdateForRangeMode:rangeMode]) {
+  if ((!_preserveCurrentRangeMode && ASInterfaceStateIncludesVisible(selfInterfaceState)) || [[self class] isFirstRangeUpdateForRangeMode:rangeMode]) {
     rangeMode = [ASRangeController rangeModeForInterfaceState:selfInterfaceState currentRangeMode:_currentRangeMode];
   }
 
@@ -246,7 +250,7 @@ static UIApplicationState __ApplicationState = UIApplicationStateActive;
   
   // Typically the preloadIndexPaths will be the largest, and be a superset of the others, though it may be disjoint.
   // Because allIndexPaths is an NSMutableOrderedSet, this adds the non-duplicate items /after/ the existing items.
-  // This means that during iteration, we will first visit visible, then display, then fetch data nodes.
+  // This means that during iteration, we will first visit visible, then display, then preload nodes.
   [allIndexPaths unionSet:displayIndexPaths];
   [allIndexPaths unionSet:preloadIndexPaths];
   
@@ -259,7 +263,7 @@ static UIApplicationState __ApplicationState = UIApplicationStateActive;
   _allPreviousIndexPaths = allCurrentIndexPaths;
   
   _currentRangeMode = rangeMode;
-  _didUpdateCurrentRange = NO;
+  _preserveCurrentRangeMode = NO;
   
   if (!_rangeIsValid) {
     [allIndexPaths addObjectsFromArray:ASIndexPathsForTwoDimensionalArray(allNodes)];
@@ -288,14 +292,14 @@ static UIApplicationState __ApplicationState = UIApplicationStateActive;
       }
     } else {
       // If selfInterfaceState isn't visible, then visibleIndexPaths represents what /will/ be immediately visible at the
-      // instant we come onscreen.  So, fetch data and display all of those things, but don't waste resources preloading yet.
+      // instant we come onscreen.  So, preload and display all of those things, but don't waste resources preloading yet.
       // We handle this as a separate case to minimize set operations for offscreen preloading, including containsObject:.
       
       if ([allCurrentIndexPaths containsObject:indexPath]) {
         // DO NOT set Visible: even though these elements are in the visible range / "viewport",
         // our overall container object is itself not visible yet.  The moment it becomes visible, we will run the condition above
         
-        // Set Layout, Fetch Data
+        // Set Layout, Preload
         interfaceState |= ASInterfaceStatePreload;
         
         if (rangeMode != ASLayoutRangeModeLowMemory) {
@@ -335,7 +339,7 @@ static UIApplicationState __ApplicationState = UIApplicationStateActive;
           if (nodeShouldScheduleDisplay) {
             [self registerForNodeDisplayNotificationsForInterfaceStateIfNeeded:selfInterfaceState];
             if (_didRegisterForNodeDisplayNotifications) {
-              _pendingDisplayNodesTimestamp = CFAbsoluteTimeGetCurrent();
+              _pendingDisplayNodesTimestamp = CACurrentMediaTime();
             }
           }
         }
@@ -375,7 +379,6 @@ static UIApplicationState __ApplicationState = UIApplicationStateActive;
   [modifiedIndexPaths sortUsingSelector:@selector(compare:)];
   NSLog(@"Range update complete; modifiedIndexPaths: %@", [self descriptionWithIndexPaths:modifiedIndexPaths]);
 #endif
-  [_delegate didCompleteUpdatesInRangeController:self];
   
   ASProfilingSignpostEnd(1, self);
 }
@@ -498,7 +501,7 @@ static UIApplicationState __ApplicationState = UIApplicationStateActive;
   }
 }
 
-- (void)clearFetchedData
+- (void)clearPreloadedData
 {
   for (NSArray *section in [_dataSource completedNodes]) {
     for (ASDisplayNode *node in section) {
@@ -532,7 +535,7 @@ static UIApplicationState __ApplicationState = UIApplicationStateActive;
   [center addObserver:self selector:@selector(willEnterForeground:) name:UIApplicationWillEnterForegroundNotification object:nil];
 }
 
-static ASLayoutRangeMode __rangeModeForMemoryWarnings = ASLayoutRangeModeVisibleOnly;
+static ASLayoutRangeMode __rangeModeForMemoryWarnings = ASLayoutRangeModeLowMemory;
 + (void)setRangeModeForMemoryWarnings:(ASLayoutRangeMode)rangeMode
 {
   ASDisplayNodeAssert(rangeMode == ASLayoutRangeModeVisibleOnly || rangeMode == ASLayoutRangeModeLowMemory, @"It is highly inadvisable to engage a larger range mode when a memory warning occurs, as this will almost certainly cause app eviction");
@@ -544,8 +547,8 @@ static ASLayoutRangeMode __rangeModeForMemoryWarnings = ASLayoutRangeModeVisible
   NSArray *allRangeControllers = [[self allRangeControllersWeakSet] allObjects];
   for (ASRangeController *rangeController in allRangeControllers) {
     BOOL isDisplay = ASInterfaceStateIncludesDisplay([rangeController interfaceState]);
-    [rangeController updateCurrentRangeWithMode:isDisplay ? ASLayoutRangeModeMinimum : __rangeModeForMemoryWarnings];
-    [rangeController setNeedsUpdate];
+    [rangeController updateCurrentRangeWithMode:isDisplay ? ASLayoutRangeModeVisibleOnly : __rangeModeForMemoryWarnings];
+    // There's no need to call needs update as updateCurrentRangeWithMode sets this if necessary.
     [rangeController updateIfNeeded];
   }
   
@@ -568,7 +571,7 @@ static ASLayoutRangeMode __rangeModeForMemoryWarnings = ASLayoutRangeModeVisible
   __ApplicationState = UIApplicationStateBackground;
   for (ASRangeController *rangeController in allRangeControllers) {
     // Trigger a range update immediately, as we may not be allowed by the system to run the update block scheduled by changing range mode.
-    [rangeController setNeedsUpdate];
+    // There's no need to call needs update as updateCurrentRangeWithMode sets this if necessary.
     [rangeController updateIfNeeded];
   }
   
@@ -584,7 +587,7 @@ static ASLayoutRangeMode __rangeModeForMemoryWarnings = ASLayoutRangeModeVisible
   for (ASRangeController *rangeController in allRangeControllers) {
     BOOL isVisible = ASInterfaceStateIncludesVisible([rangeController interfaceState]);
     [rangeController updateCurrentRangeWithMode:isVisible ? ASLayoutRangeModeMinimum : ASLayoutRangeModeVisibleOnly];
-    [rangeController setNeedsUpdate];
+    // There's no need to call needs update as updateCurrentRangeWithMode sets this if necessary.
     [rangeController updateIfNeeded];
   }
   

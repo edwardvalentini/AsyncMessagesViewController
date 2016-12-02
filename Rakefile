@@ -33,32 +33,28 @@ task :version do
   replace_version_number(new_version_number)
 end
 
+
+desc "Release a new version of the Pod without incrementing version"
+task :release_without_versioning do
+  puts "* Releasing"
+  branch = `git rev-parse --abbrev-ref HEAD`.chomp
+  # sh "git commit #{podspec_path} -m 'Release #{spec_version}'"
+  sh "git tag -a #{spec_version} -m 'Release #{spec_version}'"
+  sh "git push origin #{branch}"
+  sh "git push origin --tags"
+  if PODREPO == "trunk"
+	   sh "pod trunk push #{podspec_path} --allow-warnings"
+  else
+  	sh "pod repo push #{PODREPO} #{podspec_path} --allow-warnings" # --verbose"
+  end
+end
+
 desc "Release a new version of the Pod"
 task :release do
 
   puts "* Running version"
   sh "rake version"
 
-  # unless ENV['SKIP_CHECKS']
-  #   #if `git symbolic-ref HEAD 2>/dev/null`.strip.split('/').last != 'master'
-  #   #  $stderr.puts "[!] You need to be on the `master' branch in order to be able to do a release."
-  #   #  exit 1
-  #   #end
-  #
-  #   if `git tag`.strip.split("\n").include?(spec_version)
-  #     $stderr.puts "[!] A tag for version `#{spec_version}' already exists. Change the version in the podspec"
-  #     exit 1
-  #   end
-  #
-  #   puts "You are about to release `#{spec_version}`, is that correct? [y/n]"
-  #   exit if $stdin.gets.strip.downcase != 'y'
-  # end
-
-  # puts "* Running specs"
-  # sh "rake spec"
-
- # puts "* Linting the podspec"
- # sh "pod lib lint"
 
   puts "* Releasing"
   branch = `git rev-parse --abbrev-ref HEAD`.chomp

@@ -1,15 +1,13 @@
 PODS:
-  - AsyncDisplayKit (2.0-beta.1):
-    - AsyncDisplayKit/PINRemoteImage (= 2.0-beta.1)
-  - AsyncDisplayKit/ASDealloc2MainObject (2.0-beta.1)
-  - AsyncDisplayKit/Core (2.0-beta.1):
-    - AsyncDisplayKit/ASDealloc2MainObject
-  - AsyncDisplayKit/PINRemoteImage (2.0-beta.1):
+  - AsyncDisplayKit (2.0-rc.1):
+    - AsyncDisplayKit/PINRemoteImage (= 2.0-rc.1)
+  - AsyncDisplayKit/Core (2.0-rc.1)
+  - AsyncDisplayKit/PINRemoteImage (2.0-rc.1):
     - AsyncDisplayKit/Core
     - PINRemoteImage/iOS (= 3.0.0-beta.6)
     - PINRemoteImage/PINCache
-  - AsyncMessagesViewController (0.3.1):
-    - AsyncDisplayKit (>= 2.0-beta.1)
+  - AsyncMessagesViewController (0.4.5):
+    - AsyncDisplayKit (>= 2.0-rc.1)
     - SlackTextViewController (~> 1.9.5)
   - LoremIpsum (1.0.0)
   - PINCache (3.0.1-beta.2):
@@ -35,8 +33,8 @@ EXTERNAL SOURCES:
     :path: "../"
 
 SPEC CHECKSUMS:
-  AsyncDisplayKit: 4d4403eb61b2b667866e98ca8b7fab6cec497b68
-  AsyncMessagesViewController: 4655171025abf5ec181ea6a3b067dac7ad3d162d
+  AsyncDisplayKit: bd1d54ec70644ab235bcca899644d2129d5d06df
+  AsyncMessagesViewController: 49c766718441ca5da818989bfaccca061d5f2107
   LoremIpsum: 9029c55d36501b2ee0b05cc9ecda11d3a0479160
   PINCache: 6d273a6e0754bd26e3f12a38a90dde73cc6a42b2
   PINRemoteImage: 60156f185c9360ca4e93832cd490d6f6c7afbd9a
