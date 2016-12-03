@@ -63,7 +63,6 @@ public class MessageBubbleImageProvider {
         let imageName = "bubble" + (properties.isOutgoing ? "_outgoing" : "_incoming") + (properties.hasTail ? "" : "_tailless")
         
         guard let bubble = Bundle.asyncImage(withName: imageName, andExtension: "png") else {
-            fatalError("Must have image not be nil")
             return UIImage()
         }
         
