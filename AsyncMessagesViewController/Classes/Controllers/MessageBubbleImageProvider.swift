@@ -62,7 +62,10 @@ public class MessageBubbleImageProvider {
     private func buildBubbleImage(_ properties: MessageProperties) -> UIImage {
         let imageName = "bubble" + (properties.isOutgoing ? "_outgoing" : "_incoming") + (properties.hasTail ? "" : "_tailless")
         
-        let bubble = Bundle.asyncImage(imageName, ofType: "png")
+        guard let bubble = Bundle.asyncImage(withName: imageName, andExtension: "png") else {
+            fatalError("Must have image not be nil")
+            return UIImage()
+        }
         
         //   var normalBubble = bubble.imageMaskedWith(properties.isOutgoing ? outgoingColor : incomingColor)
         var normalBubble = bubble.imageMaskedWith(properties.color)
