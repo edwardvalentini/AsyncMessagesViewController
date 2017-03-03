@@ -1,26 +1,28 @@
 PODS:
-  - AsyncDisplayKit (2.0-rc.1):
-    - AsyncDisplayKit/PINRemoteImage (= 2.0-rc.1)
-  - AsyncDisplayKit/Core (2.0-rc.1)
-  - AsyncDisplayKit/PINRemoteImage (2.0-rc.1):
+  - AsyncDisplayKit (2.2):
+    - AsyncDisplayKit/PINRemoteImage (= 2.2)
+  - AsyncDisplayKit/Core (2.2)
+  - AsyncDisplayKit/PINRemoteImage (2.2):
     - AsyncDisplayKit/Core
-    - PINRemoteImage/iOS (= 3.0.0-beta.6)
+    - PINRemoteImage/iOS (= 3.0.0-beta.8)
     - PINRemoteImage/PINCache
-  - AsyncMessagesViewController (0.5.0):
+  - AsyncMessagesViewController (0.5.2):
     - AsyncDisplayKit (>= 2.0-rc.1)
     - SlackTextViewController (~> 1.9.5)
   - LoremIpsum (1.0.0)
-  - PINCache (3.0.1-beta.2):
-    - PINCache/Arc-exception-safe (= 3.0.1-beta.2)
-    - PINCache/Core (= 3.0.1-beta.2)
-  - PINCache/Arc-exception-safe (3.0.1-beta.2):
+  - PINCache (3.0.1-beta.4):
+    - PINCache/Arc-exception-safe (= 3.0.1-beta.4)
+    - PINCache/Core (= 3.0.1-beta.4)
+  - PINCache/Arc-exception-safe (3.0.1-beta.4):
     - PINCache/Core
-  - PINCache/Core (3.0.1-beta.2)
-  - PINRemoteImage/Core (3.0.0-beta.6)
-  - PINRemoteImage/iOS (3.0.0-beta.6):
+  - PINCache/Core (3.0.1-beta.4):
+    - PINOperation (= 1.0.3)
+  - PINOperation (1.0.3)
+  - PINRemoteImage/Core (3.0.0-beta.8)
+  - PINRemoteImage/iOS (3.0.0-beta.8):
     - PINRemoteImage/Core
-  - PINRemoteImage/PINCache (3.0.0-beta.6):
-    - PINCache (= 3.0.1-beta.2)
+  - PINRemoteImage/PINCache (3.0.0-beta.8):
+    - PINCache (= 3.0.1-beta.4)
     - PINRemoteImage/Core
   - SlackTextViewController (1.9.5)
 
@@ -33,13 +35,14 @@ EXTERNAL SOURCES:
     :path: "../"
 
 SPEC CHECKSUMS:
-  AsyncDisplayKit: bd1d54ec70644ab235bcca899644d2129d5d06df
-  AsyncMessagesViewController: 8e476bfea0119345db4f70b811eddfdd08244d97
+  AsyncDisplayKit: 1585f6cd0531ae9b30476f5912f577b73ebcb0e4
+  AsyncMessagesViewController: 6d67c3cefea6a0f0deb874c758a065e31ee66eef
   LoremIpsum: 9029c55d36501b2ee0b05cc9ecda11d3a0479160
-  PINCache: 6d273a6e0754bd26e3f12a38a90dde73cc6a42b2
-  PINRemoteImage: 60156f185c9360ca4e93832cd490d6f6c7afbd9a
+  PINCache: a89c8f609232afac77128557bd12c861844423d7
+  PINOperation: ac23db44796d4a564ecf9b5ea7163510f579b71d
+  PINRemoteImage: c4f9f16932840c597f32e69dd288e10e111a1929
   SlackTextViewController: fbcdadbb8090673f604484ff5b6eb8d77baed42a
 
 PODFILE CHECKSUM: 6dc1c5b476ab8d7578a0183a4c6486ab6bca099b
 
-COCOAPODS: 1.2.0.beta.1
+COCOAPODS: 1.2.0

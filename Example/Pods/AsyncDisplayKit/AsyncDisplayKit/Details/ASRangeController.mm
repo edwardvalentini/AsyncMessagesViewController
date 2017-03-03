@@ -8,19 +8,18 @@
 //  of patent rights can be found in the PATENTS file in the same directory.
 //
 
-#import "ASRangeController.h"
+#import <AsyncDisplayKit/ASRangeController.h>
 
-#import "ASAssert.h"
-#import "ASCellNode.h"
-#import "ASDisplayNodeExtras.h"
-#import "ASDisplayNodeInternal.h"
-#import "ASMultidimensionalArrayUtils.h"
-#import "ASInternalHelpers.h"
-#import "ASMultiDimensionalArrayUtils.h"
-#import "ASWeakSet.h"
+#import <AsyncDisplayKit/ASAssert.h>
+#import <AsyncDisplayKit/ASCellNode.h>
+#import <AsyncDisplayKit/ASDisplayNodeExtras.h>
+#import <AsyncDisplayKit/ASDisplayNodeInternal.h> // Required for interfaceState and hierarchyState setter methods.
+#import <AsyncDisplayKit/ASInternalHelpers.h>
+#import <AsyncDisplayKit/ASMultidimensionalArrayUtils.h>
+#import <AsyncDisplayKit/ASWeakSet.h>
 
-#import "ASDisplayNode+FrameworkPrivate.h"
-#import "AsyncDisplayKit+Debug.h"
+#import <AsyncDisplayKit/ASDisplayNode+FrameworkPrivate.h>
+#import <AsyncDisplayKit/AsyncDisplayKit+Debug.h>
 
 #define AS_RANGECONTROLLER_LOG_UPDATE_FREQ 0
 
@@ -35,10 +34,17 @@
   BOOL _layoutControllerImplementsSetVisibleIndexPaths;
   BOOL _layoutControllerImplementsSetViewportSize;
   NSSet<NSIndexPath *> *_allPreviousIndexPaths;
+  ASWeakSet<ASCellNode *> *_visibleNodes;
   ASLayoutRangeMode _currentRangeMode;
   BOOL _preserveCurrentRangeMode;
   BOOL _didRegisterForNodeDisplayNotifications;
   CFTimeInterval _pendingDisplayNodesTimestamp;
+
+  // If the user is not currently scrolling, we will keep our ranges
+  // configured to match their previous scroll direction. Defaults
+  // to [.right, .down] so that when the user first opens a screen
+  // the ranges point down into the content.
+  ASScrollDirection _previousScrollDirection;
   
 #if AS_RANGECONTROLLER_LOG_UPDATE_FREQ
   NSUInteger _updateCountThisFrame;
@@ -63,6 +69,7 @@ static UIApplicationState __ApplicationState = UIApplicationStateActive;
   _rangeIsValid = YES;
   _currentRangeMode = ASLayoutRangeModeInvalid;
   _preserveCurrentRangeMode = NO;
+  _previousScrollDirection = ASScrollDirectionDown | ASScrollDirectionRight;
   
   [[[self class] allRangeControllersWeakSet] addObject:self];
   
@@ -170,6 +177,24 @@ static UIApplicationState __ApplicationState = UIApplicationStateActive;
   }
 }
 
+// Clear the visible bit from any nodes that disappeared since last update.
+// Currently we guarantee that nodes will not be marked visible when deallocated,
+// but it's OK to be in e.g. the preload range. So for the visible bit specifically,
+// we add this extra mechanism to account for e.g. deleted items.
+//
+// NOTE: There is a minor risk here, if a node is transferred from one range controller
+// to another before the first rc updates and clears the node out of this set. It's a pretty
+// wild scenario that I doubt happens in practice.
+- (void)_setVisibleNodes:(ASWeakSet *)newVisibleNodes
+{
+  for (ASCellNode *node in _visibleNodes) {
+    if (![newVisibleNodes containsObject:node] && node.isVisible) {
+      [node exitInterfaceState:ASInterfaceStateVisible];
+    }
+  }
+  _visibleNodes = newVisibleNodes;
+}
+
 - (void)_updateVisibleNodeIndexPaths
 {
   ASDisplayNodeAssert(_layoutController, @"An ASLayoutController is required by ASRangeController");
@@ -188,13 +213,21 @@ static UIApplicationState __ApplicationState = UIApplicationStateActive;
   // TODO: Consider if we need to use this codepath, or can rely on something more similar to the data & display ranges
   // Example: ... = [_layoutController indexPathsForScrolling:scrollDirection rangeType:ASLayoutRangeTypeVisible];
   NSArray<NSIndexPath *> *visibleNodePaths = [_dataSource visibleNodeIndexPathsForRangeController:self];
-  
+  ASWeakSet *newVisibleNodes = [[ASWeakSet alloc] init];
+
   if (visibleNodePaths.count == 0) { // if we don't have any visibleNodes currently (scrolled before or after content)...
+    [self _setVisibleNodes:newVisibleNodes];
     return; // don't do anything for this update, but leave _rangeIsValid == NO to make sure we update it later
   }
   ASProfilingSignpostStart(1, self);
 
+  // Get the scroll direction. Default to using the previous one, if they're not scrolling.
   ASScrollDirection scrollDirection = [_dataSource scrollDirectionForRangeController:self];
+  if (scrollDirection == ASScrollDirectionNone) {
+    scrollDirection = _previousScrollDirection;
+  }
+  _previousScrollDirection = scrollDirection;
+
   if (_layoutControllerImplementsSetViewportSize) {
     [_layoutController setViewportSize:[_dataSource viewportSizeForRangeController:self]];
   }
@@ -273,7 +306,7 @@ static UIApplicationState __ApplicationState = UIApplicationStateActive;
   ASDisplayNodeAssertTrue([visibleIndexPaths isSubsetOfSet:displayIndexPaths]);
   NSMutableArray<NSIndexPath *> *modifiedIndexPaths = (ASRangeControllerLoggingEnabled ? [NSMutableArray array] : nil);
 #endif
-  
+
   for (NSIndexPath *indexPath in allIndexPaths) {
     // Before a node / indexPath is exposed to ASRangeController, ASDataController should have already measured it.
     // For consistency, make sure each node knows that it should measure itself if something changes.
@@ -327,6 +360,9 @@ static UIApplicationState __ApplicationState = UIApplicationStateActive;
         ASDisplayNode *node = currentSectionNodes[row];
         
         ASDisplayNodeAssert(node.hierarchyState & ASHierarchyStateRangeManaged, @"All nodes reaching this point should be range-managed, or interfaceState may be incorrectly reset.");
+        if (ASInterfaceStateIncludesVisible(interfaceState)) {
+          [newVisibleNodes addObject:node];
+        }
         // Skip the many method calls of the recursive operation if the top level cell node already has the right interfaceState.
         if (node.interfaceState != interfaceState) {
 #if ASRangeControllerLoggingEnabled
@@ -346,6 +382,8 @@ static UIApplicationState __ApplicationState = UIApplicationStateActive;
       }
     }
   }
+
+  [self _setVisibleNodes:newVisibleNodes];
   
   // TODO: This code is for debugging only, but would be great to clean up with a delegate method implementation.
   if ([ASRangeController shouldShowRangeDebugOverlay]) {
@@ -449,6 +487,11 @@ static UIApplicationState __ApplicationState = UIApplicationStateActive;
 {
   ASDisplayNodeAssertMainThread();
   [_delegate didBeginUpdatesInRangeController:self];
+}
+
+- (void)dataControllerWillDeleteAllData:(ASDataController *)dataController
+{
+  [self _setVisibleNodes:nil];
 }
 
 - (void)dataController:(ASDataController *)dataController endUpdatesAnimated:(BOOL)animated completion:(void (^)(BOOL))completion

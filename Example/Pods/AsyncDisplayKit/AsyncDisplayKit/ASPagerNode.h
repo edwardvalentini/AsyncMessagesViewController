@@ -11,7 +11,6 @@
 //
 
 #import <AsyncDisplayKit/ASCollectionNode.h>
-#import <AsyncDisplayKit/ASDataController.h>
 
 @class ASPagerNode;
 @class ASPagerFlowLayout;
@@ -67,7 +66,7 @@ NS_ASSUME_NONNULL_BEGIN
  * @param index The index of the node.
  * @return A constrained size range for layout the node at this index.
  */
-- (ASSizeRange)pagerNode:(ASPagerNode *)pagerNode constrainedSizeForNodeAtIndex:(NSInteger)index;
+- (ASSizeRange)pagerNode:(ASPagerNode *)pagerNode constrainedSizeForNodeAtIndex:(NSInteger)index ASDISPLAYNODE_DEPRECATED_MSG("Pages in a pager node should be the exact size of the collection node (default behavior).");
 
 @end
 
@@ -120,6 +119,24 @@ NS_ASSUME_NONNULL_BEGIN
  * Returns the index of the page for the cell passed or NSNotFound
  */
 - (NSInteger)indexOfPageWithNode:(ASCellNode *)node;
+
+/**
+ * Tells the pager node to allow its view controller to automatically adjust its content insets.
+ *
+ * @see UIViewController.automaticallyAdjustsScrollViewInsets
+ *
+ * @discussion ASPagerNode should usually not have its content insets automatically adjusted
+ * because it scrolls horizontally, and flow layout will log errors because the pages
+ * do not fit between the top & bottom insets of the collection view.
+ *
+ * The default value is NO, which means that ASPagerNode expects that its view controller will
+ * have automaticallyAdjustsScrollViewInsets=NO.
+ *
+ * If this property is NO, but your view controller has automaticallyAdjustsScrollViewInsets=YES,
+ * the pager node will set the property to NO and log a warning message. In the future,
+ * the pager node will just log the warning, and you'll need to configure your view controller on your own.
+ */
+@property (nonatomic, assign) BOOL allowsAutomaticInsetsAdjustment;
 
 @end
 

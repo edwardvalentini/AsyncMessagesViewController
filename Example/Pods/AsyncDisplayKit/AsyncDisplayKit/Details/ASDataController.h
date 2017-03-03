@@ -11,9 +11,12 @@
 #pragma once
 
 #import <UIKit/UIKit.h>
+#import <AsyncDisplayKit/ASBlockTypes.h>
 #import <AsyncDisplayKit/ASDimension.h>
-#import <AsyncDisplayKit/ASFlowLayoutController.h>
 #import <AsyncDisplayKit/ASEventLog.h>
+#ifdef __cplusplus
+#import <vector>
+#endif
 
 NS_ASSUME_NONNULL_BEGIN
 
@@ -25,14 +28,10 @@ NS_ASSUME_NONNULL_BEGIN
 
 @class ASCellNode;
 @class ASDataController;
-@protocol ASEnvironment;
+@class _ASHierarchyChangeSet;
+@protocol ASTraitEnvironment;
 
 typedef NSUInteger ASDataControllerAnimationOptions;
-
-/**
- * ASCellNode creation block. Used to lazily create the ASCellNode instance for a specified indexPath.
- */
-typedef ASCellNode * _Nonnull(^ASCellNodeBlock)();
 
 extern NSString * const ASDataControllerRowNodeKind;
 extern NSString * const ASCollectionInvalidUpdateException;
@@ -67,7 +66,7 @@ extern NSString * const ASCollectionInvalidUpdateException;
 @end
 
 @protocol ASDataControllerEnvironmentDelegate
-- (id<ASEnvironment>)dataControllerEnvironment;
+- (id<ASTraitEnvironment>)dataControllerEnvironment;
 @end
 
 /**
@@ -76,12 +75,11 @@ extern NSString * const ASCollectionInvalidUpdateException;
  */
 @protocol ASDataControllerDelegate <NSObject>
 
-@optional
-
 /**
  Called for batch update.
  */
 - (void)dataControllerBeginUpdates:(ASDataController *)dataController;
+- (void)dataControllerWillDeleteAllData:(ASDataController *)dataController;
 - (void)dataController:(ASDataController *)dataController endUpdatesAnimated:(BOOL)animated completion:(void (^ _Nullable)(BOOL))completion;
 
 /**
@@ -113,8 +111,7 @@ extern NSString * const ASCollectionInvalidUpdateException;
  * will be updated asynchronously. The dataSource must be updated to reflect the changes before these methods has been called.
  * For each data updating, the corresponding methods in delegate will be called.
  */
-@protocol ASFlowLayoutControllerDataSource;
-@interface ASDataController : NSObject <ASFlowLayoutControllerDataSource>
+@interface ASDataController : NSObject
 
 - (instancetype)initWithDataSource:(id<ASDataControllerSource>)dataSource eventLog:(nullable ASEventLog *)eventLog NS_DESIGNATED_INITIALIZER;
 
@@ -138,6 +135,16 @@ extern NSString * const ASCollectionInvalidUpdateException;
  */
 @property (nonatomic, weak) id<ASDataControllerEnvironmentDelegate> environmentDelegate;
 
+#ifdef __cplusplus
+/**
+ * Returns the most recently gathered item counts from the data source. If the counts
+ * have been invalidated, this synchronously queries the data source and saves the result.
+ *
+ * This must be called on the main thread.
+ */
+- (std::vector<NSInteger>)itemCountsFromDataSource;
+#endif
+
 /**
  * Returns YES if reloadData has been called at least once. Before this point it is
  * important to ignore/suppress some operations. For example, inserting a section
@@ -156,25 +163,7 @@ extern NSString * const ASCollectionInvalidUpdateException;
 
 /** @name Data Updating */
 
-- (void)beginUpdates;
-
-- (void)endUpdates;
-
-- (void)endUpdatesAnimated:(BOOL)animated completion:(void (^ _Nullable)(BOOL))completion;
-
-- (void)insertSections:(NSIndexSet *)sections withAnimationOptions:(ASDataControllerAnimationOptions)animationOptions;
-
-- (void)deleteSections:(NSIndexSet *)sections withAnimationOptions:(ASDataControllerAnimationOptions)animationOptions;
-
-- (void)reloadSections:(NSIndexSet *)sections withAnimationOptions:(ASDataControllerAnimationOptions)animationOptions;
-
-- (void)moveSection:(NSInteger)section toSection:(NSInteger)newSection withAnimationOptions:(ASDataControllerAnimationOptions)animationOptions;
-
-- (void)insertRowsAtIndexPaths:(NSArray<NSIndexPath *> *)indexPaths withAnimationOptions:(ASDataControllerAnimationOptions)animationOptions;
-
-- (void)deleteRowsAtIndexPaths:(NSArray<NSIndexPath *> *)indexPaths withAnimationOptions:(ASDataControllerAnimationOptions)animationOptions;
-
-- (void)reloadRowsAtIndexPaths:(NSArray<NSIndexPath *> *)indexPaths withAnimationOptions:(ASDataControllerAnimationOptions)animationOptions;
+- (void)updateWithChangeSet:(_ASHierarchyChangeSet *)changeSet animated:(BOOL)animated;
 
 /**
  * Re-measures all loaded nodes in the backing store.
@@ -183,8 +172,6 @@ extern NSString * const ASCollectionInvalidUpdateException;
  * (e.g. ASTableView or ASCollectionView after an orientation change).
  */
 - (void)relayoutAllNodes;
-
-- (void)moveRowAtIndexPath:(NSIndexPath *)indexPath toIndexPath:(NSIndexPath *)newIndexPath withAnimationOptions:(ASDataControllerAnimationOptions)animationOptions;
 
 - (void)reloadDataWithAnimationOptions:(ASDataControllerAnimationOptions)animationOptions completion:(void (^ _Nullable)())completion;
 

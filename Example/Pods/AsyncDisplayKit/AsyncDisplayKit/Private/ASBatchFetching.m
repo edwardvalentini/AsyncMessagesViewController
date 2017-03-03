@@ -8,7 +8,8 @@
 //  of patent rights can be found in the PATENTS file in the same directory.
 //
 
-#import "ASBatchFetching.h"
+#import <AsyncDisplayKit/ASBatchFetching.h>
+#import <AsyncDisplayKit/ASBatchContext.h>
 
 BOOL ASDisplayShouldFetchBatchForScrollView(UIScrollView<ASBatchFetchingScrollView> *scrollView, ASScrollDirection scrollDirection, ASScrollDirection scrollableDirections, CGPoint contentOffset)
 {
@@ -22,7 +23,8 @@ BOOL ASDisplayShouldFetchBatchForScrollView(UIScrollView<ASBatchFetchingScrollVi
   CGRect bounds = scrollView.bounds;
   CGSize contentSize = scrollView.contentSize;
   CGFloat leadingScreens = scrollView.leadingScreensForBatching;
-  return ASDisplayShouldFetchBatchForContext(context, scrollDirection, scrollableDirections, bounds, contentSize, contentOffset, leadingScreens);
+  BOOL visible = (scrollView.window != nil);
+  return ASDisplayShouldFetchBatchForContext(context, scrollDirection, scrollableDirections, bounds, contentSize, contentOffset, leadingScreens, visible);
 }
 
 BOOL ASDisplayShouldFetchBatchForContext(ASBatchContext *context,
@@ -31,7 +33,8 @@ BOOL ASDisplayShouldFetchBatchForContext(ASBatchContext *context,
                                          CGRect bounds,
                                          CGSize contentSize,
                                          CGPoint targetOffset,
-                                         CGFloat leadingScreens)
+                                         CGFloat leadingScreens,
+                                         BOOL visible)
 {
   // Do not allow fetching if a batch is already in-flight and hasn't been completed or cancelled
   if ([context isFetching]) {
@@ -55,16 +58,25 @@ BOOL ASDisplayShouldFetchBatchForContext(ASBatchContext *context,
     contentLength = contentSize.width;
   }
 
-  // target offset will always be 0 if the content size is smaller than the viewport
-  BOOL hasSmallContent = offset == 0.0 && contentLength < viewLength;
+  BOOL hasSmallContent = contentLength < viewLength;
   if (hasSmallContent) {
     return YES;
   }
 
-  BOOL isScrollingTowardEnd = (ASScrollDirectionContainsDown(scrollDirection) || ASScrollDirectionContainsRight(scrollDirection));
+  // If we are not visible, but we do have enough content to fill visible area,
+  // don't batch fetch.
+  if (visible == NO) {
+    return NO;
+  }
+
+  // If they are scrolling toward the head of content, don't batch fetch.
+  BOOL isScrollingTowardHead = (ASScrollDirectionContainsUp(scrollDirection) || ASScrollDirectionContainsLeft(scrollDirection));
+  if (isScrollingTowardHead) {
+    return NO;
+  }
 
   CGFloat triggerDistance = viewLength * leadingScreens;
   CGFloat remainingDistance = contentLength - viewLength - offset;
 
-  return isScrollingTowardEnd && remainingDistance <= triggerDistance;
+  return remainingDistance <= triggerDistance;
 }

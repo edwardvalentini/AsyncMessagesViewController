@@ -12,6 +12,7 @@
 
 #import "NSData+ImageDetectors.h"
 #import "PINImage+DecodedImage.h"
+#import "PINImage+ScaledImage.h"
 #import "PINImage+WebP.h"
 #import "PINButton+PINRemoteImage.h"
 #import "PINImageView+PINRemoteImage.h"
